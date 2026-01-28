@@ -49,13 +49,34 @@ def fetch_market_context(start_date, end_date):
     """
     print("Fetching market context (VIX, Oil)...")
     try:
-        vix = yf.download("^VIX", start=start_date, end=end_date)['Close']
-        oil = yf.download("CL=F", start=start_date, end=end_date)['Close']
+        vix = yf.download("^VIX", start=start_date, end=end_date)
+        oil = yf.download("CL=F", start=start_date, end=end_date)
         
-        context_df = pd.DataFrame({'VIX': vix, 'Oil': oil})
-        if isinstance(context_df.columns, pd.MultiIndex):
-             context_df.columns = context_df.columns.get_level_values(0)
-             
+        # Check if data is empty
+        if vix.empty or oil.empty:
+            print("Warning: VIX or Oil data is empty.")
+            return pd.DataFrame()
+
+        # Handle MultiIndex if present
+        if isinstance(vix.columns, pd.MultiIndex):
+            vix = vix['Close']
+            if isinstance(vix, pd.DataFrame): # If still DataFrame (multiple tickers?)
+                 vix = vix.iloc[:, 0]
+        else:
+            vix = vix['Close']
+            
+        if isinstance(oil.columns, pd.MultiIndex):
+            oil = oil['Close']
+            if isinstance(oil, pd.DataFrame):
+                 oil = oil.iloc[:, 0]
+        else:
+            oil = oil['Close']
+
+        # Ensure they are Series
+        vix.name = 'VIX'
+        oil.name = 'Oil'
+        
+        context_df = pd.merge(vix, oil, left_index=True, right_index=True, how='outer')
         return context_df
     except Exception as e:
         print(f"Error fetching market context: {e}")
