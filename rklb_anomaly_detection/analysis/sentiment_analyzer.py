@@ -39,8 +39,10 @@ class SentimentAnalyzer:
         if sentiment_data is None:
             sentiment_data = self._generate_synthetic_sentiment(df)
         
-        # Join sentiment data
-        df = df.join(sentiment_data, how='left')
+        # Only add columns that don't already exist
+        new_cols = [c for c in sentiment_data.columns if c not in df.columns]
+        if new_cols:
+            df = df.join(sentiment_data[new_cols], how='left')
         
         # Calculate sentiment anomalies
         df = self._calculate_sentiment_anomalies(df)

@@ -1,0 +1,110 @@
+
+================================================================================
+                    RKLB ANOMALY DETECTION ANALYSIS REPORT
+                    Generated: 2026-01-28 19:14:30
+================================================================================
+
+EXECUTIVE SUMMARY
+-----------------
+Ticker: RKLB
+Analysis Period: 2021-08-25 to 2026-01-27
+Total Trading Days: 1110
+
+SIGNAL GENERATION
+-----------------
+Total Features Generated: 283
+Total Buy Signals: 12
+Strong Signals (score > 0.65): 5
+Regular Signals (score 0.45-0.65): 7
+Signal Frequency: 1.08% of trading days
+
+BACKTEST PERFORMANCE
+--------------------
+Total Return: 5.25%
+Annualized Return: 1.17%
+Benchmark Return (Buy & Hold): 734.13%
+Excess Return: -728.88%
+
+Risk Metrics:
+- Sharpe Ratio: 0.296
+- Sortino Ratio: 0.190
+- Max Drawdown: -5.85%
+- Volatility: 3.95%
+
+Trade Statistics:
+- Total Trades: 12
+- Win Rate: 41.7%
+- Profit Factor: 1.54
+- Avg Win: 20.65%
+- Avg Loss: -9.60%
+- Avg Holding Period: 12.8 days
+
+RALLY PREDICTION METRICS
+------------------------
+Precision: 11.1%
+Recall: 0.3%
+F1 Score: 0.006
+Avg Return on Signal: 1.5%
+
+MODELS EMPLOYED
+---------------
+Statistical Models:
+- Z-Score Anomaly Detection
+- Modified Z-Score (MAD-based)
+- Bollinger Bands
+- GARCH Volatility Model
+- Mahalanobis Distance
+- Extreme Value Theory (EVT)
+- CUSUM Change Point Detection
+
+Machine Learning Models:
+- Isolation Forest
+- Local Outlier Factor (LOF)
+- One-Class SVM
+- Autoencoder Neural Network
+- DBSCAN Clustering
+- Gaussian Mixture Models
+- Matrix Profile (STUMPY)
+
+Cyclical/Mean Reversion Models:
+- Fourier Transform Analysis
+- Hurst Exponent
+- Ornstein-Uhlenbeck Process
+- Hidden Markov Models
+- Wavelet Analysis
+- Kalman Filter
+
+Sentiment Analysis:
+- Social Media Sentiment
+- News Sentiment
+- Search Interest Trends
+- Put/Call Ratio Analysis
+- VIX Analysis
+
+Technical Indicators:
+- RSI, MACD, Stochastic
+- Bollinger Bands, Keltner Channels
+- ADX, Ichimoku Cloud
+- OBV, MFI, VWAP
+- And 30+ additional indicators
+
+OUTPUTS GENERATED
+-----------------
+Data Files:
+- reports/data/RKLB_raw_data.csv
+- reports/data/RKLB_all_features.csv
+- reports/data/RKLB_signals.csv
+- reports/data/rally_predictions.csv
+- reports/data/equity_curve.csv
+- reports/data/event_study.csv
+
+Charts:
+- reports/charts/price_signals.png
+- reports/charts/anomaly_heatmap.png
+- reports/charts/model_comparison.png
+- reports/charts/backtest_results.png
+- reports/charts/signal_analysis.png
+
+================================================================================
+                              END OF REPORT
+================================================================================

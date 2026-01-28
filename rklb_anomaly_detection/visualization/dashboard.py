@@ -92,11 +92,13 @@ class AnomalyVisualizer:
         # Ensemble score
         ax3 = axes[2]
         if 'ensemble_score' in data.columns:
-            ax3.fill_between(data.index, 0, data['ensemble_score'], 
-                           where=data['ensemble_score'] >= 0,
+            # Convert to numpy array and handle non-numeric values
+            ensemble_score = pd.to_numeric(data['ensemble_score'], errors='coerce').fillna(0).values
+            ax3.fill_between(data.index, 0, ensemble_score, 
+                           where=ensemble_score >= 0,
                            color=self.colors['positive'], alpha=0.5, label='Bullish')
-            ax3.fill_between(data.index, 0, data['ensemble_score'], 
-                           where=data['ensemble_score'] < 0,
+            ax3.fill_between(data.index, 0, ensemble_score, 
+                           where=ensemble_score < 0,
                            color=self.colors['negative'], alpha=0.5, label='Bearish')
             ax3.axhline(y=0.5, color='green', linestyle='--', alpha=0.5, label='Signal Threshold')
             ax3.axhline(y=0.7, color='darkgreen', linestyle='--', alpha=0.5, label='Strong Signal')
@@ -128,10 +130,13 @@ class AnomalyVisualizer:
         # Limit to last 100 days for readability
         recent_data = data[anomaly_cols].tail(100)
         
+        # Convert to numeric and fill NaN
+        recent_data = recent_data.apply(pd.to_numeric, errors='coerce').fillna(0)
+        
         fig, ax = plt.subplots(figsize=(16, 8))
         
         # Create heatmap
-        im = ax.imshow(recent_data.T.values, aspect='auto', cmap='RdYlGn_r',
+        im = ax.imshow(recent_data.T.values.astype(float), aspect='auto', cmap='RdYlGn_r',
                       interpolation='nearest')
         
         # Labels
@@ -175,11 +180,13 @@ class AnomalyVisualizer:
         # Statistical signals
         ax2 = axes[1]
         if 'stat_signal' in data.columns:
-            ax2.fill_between(data.index, 0, data['stat_signal'], alpha=0.7, 
+            stat_signal = pd.to_numeric(data['stat_signal'], errors='coerce').fillna(0).values
+            ax2.fill_between(data.index, 0, stat_signal, alpha=0.7, 
                            color='blue', label='Statistical')
         if 'stat_anomaly_count' in data.columns:
             ax2_twin = ax2.twinx()
-            ax2_twin.plot(data.index, data['stat_anomaly_count'], 
+            stat_count = pd.to_numeric(data['stat_anomaly_count'], errors='coerce').fillna(0).values
+            ax2_twin.plot(data.index, stat_count, 
                          color='darkblue', linestyle='--', alpha=0.5)
             ax2_twin.set_ylabel('Anomaly Count', color='darkblue')
         ax2.set_ylabel('Stat Signal')
@@ -188,7 +195,8 @@ class AnomalyVisualizer:
         # ML signals
         ax3 = axes[2]
         if 'ml_signal' in data.columns:
-            ax3.fill_between(data.index, 0, data['ml_signal'], alpha=0.7, 
+            ml_signal = pd.to_numeric(data['ml_signal'], errors='coerce').fillna(0).values
+            ax3.fill_between(data.index, 0, ml_signal, alpha=0.7, 
                            color='green', label='Machine Learning')
         ax3.set_ylabel('ML Signal')
         ax3.legend(loc='upper left')
@@ -196,10 +204,12 @@ class AnomalyVisualizer:
         # Cyclical/Sentiment signals
         ax4 = axes[3]
         if 'cyclical_signal' in data.columns:
-            ax4.plot(data.index, data['cyclical_signal'], 
+            cyclical_signal = pd.to_numeric(data['cyclical_signal'], errors='coerce').fillna(0).values
+            ax4.plot(data.index, cyclical_signal, 
                     color='purple', label='Cyclical', alpha=0.7)
         if 'sentiment_signal' in data.columns:
-            ax4.plot(data.index, data['sentiment_signal'], 
+            sentiment_signal = pd.to_numeric(data['sentiment_signal'], errors='coerce').fillna(0).values
+            ax4.plot(data.index, sentiment_signal, 
                     color='orange', label='Sentiment', alpha=0.7)
         ax4.set_ylabel('Signal Score')
         ax4.set_xlabel('Date')

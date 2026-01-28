@@ -1,0 +1,48 @@
+2026-01-28 19:13:39.498 | INFO     | __main__:setup_logging:51 - ============================================================
+2026-01-28 19:13:39.498 | INFO     | __main__:setup_logging:52 - RKLB Anomaly Detection System Started
+2026-01-28 19:13:39.498 | INFO     | __main__:setup_logging:53 - ============================================================
+2026-01-28 19:13:39.498 | INFO     | __main__:run_full_analysis:74 - Starting full analysis for RKLB
+2026-01-28 19:13:39.498 | INFO     | __main__:run_full_analysis:75 - Analysis period: 2021-08-25 to present
+2026-01-28 19:13:39.498 | INFO     | __main__:run_full_analysis:85 - 
+==================================================
+2026-01-28 19:13:39.498 | INFO     | __main__:run_full_analysis:86 - STEP 1: Data Collection
+2026-01-28 19:13:39.498 | INFO     | __main__:run_full_analysis:87 - ==================================================
+2026-01-28 19:13:39.499 | INFO     | data.data_collector:create_comprehensive_dataset:379 - Creating comprehensive dataset for RKLB
+2026-01-28 19:13:39.499 | INFO     | data.data_collector:collect_all_data:195 - Collecting all market data
+2026-01-28 19:13:39.499 | INFO     | data.data_collector:fetch_price_data:36 - Fetching price data for RKLB
+2026-01-28 19:13:39.857 | INFO     | data.data_collector:fetch_price_data:67 - Fetched 1110 rows of price data
+2026-01-28 19:13:39.857 | INFO     | data.data_collector:fetch_vix:72 - Fetching VIX data
+2026-01-28 19:13:40.118 | INFO     | data.data_collector:fetch_oil:86 - Fetching oil data
+2026-01-28 19:13:40.237 | INFO     | data.data_collector:fetch_related_assets:99 - Fetching related assets
+2026-01-28 19:13:41.831 | INFO     | data.data_collector:fetch_options_data:128 - Fetching options data
+2026-01-28 19:13:42.267 | INFO     | data.data_collector:collect_all_data:219 - Final dataset: 1110 rows, 34 columns
+2026-01-28 19:13:42.267 | INFO     | data.data_collector:generate_synthetic_sentiment:283 - Generating synthetic sentiment data
+2026-01-28 19:13:42.321 | INFO     | data.data_collector:create_comprehensive_dataset:402 - Comprehensive dataset saved to reports/data/RKLB_raw_data.csv
+2026-01-28 19:13:42.321 | INFO     | data.data_collector:create_comprehensive_dataset:404 - Comprehensive dataset created: (1110, 46)
+2026-01-28 19:13:42.321 | INFO     | __main__:run_full_analysis:97 - Collected 1110 days of data
+2026-01-28 19:13:42.321 | INFO     | __main__:run_full_analysis:98 - Columns: 46
+2026-01-28 19:13:42.321 | INFO     | __main__:run_full_analysis:99 - Date range: 2021-08-25 04:00:00+00:00 to 2026-01-27 05:00:00+00:00
+2026-01-28 19:13:42.321 | INFO     | __main__:run_full_analysis:108 - 
+==================================================
+2026-01-28 19:13:42.321 | INFO     | __main__:run_full_analysis:109 - STEP 2: Ensemble Signal Generation
+2026-01-28 19:13:42.321 | INFO     | __main__:run_full_analysis:110 - ==================================================
+2026-01-28 19:13:42.322 | INFO     | analysis.ensemble_signal_generator:generate_signals:91 - Starting ensemble signal generation...
+2026-01-28 19:13:42.323 | INFO     | analysis.ensemble_signal_generator:generate_signals:97 - Running statistical anomaly detection...
+2026-01-28 19:13:42.323 | INFO     | models.statistical_models:fit_transform:440 - Running statistical anomaly detection ensemble...
+2026-01-28 19:13:43.042 | INFO     | models.statistical_models:fit_transform:481 - Statistical ensemble complete: 46 features generated
+2026-01-28 19:13:43.042 | INFO     | analysis.ensemble_signal_generator:generate_signals:100 - Running machine learning anomaly detection...
+2026-01-28 19:13:43.043 | INFO     | models.ml_models:fit_transform:568 - Running ML anomaly detection with 7 features...
+2026-01-28 19:13:43.370 | WARNING  | models.ml_models:_build_model:264 - TensorFlow not available, using simple autoencoder
+2026-01-28 19:13:43.371 | INFO     | models.ml_models:_fallback_pca:322 - Using PCA reconstruction error as fallback
+2026-01-28 19:13:43.423 | WARNING  | models.ml_models:fit_transform:505 - STUMPY not available, skipping Matrix Profile
+2026-01-28 19:13:43.425 | INFO     | models.ml_models:fit_transform:603 - ML ensemble complete: 24 features generated
+2026-01-28 19:13:43.425 | INFO     | analysis.ensemble_signal_generator:generate_signals:103 - Running cyclical/mean reversion analysis...
+2026-01-28 19:13:43.426 | INFO     | models.cyclical_models:fit_transform:685 - Running cyclical/mean reversion analysis...
+2026-01-28 19:13:52.369 | WARNING  | models.cyclical_models:fit_transform:565 - PyWavelets not available, skipping wavelet analysis
+2026-01-28 19:13:52.375 | INFO     | models.cyclical_models:fit_transform:723 - Cyclical ensemble complete: 44 features generated
+2026-01-28 19:13:52.375 | INFO     | analysis.ensemble_signal_generator:generate_signals:106 - Calculating technical indicators...
+2026-01-28 19:13:52.474 | INFO     | analysis.technical_indicators:calculate_all:73 - Calculated 79 technical indicators
+2026-01-28 19:13:52.475 | INFO     | analysis.ensemble_signal_generator:generate_signals:109 - Running sentiment analysis...
+2026-01-28 19:13:52.481 | ERROR    | __main__:run_full_analysis:148 - Signal generation failed: columns overlap but no suffix specified: Index(['news_sentiment', 'news_count', 'search_interest',
+       'search_interest_zscore'],
+      dtype='str')

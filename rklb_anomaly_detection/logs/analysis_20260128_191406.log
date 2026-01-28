@@ -1,0 +1,274 @@
+2026-01-28 19:14:06.912 | INFO     | __main__:setup_logging:51 - ============================================================
+2026-01-28 19:14:06.912 | INFO     | __main__:setup_logging:52 - RKLB Anomaly Detection System Started
+2026-01-28 19:14:06.912 | INFO     | __main__:setup_logging:53 - ============================================================
+2026-01-28 19:14:06.912 | INFO     | __main__:run_full_analysis:74 - Starting full analysis for RKLB
+2026-01-28 19:14:06.912 | INFO     | __main__:run_full_analysis:75 - Analysis period: 2021-08-25 to present
+2026-01-28 19:14:06.912 | INFO     | __main__:run_full_analysis:85 - 
+==================================================
+2026-01-28 19:14:06.912 | INFO     | __main__:run_full_analysis:86 - STEP 1: Data Collection
+2026-01-28 19:14:06.912 | INFO     | __main__:run_full_analysis:87 - ==================================================
+2026-01-28 19:14:06.912 | INFO     | data.data_collector:create_comprehensive_dataset:379 - Creating comprehensive dataset for RKLB
+2026-01-28 19:14:06.912 | INFO     | data.data_collector:collect_all_data:195 - Collecting all market data
+2026-01-28 19:14:06.912 | INFO     | data.data_collector:fetch_price_data:36 - Fetching price data for RKLB
+2026-01-28 19:14:07.198 | INFO     | data.data_collector:fetch_price_data:67 - Fetched 1110 rows of price data
+2026-01-28 19:14:07.198 | INFO     | data.data_collector:fetch_vix:72 - Fetching VIX data
+2026-01-28 19:14:07.262 | INFO     | data.data_collector:fetch_oil:86 - Fetching oil data
+2026-01-28 19:14:07.430 | INFO     | data.data_collector:fetch_related_assets:99 - Fetching related assets
+2026-01-28 19:14:08.276 | INFO     | data.data_collector:fetch_options_data:128 - Fetching options data
+2026-01-28 19:14:08.724 | INFO     | data.data_collector:collect_all_data:219 - Final dataset: 1110 rows, 34 columns
+2026-01-28 19:14:08.724 | INFO     | data.data_collector:generate_synthetic_sentiment:283 - Generating synthetic sentiment data
+2026-01-28 19:14:08.777 | INFO     | data.data_collector:create_comprehensive_dataset:402 - Comprehensive dataset saved to reports/data/RKLB_raw_data.csv
+2026-01-28 19:14:08.777 | INFO     | data.data_collector:create_comprehensive_dataset:404 - Comprehensive dataset created: (1110, 46)
+2026-01-28 19:14:08.777 | INFO     | __main__:run_full_analysis:97 - Collected 1110 days of data
+2026-01-28 19:14:08.777 | INFO     | __main__:run_full_analysis:98 - Columns: 46
+2026-01-28 19:14:08.777 | INFO     | __main__:run_full_analysis:99 - Date range: 2021-08-25 04:00:00+00:00 to 2026-01-27 05:00:00+00:00
+2026-01-28 19:14:08.777 | INFO     | __main__:run_full_analysis:108 - 
+==================================================
+2026-01-28 19:14:08.777 | INFO     | __main__:run_full_analysis:109 - STEP 2: Ensemble Signal Generation
+2026-01-28 19:14:08.777 | INFO     | __main__:run_full_analysis:110 - ==================================================
+2026-01-28 19:14:08.778 | INFO     | analysis.ensemble_signal_generator:generate_signals:91 - Starting ensemble signal generation...
+2026-01-28 19:14:08.779 | INFO     | analysis.ensemble_signal_generator:generate_signals:97 - Running statistical anomaly detection...
+2026-01-28 19:14:08.779 | INFO     | models.statistical_models:fit_transform:440 - Running statistical anomaly detection ensemble...
+2026-01-28 19:14:09.483 | INFO     | models.statistical_models:fit_transform:481 - Statistical ensemble complete: 46 features generated
+2026-01-28 19:14:09.484 | INFO     | analysis.ensemble_signal_generator:generate_signals:100 - Running machine learning anomaly detection...
+2026-01-28 19:14:09.484 | INFO     | models.ml_models:fit_transform:568 - Running ML anomaly detection with 7 features...
+2026-01-28 19:14:09.805 | WARNING  | models.ml_models:_build_model:264 - TensorFlow not available, using simple autoencoder
+2026-01-28 19:14:09.805 | INFO     | models.ml_models:_fallback_pca:322 - Using PCA reconstruction error as fallback
+2026-01-28 19:14:09.852 | WARNING  | models.ml_models:fit_transform:505 - STUMPY not available, skipping Matrix Profile
+2026-01-28 19:14:09.855 | INFO     | models.ml_models:fit_transform:603 - ML ensemble complete: 24 features generated
+2026-01-28 19:14:09.855 | INFO     | analysis.ensemble_signal_generator:generate_signals:103 - Running cyclical/mean reversion analysis...
+2026-01-28 19:14:09.856 | INFO     | models.cyclical_models:fit_transform:685 - Running cyclical/mean reversion analysis...
+2026-01-28 19:14:18.824 | WARNING  | models.cyclical_models:fit_transform:565 - PyWavelets not available, skipping wavelet analysis
+2026-01-28 19:14:18.831 | INFO     | models.cyclical_models:fit_transform:723 - Cyclical ensemble complete: 44 features generated
+2026-01-28 19:14:18.831 | INFO     | analysis.ensemble_signal_generator:generate_signals:106 - Calculating technical indicators...
+2026-01-28 19:14:18.956 | INFO     | analysis.technical_indicators:calculate_all:73 - Calculated 79 technical indicators
+2026-01-28 19:14:18.957 | INFO     | analysis.ensemble_signal_generator:generate_signals:109 - Running sentiment analysis...
+2026-01-28 19:14:18.976 | INFO     | analysis.sentiment_analyzer:_calculate_composite_sentiment:306 - Sentiment analysis complete: 18 sentiment features
+2026-01-28 19:14:18.993 | INFO     | analysis.ensemble_signal_generator:generate_signals:130 - Signal generation complete. Total features: 283
+2026-01-28 19:14:18.995 | INFO     | __main__:run_full_analysis:137 - 
+--- Signal Summary ---
+2026-01-28 19:14:18.995 | INFO     | __main__:run_full_analysis:138 - Total signals generated: 12
+2026-01-28 19:14:18.995 | INFO     | __main__:run_full_analysis:139 - Strong signals: 5
+2026-01-28 19:14:18.995 | INFO     | __main__:run_full_analysis:140 - Regular signals: 7
+2026-01-28 19:14:18.995 | INFO     | __main__:run_full_analysis:141 - Signal rate: 1.08%
+2026-01-28 19:14:19.202 | INFO     | __main__:run_full_analysis:156 - 
+==================================================
+2026-01-28 19:14:19.202 | INFO     | __main__:run_full_analysis:157 - STEP 3: Backtesting
+2026-01-28 19:14:19.202 | INFO     | __main__:run_full_analysis:158 - ==================================================
+2026-01-28 19:14:19.202 | INFO     | backtest.backtester:backtest:122 - Running backtest for 'RKLB_ensemble'...
+2026-01-28 19:14:19.211 | INFO     | __main__:run_full_analysis:182 - 
+============================================================
+           BACKTEST RESULTS REPORT
+============================================================
+
+--- RETURN METRICS ---
+Total Return:        5.25%
+Annualized Return:   1.17%
+Benchmark Return:    734.13%
+Excess Return:       -728.88%
+
+--- RISK METRICS ---
+Volatility (Ann.):   3.95%
+Sharpe Ratio:        0.296
+Sortino Ratio:       0.190
+Calmar Ratio:        0.200
+Max Drawdown:        -5.85%
+Max DD Duration:     378 days
+
+--- TRADE STATISTICS ---
+Total Trades:        12
+Winning Trades:      5
+Losing Trades:       7
+Win Rate:            41.7%
+Avg Win:             20.65%
+Avg Loss:            -9.60%
+Profit Factor:       1.54
+Avg Holding Period:  12.8 days
+
+--- ADVANCED METRICS ---
+VaR (95%):           -0.01%
+CVaR (95%):          -0.46%
+Omega Ratio:         1.20
+Tail Ratio:          0.00
+============================================================
+2026-01-28 19:14:19.216 | INFO     | __main__:run_full_analysis:198 - 
+==================================================
+2026-01-28 19:14:19.216 | INFO     | __main__:run_full_analysis:199 - STEP 4: Rally Prediction Analysis
+2026-01-28 19:14:19.216 | INFO     | __main__:run_full_analysis:200 - ==================================================
+2026-01-28 19:14:19.216 | INFO     | analysis.ensemble_signal_generator:generate_signals:91 - Starting ensemble signal generation...
+2026-01-28 19:14:19.217 | INFO     | analysis.ensemble_signal_generator:generate_signals:97 - Running statistical anomaly detection...
+2026-01-28 19:14:19.217 | INFO     | models.statistical_models:fit_transform:440 - Running statistical anomaly detection ensemble...
+2026-01-28 19:14:19.945 | INFO     | models.statistical_models:fit_transform:481 - Statistical ensemble complete: 46 features generated
+2026-01-28 19:14:19.945 | INFO     | analysis.ensemble_signal_generator:generate_signals:100 - Running machine learning anomaly detection...
+2026-01-28 19:14:19.946 | INFO     | models.ml_models:fit_transform:568 - Running ML anomaly detection with 7 features...
+2026-01-28 19:14:20.283 | WARNING  | models.ml_models:_build_model:264 - TensorFlow not available, using simple autoencoder
+2026-01-28 19:14:20.283 | INFO     | models.ml_models:_fallback_pca:322 - Using PCA reconstruction error as fallback
+2026-01-28 19:14:20.319 | WARNING  | models.ml_models:fit_transform:505 - STUMPY not available, skipping Matrix Profile
+2026-01-28 19:14:20.321 | INFO     | models.ml_models:fit_transform:603 - ML ensemble complete: 24 features generated
+2026-01-28 19:14:20.322 | INFO     | analysis.ensemble_signal_generator:generate_signals:103 - Running cyclical/mean reversion analysis...
+2026-01-28 19:14:20.322 | INFO     | models.cyclical_models:fit_transform:685 - Running cyclical/mean reversion analysis...
+2026-01-28 19:14:29.668 | WARNING  | models.cyclical_models:fit_transform:565 - PyWavelets not available, skipping wavelet analysis
+2026-01-28 19:14:29.677 | INFO     | models.cyclical_models:fit_transform:723 - Cyclical ensemble complete: 44 features generated
+2026-01-28 19:14:29.677 | INFO     | analysis.ensemble_signal_generator:generate_signals:106 - Calculating technical indicators...
+2026-01-28 19:14:29.776 | INFO     | analysis.technical_indicators:calculate_all:73 - Calculated 79 technical indicators
+2026-01-28 19:14:29.776 | INFO     | analysis.ensemble_signal_generator:generate_signals:109 - Running sentiment analysis...
+2026-01-28 19:14:29.795 | INFO     | analysis.sentiment_analyzer:_calculate_composite_sentiment:306 - Sentiment analysis complete: 18 sentiment features
+2026-01-28 19:14:29.811 | INFO     | analysis.ensemble_signal_generator:generate_signals:130 - Signal generation complete. Total features: 283
+2026-01-28 19:14:29.816 | INFO     | __main__:run_full_analysis:212 - 
+--- Rally Prediction Metrics ---
+2026-01-28 19:14:29.816 | INFO     | __main__:run_full_analysis:213 - Total signals: 9
+2026-01-28 19:14:29.816 | INFO     | __main__:run_full_analysis:214 - Actual rallies in data: 340
+2026-01-28 19:14:29.816 | INFO     | __main__:run_full_analysis:215 - True positives: 1
+2026-01-28 19:14:29.816 | INFO     | __main__:run_full_analysis:216 - False positives: 8
+2026-01-28 19:14:29.816 | INFO     | __main__:run_full_analysis:217 - Precision: 11.1%
+2026-01-28 19:14:29.816 | INFO     | __main__:run_full_analysis:218 - Recall: 0.3%
+2026-01-28 19:14:29.816 | INFO     | __main__:run_full_analysis:219 - F1 Score: 0.006
+2026-01-28 19:14:29.816 | INFO     | __main__:run_full_analysis:220 - Avg return when signal fires: 1.5%
+2026-01-28 19:14:29.823 | INFO     | __main__:run_full_analysis:233 - 
+==================================================
+2026-01-28 19:14:29.823 | INFO     | __main__:run_full_analysis:234 - STEP 5: Monte Carlo Simulation
+2026-01-28 19:14:29.823 | INFO     | __main__:run_full_analysis:235 - ==================================================
+2026-01-28 19:14:29.823 | INFO     | backtest.backtester:simulate:505 - Running 1000 Monte Carlo simulations...
+2026-01-28 19:14:29.834 | INFO     | __main__:run_full_analysis:242 - 
+--- Monte Carlo Results ---
+2026-01-28 19:14:29.834 | INFO     | __main__:run_full_analysis:243 - Mean Return: 41.0%
+2026-01-28 19:14:29.834 | INFO     | __main__:run_full_analysis:244 - Median Return: 23.1%
+2026-01-28 19:14:29.834 | INFO     | __main__:run_full_analysis:245 - 5th Percentile: -44.2%
+2026-01-28 19:14:29.834 | INFO     | __main__:run_full_analysis:246 - 95th Percentile: 195.7%
+2026-01-28 19:14:29.834 | INFO     | __main__:run_full_analysis:247 - Probability of Positive Return: 64.5%
+2026-01-28 19:14:29.834 | INFO     | __main__:run_full_analysis:248 - Mean Max Drawdown: -31.8%
+2026-01-28 19:14:29.834 | INFO     | __main__:run_full_analysis:249 - Worst Case Drawdown: -70.0%
+2026-01-28 19:14:29.834 | INFO     | __main__:run_full_analysis:256 - 
+==================================================
+2026-01-28 19:14:29.834 | INFO     | __main__:run_full_analysis:257 - STEP 6: Event Study Analysis
+2026-01-28 19:14:29.834 | INFO     | __main__:run_full_analysis:258 - ==================================================
+2026-01-28 19:14:29.836 | INFO     | __main__:run_full_analysis:265 - 
+--- Event Study Results (Average Returns Around Signals) ---
+2026-01-28 19:14:29.836 | INFO     | __main__:run_full_analysis:266 - Pre-signal 5-day return: 5.06%
+2026-01-28 19:14:29.836 | INFO     | __main__:run_full_analysis:267 - Signal day return: 8.20%
+2026-01-28 19:14:29.837 | INFO     | __main__:run_full_analysis:268 - Post-signal 5-day return: 18.19%
+2026-01-28 19:14:29.837 | INFO     | __main__:run_full_analysis:269 - Post-signal 10-day return: 22.70%
+2026-01-28 19:14:29.837 | INFO     | __main__:run_full_analysis:270 - Post-signal 20-day return: 22.27%
+2026-01-28 19:14:29.837 | INFO     | __main__:run_full_analysis:280 - 
+==================================================
+2026-01-28 19:14:29.837 | INFO     | __main__:run_full_analysis:281 - STEP 7: Generating Visualizations
+2026-01-28 19:14:29.837 | INFO     | __main__:run_full_analysis:282 - ==================================================
+2026-01-28 19:14:30.349 | ERROR    | __main__:run_full_analysis:333 - Visualization failed: ufunc 'isfinite' not supported for the input types, and the inputs could not be safely coerced to any supported types according to the casting rule ''safe''
+2026-01-28 19:14:30.352 | INFO     | __main__:run_full_analysis:340 - 
+==================================================
+2026-01-28 19:14:30.352 | INFO     | __main__:run_full_analysis:341 - STEP 8: Generating Final Report
+2026-01-28 19:14:30.352 | INFO     | __main__:run_full_analysis:342 - ==================================================
+2026-01-28 19:14:30.353 | INFO     | __main__:run_full_analysis:466 - 
+================================================================================
+                    RKLB ANOMALY DETECTION ANALYSIS REPORT
+                    Generated: 2026-01-28 19:14:30
+================================================================================
+
+EXECUTIVE SUMMARY
+-----------------
+Ticker: RKLB
+Analysis Period: 2021-08-25 to 2026-01-27
+Total Trading Days: 1110
+
+SIGNAL GENERATION
+-----------------
+Total Features Generated: 283
+Total Buy Signals: 12
+Strong Signals (score > 0.65): 5
+Regular Signals (score 0.45-0.65): 7
+Signal Frequency: 1.08% of trading days
+
+BACKTEST PERFORMANCE
+--------------------
+Total Return: 5.25%
+Annualized Return: 1.17%
+Benchmark Return (Buy & Hold): 734.13%
+Excess Return: -728.88%
+
+Risk Metrics:
+- Sharpe Ratio: 0.296
+- Sortino Ratio: 0.190
+- Max Drawdown: -5.85%
+- Volatility: 3.95%
+
+Trade Statistics:
+- Total Trades: 12
+- Win Rate: 41.7%
+- Profit Factor: 1.54
+- Avg Win: 20.65%
+- Avg Loss: -9.60%
+- Avg Holding Period: 12.8 days
+
+RALLY PREDICTION METRICS
+------------------------
+Precision: 11.1%
+Recall: 0.3%
+F1 Score: 0.006
+Avg Return on Signal: 1.5%
+
+MODELS EMPLOYED
+---------------
+Statistical Models:
+- Z-Score Anomaly Detection
+- Modified Z-Score (MAD-based)
+- Bollinger Bands
+- GARCH Volatility Model
+- Mahalanobis Distance
+- Extreme Value Theory (EVT)
+- CUSUM Change Point Detection
+
+Machine Learning Models:
+- Isolation Forest
+- Local Outlier Factor (LOF)
+- One-Class SVM
+- Autoencoder Neural Network
+- DBSCAN Clustering
+- Gaussian Mixture Models
+- Matrix Profile (STUMPY)
+
+Cyclical/Mean Reversion Models:
+- Fourier Transform Analysis
+- Hurst Exponent
+- Ornstein-Uhlenbeck Process
+- Hidden Markov Models
+- Wavelet Analysis
+- Kalman Filter
+
+Sentiment Analysis:
+- Social Media Sentiment
+- News Sentiment
+- Search Interest Trends
+- Put/Call Ratio Analysis
+- VIX Analysis
+
+Technical Indicators:
+- RSI, MACD, Stochastic
+- Bollinger Bands, Keltner Channels
+- ADX, Ichimoku Cloud
+- OBV, MFI, VWAP
+- And 30+ additional indicators
+
+OUTPUTS GENERATED
+-----------------
+Data Files:
+- reports/data/RKLB_raw_data.csv
+- reports/data/RKLB_all_features.csv
+- reports/data/RKLB_signals.csv
+- reports/data/rally_predictions.csv
+- reports/data/equity_curve.csv
+- reports/data/event_study.csv
+
+Charts:
+- reports/charts/price_signals.png
+- reports/charts/anomaly_heatmap.png
+- reports/charts/model_comparison.png
+- reports/charts/backtest_results.png
+- reports/charts/signal_analysis.png
+
+================================================================================
+                              END OF REPORT
+================================================================================
+
+2026-01-28 19:14:30.353 | INFO     | __main__:run_full_analysis:467 - 
+All outputs saved to: reports/
+2026-01-28 19:14:30.353 | INFO     | __main__:run_full_analysis:468 - Analysis complete!

@@ -1,0 +1,34 @@
+============================================================
+           BACKTEST RESULTS REPORT
+============================================================
+
+--- RETURN METRICS ---
+Total Return:        5.25%
+Annualized Return:   1.17%
+Benchmark Return:    734.13%
+Excess Return:       -728.88%
+
+--- RISK METRICS ---
+Volatility (Ann.):   3.95%
+Sharpe Ratio:        0.296
+Sortino Ratio:       0.190
+Calmar Ratio:        0.200
+Max Drawdown:        -5.85%
+Max DD Duration:     378 days
+
+--- TRADE STATISTICS ---
+Total Trades:        12
+Winning Trades:      5
+Losing Trades:       7
+Win Rate:            41.7%
+Avg Win:             20.65%
+Avg Loss:            -9.60%
+Profit Factor:       1.54
+Avg Holding Period:  12.8 days
+
+--- ADVANCED METRICS ---
+VaR (95%):           -0.01%
+CVaR (95%):          -0.46%
+Omega Ratio:         1.20
+Tail Ratio:          0.00
+============================================================
