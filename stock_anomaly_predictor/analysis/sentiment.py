@@ -458,11 +458,25 @@ class SentimentAnalyzer:
         Returns:
             DataFrame with sentiment indicators
         """
-        signals = pd.DataFrame(index=price_df.index)
+        # Create signals DataFrame with timezone-naive index
+        price_index = price_df.index
+        if hasattr(price_index, 'tz') and price_index.tz is not None:
+            price_index = price_index.tz_localize(None)
+        signals = pd.DataFrame(index=price_index)
+        
+        # Helper function to make index timezone-naive
+        def make_tz_naive(df):
+            if df.empty:
+                return df
+            df = df.copy()
+            df.index = pd.to_datetime(df.index)
+            if hasattr(df.index, 'tz') and df.index.tz is not None:
+                df.index = df.index.tz_localize(None)
+            return df
         
         # Twitter sentiment
         if not twitter_df.empty:
-            twitter_df.index = pd.to_datetime(twitter_df.index)
+            twitter_df = make_tz_naive(twitter_df)
             signals = signals.join(
                 twitter_df[['ensemble']].rename(columns={'ensemble': 'twitter_sentiment'}),
                 how='left'
@@ -475,7 +489,7 @@ class SentimentAnalyzer:
         
         # News sentiment
         if not news_df.empty:
-            news_df.index = pd.to_datetime(news_df.index)
+            news_df = make_tz_naive(news_df)
             signals = signals.join(
                 news_df[['ensemble']].rename(columns={'ensemble': 'news_sentiment'}),
                 how='left'
@@ -488,7 +502,7 @@ class SentimentAnalyzer:
         
         # Google Trends
         if not trends_df.empty:
-            trends_df.index = pd.to_datetime(trends_df.index)
+            trends_df = make_tz_naive(trends_df)
             for col in ['trends_aggregate', 'trends_zscore']:
                 if col in trends_df.columns:
                     signals = signals.join(trends_df[[col]], how='left')

@@ -214,12 +214,27 @@ class CyclicalAnalyzer:
         # Detrend
         detrended = signal.detrend(series.values)
         
-        # Continuous wavelet transform using scipy
-        from scipy.signal import cwt, morlet2
-        
-        # Use morlet wavelet
-        widths = scales
-        cwtmatr = cwt(detrended, morlet2, widths)
+        try:
+            # Try using scipy cwt (older versions)
+            from scipy.signal import cwt, morlet2
+            widths = scales
+            cwtmatr = cwt(detrended, morlet2, widths)
+        except ImportError:
+            # Fallback: manual wavelet transform using convolution
+            # Use a simple Morlet-like wavelet approximation
+            def morlet_wavelet(M, w=5.0):
+                x = np.linspace(-4, 4, M)
+                return np.exp(1j * w * x) * np.exp(-x**2 / 2) / np.sqrt(np.pi)
+            
+            cwtmatr = np.zeros((len(scales), len(detrended)), dtype=complex)
+            for i, scale in enumerate(scales):
+                wavelet_len = min(int(scale * 10), len(detrended))
+                if wavelet_len < 4:
+                    wavelet_len = 4
+                wavelet_data = morlet_wavelet(wavelet_len, w=5.0/scale)
+                # Convolve
+                conv = np.convolve(detrended, wavelet_data, mode='same')
+                cwtmatr[i, :] = conv
         
         # Power spectrum
         power = np.abs(cwtmatr) ** 2
@@ -593,7 +608,7 @@ class CyclicalAnalyzer:
             # Prepare features
             features = np.column_stack([
                 returns.values.reshape(-1, 1),
-                self.df['volatility_10'].loc[returns.index].fillna(method='bfill').values.reshape(-1, 1)
+                self.df['volatility_10'].loc[returns.index].bfill().values.reshape(-1, 1)
                 if 'volatility_10' in self.df.columns else np.zeros((len(returns), 1))
             ])
             
@@ -737,20 +752,26 @@ class CyclicalAnalyzer:
                 if len(prev_lows) > 0:
                     if close.iloc[i] < prev_lows.iloc[-1]:  # Lower price low
                         # Check if RSI made higher low
-                        prev_rsi = rsi.iloc[prev_lows.index[-1]]
-                        curr_rsi = rsi.iloc[i]
-                        if curr_rsi > prev_rsi:
-                            bullish_div.iloc[i] = True
+                        try:
+                            prev_rsi = rsi.loc[prev_lows.index[-1]]
+                            curr_rsi = rsi.iloc[i]
+                            if curr_rsi > prev_rsi:
+                                bullish_div.iloc[i] = True
+                        except:
+                            pass
             
             # Look for bearish divergence
             if price_max.iloc[i]:
                 prev_highs = close.iloc[i-lookback*4:i-lookback][price_max.iloc[i-lookback*4:i-lookback]]
                 if len(prev_highs) > 0:
                     if close.iloc[i] > prev_highs.iloc[-1]:  # Higher price high
-                        prev_rsi = rsi.iloc[prev_highs.index[-1]]
-                        curr_rsi = rsi.iloc[i]
-                        if curr_rsi < prev_rsi:
-                            bearish_div.iloc[i] = True
+                        try:
+                            prev_rsi = rsi.loc[prev_highs.index[-1]]
+                            curr_rsi = rsi.iloc[i]
+                            if curr_rsi < prev_rsi:
+                                bearish_div.iloc[i] = True
+                        except:
+                            pass
         
         self.signals['rsi'] = rsi
         self.signals['rsi_bullish_div'] = bullish_div

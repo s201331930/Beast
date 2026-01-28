@@ -91,7 +91,7 @@ class MLAnomalyDetector:
         self.X = self.df[self.feature_columns].copy()
         
         # Handle missing values
-        self.X = self.X.fillna(method='ffill').fillna(method='bfill').fillna(0)
+        self.X = self.X.ffill().bfill().fillna(0)
         
         # Replace infinities
         self.X = self.X.replace([np.inf, -np.inf], 0)

@@ -384,18 +384,22 @@ class DataCollector:
             sp500_returns = market_data["^GSPC"]['returns'].rename('sp500_returns')
             primary_df = primary_df.join(sp500_returns, how='left')
             
-            # Rolling beta
-            def calc_beta(df_window):
-                if len(df_window) < 20:
-                    return np.nan
-                cov = df_window['returns'].cov(df_window['sp500_returns'])
-                var = df_window['sp500_returns'].var()
-                return cov / var if var > 0 else np.nan
-            
-            primary_df['market_beta'] = primary_df[['returns', 'sp500_returns']].rolling(window=60).apply(
-                lambda x: calc_beta(pd.DataFrame({'returns': x[:len(x)//2], 'sp500_returns': x[len(x)//2:]})),
-                raw=False
-            )
+            # Rolling beta calculation
+            betas = []
+            for i in range(len(primary_df)):
+                if i < 60:
+                    betas.append(np.nan)
+                else:
+                    stock_ret = primary_df['returns'].iloc[i-60:i]
+                    market_ret = primary_df['sp500_returns'].iloc[i-60:i]
+                    valid = ~(stock_ret.isna() | market_ret.isna())
+                    if valid.sum() >= 30:
+                        cov = stock_ret[valid].cov(market_ret[valid])
+                        var = market_ret[valid].var()
+                        betas.append(cov / var if var > 0 else np.nan)
+                    else:
+                        betas.append(np.nan)
+            primary_df['market_beta'] = betas
         
         # Calculate relative strength vs peers
         peer_returns = []
