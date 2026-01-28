@@ -1,0 +1,9 @@
+numpy
+pandas
+yfinance
+scikit-learn
+matplotlib
+seaborn
+scipy
+ta
+statsmodels
