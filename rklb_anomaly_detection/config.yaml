@@ -1,0 +1,124 @@
+# RKLB Anomaly Detection Configuration
+
+ticker: "RKLB"
+start_date: "2021-08-25"  # RKLB IPO date
+end_date: null  # null means today
+
+# Data Sources
+data_sources:
+  price_volume: true
+  options: true
+  vix: true
+  oil: true
+  sentiment:
+    twitter: true
+    google_trends: true
+    news: true
+
+# Anomaly Detection Models
+anomaly_models:
+  statistical:
+    zscore:
+      enabled: true
+      window: 20
+      threshold: 2.5
+    bollinger:
+      enabled: true
+      window: 20
+      std_dev: 2.0
+    garch:
+      enabled: true
+      p: 1
+      q: 1
+    mahalanobis:
+      enabled: true
+      window: 30
+  
+  machine_learning:
+    isolation_forest:
+      enabled: true
+      contamination: 0.05
+      n_estimators: 200
+    local_outlier_factor:
+      enabled: true
+      n_neighbors: 20
+      contamination: 0.05
+    one_class_svm:
+      enabled: true
+      kernel: "rbf"
+      nu: 0.05
+    autoencoder:
+      enabled: true
+      encoding_dim: 8
+      epochs: 100
+    dbscan:
+      enabled: true
+      eps: 0.5
+      min_samples: 5
+
+# Cyclical/Mean Reversion Models
+cyclical_models:
+  fourier:
+    enabled: true
+    n_harmonics: 5
+  hurst:
+    enabled: true
+    min_window: 20
+    max_window: 200
+  ornstein_uhlenbeck:
+    enabled: true
+    window: 60
+  hmm:
+    enabled: true
+    n_states: 3
+    n_iter: 100
+
+# Technical Indicators
+technical_indicators:
+  rsi:
+    window: 14
+    overbought: 70
+    oversold: 30
+  macd:
+    fast: 12
+    slow: 26
+    signal: 9
+  obv: true
+  atr:
+    window: 14
+  vwap: true
+  money_flow:
+    window: 14
+
+# Options Analysis
+options_analysis:
+  put_call_ratio: true
+  unusual_volume_threshold: 2.0
+  open_interest_change: true
+
+# Sentiment Thresholds
+sentiment:
+  twitter_mentions_threshold: 2.0  # std devs above mean
+  google_trends_threshold: 50
+  news_sentiment_threshold: 0.3
+
+# Backtesting Parameters
+backtest:
+  initial_capital: 100000
+  position_size: 0.1  # 10% of portfolio
+  stop_loss: 0.05  # 5%
+  take_profit: 0.20  # 20%
+  commission: 0.001  # 0.1%
+  slippage: 0.001
+
+# Signal Generation
+signal:
+  min_models_agreement: 3  # minimum number of models agreeing
+  lookback_window: 5
+  confidence_threshold: 0.7
+
+# Output
+output:
+  save_plots: true
+  save_reports: true
+  report_format: "html"
