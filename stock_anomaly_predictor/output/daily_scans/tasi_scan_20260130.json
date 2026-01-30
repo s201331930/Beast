@@ -1,0 +1,1240 @@
+{
+  "scan_time": "2026-01-30T18:13:01.570933+03:00",
+  "stocks_scanned": 168,
+  "stocks_qualified": 84,
+  "signals_generated": 17,
+  "screening_results": [
+    {
+      "ticker": "2222.SR",
+      "name": "Saudi Arabian Oil Co.",
+      "score": 59.712825640093875,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "2030.SR",
+      "name": "Saudi Arabia Refineries Co.",
+      "score": 48.95404020691154,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "2310.SR",
+      "name": "Sahara International Petrochemi",
+      "score": 48.2590355560134,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "2330.SR",
+      "name": "Advanced Petrochemical Co.",
+      "score": 42.501373525662466,
+      "recommendation": "POOR"
+    },
+    {
+      "ticker": "2380.SR",
+      "name": "Rabigh Refining and Petrochemic",
+      "score": 59.8100441460277,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "2060.SR",
+      "name": "National Industrialization Co.",
+      "score": 51.19455098889125,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "4030.SR",
+      "name": "National Shipping Company of Sa",
+      "score": 59.717480759153496,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "2210.SR",
+      "name": "Nama Chemicals Co.",
+      "score": 43.26812370890661,
+      "recommendation": "POOR"
+    },
+    {
+      "ticker": "2170.SR",
+      "name": "Alujain Corp.",
+      "score": 45.44126700794827,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "1180.SR",
+      "name": "The Saudi National Bank",
+      "score": 68.0234467017017,
+      "recommendation": "GOOD"
+    },
+    {
+      "ticker": "1010.SR",
+      "name": "Riyad Bank",
+      "score": 60.79867007991099,
+      "recommendation": "GOOD"
+    },
+    {
+      "ticker": "1050.SR",
+      "name": "Banque Saudi Fransi",
+      "score": 55.40923236322969,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "1060.SR",
+      "name": "Saudi Awwal Bank",
+      "score": 62.659757789780265,
+      "recommendation": "GOOD"
+    },
+    {
+      "ticker": "1080.SR",
+      "name": "Arab National Bank",
+      "score": 54.1975324438265,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "1120.SR",
+      "name": "Al Rajhi Bank",
+      "score": 61.13042179328387,
+      "recommendation": "GOOD"
+    },
+    {
+      "ticker": "1140.SR",
+      "name": "Bank Albilad",
+      "score": 58.16114035773218,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "1150.SR",
+      "name": "Alinma Bank",
+      "score": 61.59793764936179,
+      "recommendation": "GOOD"
+    },
+    {
+      "ticker": "1020.SR",
+      "name": "Bank Aljazira",
+      "score": 59.28558493734473,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "1030.SR",
+      "name": "Saudi Investment Bank",
+      "score": 55.21380484704796,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "8010.SR",
+      "name": "The Company for Cooperative Ins",
+      "score": 64.15246421103592,
+      "recommendation": "GOOD"
+    },
+    {
+      "ticker": "8020.SR",
+      "name": "Malath Cooperative Insurance Co",
+      "score": 52.57961911183721,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "8030.SR",
+      "name": "The Mediterranean and Gulf Insu",
+      "score": 57.48522270046627,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "8040.SR",
+      "name": "Mutakamela Insurance Co.",
+      "score": 45.04092438989085,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "8050.SR",
+      "name": "Salama Cooperative Insurance Co",
+      "score": 52.94061717060009,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "8060.SR",
+      "name": "Walaa Cooperative Insurance Co.",
+      "score": 52.90185334869095,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "8070.SR",
+      "name": "Arabian Shield Cooperative Insu",
+      "score": 52.115046039009805,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "8100.SR",
+      "name": "Saudi Arabian Cooperative Insur",
+      "score": 50.75628705776448,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "8120.SR",
+      "name": "Gulf Union Alahlia Cooperative ",
+      "score": 52.047453077323,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "8150.SR",
+      "name": "Allied Cooperative Insurance Gr",
+      "score": 45.66680067797725,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "8160.SR",
+      "name": "Arabia Insurance Cooperative Co",
+      "score": 44.82040212126026,
+      "recommendation": "POOR"
+    },
+    {
+      "ticker": "8170.SR",
+      "name": "Al-Etihad Cooperative Insurance",
+      "score": 47.637395403374896,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "8180.SR",
+      "name": "Al Sagr Cooperative Insurance C",
+      "score": 52.47438706272049,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "8190.SR",
+      "name": "United Cooperative Assurance Co",
+      "score": 54.44437831399284,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "8200.SR",
+      "name": "Saudi Reinsurance Co.",
+      "score": 48.32835813610932,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "8210.SR",
+      "name": "Bupa Arabia for Cooperative Ins",
+      "score": 64.97038432151385,
+      "recommendation": "GOOD"
+    },
+    {
+      "ticker": "8230.SR",
+      "name": "Al-Rajhi Company for Cooperativ",
+      "score": 54.61640090250553,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "8240.SR",
+      "name": "CHUBB Arabia Cooperative Insura",
+      "score": 55.82381813969692,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "8250.SR",
+      "name": "Gulf Insurance Group",
+      "score": 47.83748995497694,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "8260.SR",
+      "name": "Gulf General Cooperative Insura",
+      "score": 47.62993827182175,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "8280.SR",
+      "name": "LIVA Insurance Co.",
+      "score": 54.3034016962418,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "8300.SR",
+      "name": "Wataniya Insurance Co.",
+      "score": 51.36065058051864,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "8310.SR",
+      "name": "Amana Cooperative Insurance Co.",
+      "score": 52.20503718248387,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "8311.SR",
+      "name": "Saudi Enaya Cooperative Insuran",
+      "score": 52.336431032511705,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "2010.SR",
+      "name": "Saudi Basic Industries Corp.",
+      "score": 54.45820806611466,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "2020.SR",
+      "name": "SABIC Agri-Nutrients Co.",
+      "score": 59.285094339067285,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "2250.SR",
+      "name": "Saudi Industrial Investment Gro",
+      "score": 51.794051456255886,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "2290.SR",
+      "name": "Yanbu National Petrochemical Co",
+      "score": 42.170047408786616,
+      "recommendation": "POOR"
+    },
+    {
+      "ticker": "2300.SR",
+      "name": "Saudi Paper Manufacturing Co.",
+      "score": 51.04509330646584,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "3010.SR",
+      "name": "Arabian Cement Co.",
+      "score": 41.16559294430993,
+      "recommendation": "POOR"
+    },
+    {
+      "ticker": "3020.SR",
+      "name": "Yamama Cement Co.",
+      "score": 53.94899630826734,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "3030.SR",
+      "name": "Saudi Cement Co.",
+      "score": 45.052563484023196,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "3040.SR",
+      "name": "Qassim Cement Co.",
+      "score": 52.67256864352403,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "3050.SR",
+      "name": "Southern Province Cement Co.",
+      "score": 44.927829163101336,
+      "recommendation": "POOR"
+    },
+    {
+      "ticker": "3060.SR",
+      "name": "Yanbu Cement Co.",
+      "score": 48.23116173507161,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "3080.SR",
+      "name": "Eastern Province Cement Co.",
+      "score": 45.23381705695905,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "3090.SR",
+      "name": "Tabuk Cement Co.",
+      "score": 38.52735767276786,
+      "recommendation": "POOR"
+    },
+    {
+      "ticker": "3091.SR",
+      "name": "Al Jouf Cement Co.",
+      "score": 38.105920776719685,
+      "recommendation": "POOR"
+    },
+    {
+      "ticker": "3002.SR",
+      "name": "Najran Cement Co.",
+      "score": 46.87991579679006,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "3003.SR",
+      "name": "City Cement Co.",
+      "score": 44.842148529370974,
+      "recommendation": "POOR"
+    },
+    {
+      "ticker": "3004.SR",
+      "name": "Northern Region Cement Co.",
+      "score": 41.35016606385757,
+      "recommendation": "POOR"
+    },
+    {
+      "ticker": "3005.SR",
+      "name": "Umm Al-Qura Cement Co.",
+      "score": 43.19429625304983,
+      "recommendation": "POOR"
+    },
+    {
+      "ticker": "2040.SR",
+      "name": "Saudi Ceramic Co.",
+      "score": 51.870579637066996,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "2150.SR",
+      "name": "The National Company for Glass ",
+      "score": 51.59053770484086,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "2180.SR",
+      "name": "Filing and Packing Materials Ma",
+      "score": 46.466396485678565,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "2200.SR",
+      "name": "Arabian Pipes Co.",
+      "score": 52.90395766405703,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "1211.SR",
+      "name": "Saudi Arabian Mining Co.",
+      "score": 70.90519751500378,
+      "recommendation": "GOOD"
+    },
+    {
+      "ticker": "1212.SR",
+      "name": "Astra Industrial Group",
+      "score": 55.00501209605976,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "1301.SR",
+      "name": "United Wire Factories Co.",
+      "score": 46.84266154749546,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "1304.SR",
+      "name": "Al Yamamah Steel Industries Co.",
+      "score": 65.1367753634907,
+      "recommendation": "GOOD"
+    },
+    {
+      "ticker": "1320.SR",
+      "name": "Saudi Steel Pipe Co.",
+      "score": 58.37512976898267,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "1321.SR",
+      "name": "East Pipes Integrated Company f",
+      "score": 63.41274180841629,
+      "recommendation": "GOOD"
+    },
+    {
+      "ticker": "1322.SR",
+      "name": "Almasane Alkobra Mining Co",
+      "score": 74.75906660810956,
+      "recommendation": "GOOD"
+    },
+    {
+      "ticker": "4300.SR",
+      "name": "Dar Alarkan Real Estate Develop",
+      "score": 63.878394726763666,
+      "recommendation": "GOOD"
+    },
+    {
+      "ticker": "4310.SR",
+      "name": "Knowledge Economic City",
+      "score": 52.21046832879915,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "4320.SR",
+      "name": "Alandalus Property Co.",
+      "score": 42.643988371919534,
+      "recommendation": "POOR"
+    },
+    {
+      "ticker": "4250.SR",
+      "name": "Jabal Omar Development Co.",
+      "score": 50.77711281502091,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "4220.SR",
+      "name": "Emaar The Economic City",
+      "score": 43.93422030599248,
+      "recommendation": "POOR"
+    },
+    {
+      "ticker": "4230.SR",
+      "name": "Red Sea International Co.",
+      "score": 46.51433337379296,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "4240.SR",
+      "name": "AFG International Co.",
+      "score": 49.83576323919194,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "4150.SR",
+      "name": "Arriyadh Development Co.",
+      "score": 45.247384623094746,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "4100.SR",
+      "name": "Makkah Construction and Develop",
+      "score": 62.41399862628086,
+      "recommendation": "GOOD"
+    },
+    {
+      "ticker": "4090.SR",
+      "name": "Taiba Investments Co.",
+      "score": 51.74841720616017,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "4080.SR",
+      "name": "Sinad Holding Co.",
+      "score": 48.13602682564995,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "4190.SR",
+      "name": "Jarir Marketing Co.",
+      "score": 61.24096454518989,
+      "recommendation": "GOOD"
+    },
+    {
+      "ticker": "4001.SR",
+      "name": "Abdullah Al Othaim Markets Co.",
+      "score": 48.535295470410105,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "4003.SR",
+      "name": "United Electronics Co.",
+      "score": 54.12100084295249,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "4006.SR",
+      "name": "Saudi Marketing Co.",
+      "score": 38.683014886938906,
+      "recommendation": "POOR"
+    },
+    {
+      "ticker": "4050.SR",
+      "name": "Saudi Automotive Services Co.",
+      "score": 42.95931219987552,
+      "recommendation": "POOR"
+    },
+    {
+      "ticker": "4051.SR",
+      "name": "Baazeem Trading Co.",
+      "score": 52.70646119389345,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "4061.SR",
+      "name": "Anaam International Holding Gro",
+      "score": 49.44957803955117,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "4070.SR",
+      "name": "Tihama Advertising\\, Public Rel",
+      "score": 45.12420040680758,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "4071.SR",
+      "name": "Arabian Contracting Services Co",
+      "score": 64.87376473976815,
+      "recommendation": "GOOD"
+    },
+    {
+      "ticker": "4180.SR",
+      "name": "Fitaihi Holding Group",
+      "score": 47.77013026986664,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "4200.SR",
+      "name": "Aldrees Petroleum and Transport",
+      "score": 44.511979696384316,
+      "recommendation": "POOR"
+    },
+    {
+      "ticker": "4260.SR",
+      "name": "United International Transporta",
+      "score": 45.391699464548864,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "4261.SR",
+      "name": "Theeb Rent a Car Co.",
+      "score": 44.90656560754363,
+      "recommendation": "POOR"
+    },
+    {
+      "ticker": "4262.SR",
+      "name": "Lumi Rental Co.",
+      "score": 43.92960281361111,
+      "recommendation": "POOR"
+    },
+    {
+      "ticker": "4270.SR",
+      "name": "Saudi Printing and Packaging Co",
+      "score": 49.52025866376094,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "4291.SR",
+      "name": "National Company for Learning a",
+      "score": 44.82763022282146,
+      "recommendation": "POOR"
+    },
+    {
+      "ticker": "4292.SR",
+      "name": "Ataa Educational Co.",
+      "score": 47.57901281403404,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "7010.SR",
+      "name": "Saudi Telecom Co.",
+      "score": 59.57571483642904,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "7020.SR",
+      "name": "Etihad Etisalat Co.",
+      "score": 61.956912907629494,
+      "recommendation": "GOOD"
+    },
+    {
+      "ticker": "7030.SR",
+      "name": "Mobile Telecommunication Compan",
+      "score": 52.973171556377416,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "7040.SR",
+      "name": "Etihad GO Telecom Co.",
+      "score": 48.022194073924155,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "7200.SR",
+      "name": "Al Moammar Information Systems ",
+      "score": 70.21366880428141,
+      "recommendation": "GOOD"
+    },
+    {
+      "ticker": "7201.SR",
+      "name": "Arab Sea Information System Co.",
+      "score": 44.07629933168189,
+      "recommendation": "POOR"
+    },
+    {
+      "ticker": "7202.SR",
+      "name": "Arabian Internet and Communicat",
+      "score": 48.79526211591982,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "7203.SR",
+      "name": "Elm Co",
+      "score": 47.77329722932741,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "7204.SR",
+      "name": "Perfect Presentation for Commer",
+      "score": 47.89353100643872,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "4002.SR",
+      "name": "Mouwasat Medical Services Co.",
+      "score": 52.28726093910671,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "4004.SR",
+      "name": "Dallah Healthcare Co.",
+      "score": 46.6280770489148,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "4005.SR",
+      "name": "National Medical Care Co.",
+      "score": 49.066877118798416,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "4007.SR",
+      "name": "Al Hammadi Holding",
+      "score": 49.49315178929727,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "4009.SR",
+      "name": "Middle East Healthcare Co.",
+      "score": 55.202066884524115,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "4013.SR",
+      "name": "Dr. Sulaiman Al Habib Medical S",
+      "score": 51.09854755164128,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "4014.SR",
+      "name": "Scientific and Medical Equipmen",
+      "score": 42.26933418464151,
+      "recommendation": "POOR"
+    },
+    {
+      "ticker": "2050.SR",
+      "name": "Savola Group",
+      "score": 55.50209256728057,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "2100.SR",
+      "name": "Wafrah for Industry and Develop",
+      "score": 51.702701957448696,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "2270.SR",
+      "name": "Saudia Dairy and Foodstuff Co.",
+      "score": 44.782065553551355,
+      "recommendation": "POOR"
+    },
+    {
+      "ticker": "2280.SR",
+      "name": "Almarai Co.",
+      "score": 46.6806221345329,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "6001.SR",
+      "name": "Halwani Bros. Co.",
+      "score": 43.80068492086664,
+      "recommendation": "POOR"
+    },
+    {
+      "ticker": "6002.SR",
+      "name": "Herfy Food Services Co.",
+      "score": 46.83279155862851,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "6004.SR",
+      "name": "CATRION Catering Holding Co.",
+      "score": 49.919371563131875,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "6010.SR",
+      "name": "National Agricultural Developme",
+      "score": 47.50448843268243,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "6012.SR",
+      "name": "Raydan Food Co.",
+      "score": 45.26460770264762,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "6013.SR",
+      "name": "Development Works Food Co.",
+      "score": 44.62162640702196,
+      "recommendation": "POOR"
+    },
+    {
+      "ticker": "6014.SR",
+      "name": "Alamar Foods Co.",
+      "score": 47.820545523349985,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "6015.SR",
+      "name": "Americana Restaurants Internati",
+      "score": 42.39901994899269,
+      "recommendation": "POOR"
+    },
+    {
+      "ticker": "6020.SR",
+      "name": "Al Gassim Investment Holding Co",
+      "score": 42.920092569088155,
+      "recommendation": "POOR"
+    },
+    {
+      "ticker": "6040.SR",
+      "name": "Tabuk Agricultural Development ",
+      "score": 44.87121010529015,
+      "recommendation": "POOR"
+    },
+    {
+      "ticker": "6050.SR",
+      "name": "Saudi Fisheries Co.",
+      "score": 50.0296159896962,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "6060.SR",
+      "name": "Ash-Sharqiyah Development Co.",
+      "score": 44.63009321089136,
+      "recommendation": "POOR"
+    },
+    {
+      "ticker": "6070.SR",
+      "name": "Al-Jouf Agricultural Developmen",
+      "score": 55.85551067471161,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "6090.SR",
+      "name": "Jazan Development and Investmen",
+      "score": 51.67860965416,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "4031.SR",
+      "name": "Saudi Ground Services Co.",
+      "score": 51.75276294323341,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "2070.SR",
+      "name": "Saudi Pharmaceutical Industries",
+      "score": 56.517538499872344,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "2080.SR",
+      "name": "National Gas and Industrializat",
+      "score": 51.42450774788668,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "2090.SR",
+      "name": "National Gypsum Co.",
+      "score": 44.36176868201911,
+      "recommendation": "POOR"
+    },
+    {
+      "ticker": "2110.SR",
+      "name": "Saudi Cable Co.",
+      "score": 69.85142264239003,
+      "recommendation": "GOOD"
+    },
+    {
+      "ticker": "2120.SR",
+      "name": "Saudi Advanced Industries Co.",
+      "score": 55.60332859384586,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "2130.SR",
+      "name": "Saudi Industrial Development Co",
+      "score": 46.868058459795066,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "2160.SR",
+      "name": "Saudi Arabian Amiantit Co.",
+      "score": 47.52928859047307,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "2190.SR",
+      "name": "Sustained Infrastructure Holdin",
+      "score": 48.1649771429782,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "2220.SR",
+      "name": "National Metal Manufacturing an",
+      "score": 52.25632494802338,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "2230.SR",
+      "name": "Saudi Chemical Co.",
+      "score": 55.87004657260415,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "2240.SR",
+      "name": "Advanced Building Industries Co",
+      "score": 67.42546748154452,
+      "recommendation": "GOOD"
+    },
+    {
+      "ticker": "2320.SR",
+      "name": "Al-Babtain Power and Telecommun",
+      "score": 63.632569255027754,
+      "recommendation": "GOOD"
+    },
+    {
+      "ticker": "2340.SR",
+      "name": "ARTEX Industrial Investment Co.",
+      "score": 46.53245836655903,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "2350.SR",
+      "name": "Saudi Kayan Petrochemical Co.",
+      "score": 59.46692686576188,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "2360.SR",
+      "name": "Saudi Vitrified Clay Pipes Co.",
+      "score": 56.291949516694366,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "2370.SR",
+      "name": "Middle East Specialized Cables ",
+      "score": 53.53745386444306,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "1210.SR",
+      "name": "Basic Chemical Industries Co.",
+      "score": 45.381816428073826,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "1213.SR",
+      "name": "Naseej International Trading Co",
+      "score": 46.99269284934819,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "1214.SR",
+      "name": "Al Hassan Ghazi Ibrahim Shaker ",
+      "score": 43.80439006209744,
+      "recommendation": "POOR"
+    },
+    {
+      "ticker": "1302.SR",
+      "name": "Bawan Co.",
+      "score": 44.61243438842741,
+      "recommendation": "POOR"
+    },
+    {
+      "ticker": "1303.SR",
+      "name": "Electrical Industries Co.",
+      "score": 68.50769698812263,
+      "recommendation": "GOOD"
+    },
+    {
+      "ticker": "2001.SR",
+      "name": "Methanol Chemicals Co.",
+      "score": 48.3088921283927,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "5110.SR",
+      "name": "Saudi Electricity Co.",
+      "score": 49.46862821561374,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "2082.SR",
+      "name": "ACWA POWER Co.",
+      "score": 55.90951851181261,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "2083.SR",
+      "name": "The Power and Water Utility Com",
+      "score": 42.809042256983474,
+      "recommendation": "POOR"
+    },
+    {
+      "ticker": "4280.SR",
+      "name": "Kingdom Holding Co.",
+      "score": 60.6847601008202,
+      "recommendation": "GOOD"
+    },
+    {
+      "ticker": "4020.SR",
+      "name": "Saudi Real Estate Co.",
+      "score": 58.697094260321656,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "4210.SR",
+      "name": "Saudi Research and Media Group",
+      "score": 44.61946816870331,
+      "recommendation": "POOR"
+    },
+    {
+      "ticker": "1201.SR",
+      "name": "Takween Advanced Industries Co.",
+      "score": 48.90933611859357,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "1202.SR",
+      "name": "Middle East Paper Co.",
+      "score": 49.44042808681683,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "4040.SR",
+      "name": "Saudi Public Transport Co.",
+      "score": 49.008509624018394,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "4160.SR",
+      "name": "Thimar Development Holding Co.",
+      "score": 46.79112908309361,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "4170.SR",
+      "name": "Tourism Enterprise Co.",
+      "score": 54.9541336315274,
+      "recommendation": "MODERATE"
+    }
+  ],
+  "active_signals": [
+    {
+      "ticker": "1211.SR",
+      "company": "Saudi Arabian Mining Co.",
+      "date": "2026-01-29",
+      "signal_price": 77.3,
+      "current_price": 77.3,
+      "change_pct": 0.0,
+      "rally_probability": 61.6,
+      "signal_confidence": 30.2,
+      "anomaly_intensity": 0.5,
+      "screening_score": 70.90519751500378,
+      "recommendation": "GOOD"
+    },
+    {
+      "ticker": "7200.SR",
+      "company": "Al Moammar Information Systems ",
+      "date": "2026-01-25",
+      "signal_price": 182.0,
+      "current_price": 179.9,
+      "change_pct": -1.15,
+      "rally_probability": 65.1,
+      "signal_confidence": 38.5,
+      "anomaly_intensity": 0.93,
+      "screening_score": 70.21366880428141,
+      "recommendation": "GOOD"
+    },
+    {
+      "ticker": "1303.SR",
+      "company": "Electrical Industries Co.",
+      "date": "2026-01-29",
+      "signal_price": 13.68,
+      "current_price": 13.68,
+      "change_pct": 0.0,
+      "rally_probability": 65.5,
+      "signal_confidence": 33.8,
+      "anomaly_intensity": 0.71,
+      "screening_score": 68.50769698812263,
+      "recommendation": "GOOD"
+    },
+    {
+      "ticker": "8210.SR",
+      "company": "Bupa Arabia for Cooperative Ins",
+      "date": "2026-01-27",
+      "signal_price": 156.0,
+      "current_price": 165.0,
+      "change_pct": 5.77,
+      "rally_probability": 60.0,
+      "signal_confidence": 30.8,
+      "anomaly_intensity": 0.57,
+      "screening_score": 64.97038432151385,
+      "recommendation": "GOOD"
+    },
+    {
+      "ticker": "1321.SR",
+      "company": "East Pipes Integrated Company f",
+      "date": "2026-01-29",
+      "signal_price": 152.2,
+      "current_price": 152.2,
+      "change_pct": 0.0,
+      "rally_probability": 62.5,
+      "signal_confidence": 31.5,
+      "anomaly_intensity": 0.64,
+      "screening_score": 63.41274180841629,
+      "recommendation": "GOOD"
+    },
+    {
+      "ticker": "1150.SR",
+      "company": "Alinma Bank",
+      "date": "2026-01-27",
+      "signal_price": 27.38,
+      "current_price": 28.48,
+      "change_pct": 4.02,
+      "rally_probability": 63.4,
+      "signal_confidence": 38.1,
+      "anomaly_intensity": 0.6,
+      "screening_score": 61.59793764936179,
+      "recommendation": "GOOD"
+    },
+    {
+      "ticker": "4190.SR",
+      "company": "Jarir Marketing Co.",
+      "date": "2026-01-26",
+      "signal_price": 13.89,
+      "current_price": 14.27,
+      "change_pct": 2.74,
+      "rally_probability": 60.0,
+      "signal_confidence": 39.0,
+      "anomaly_intensity": 0.68,
+      "screening_score": 61.24096454518989,
+      "recommendation": "GOOD"
+    },
+    {
+      "ticker": "1010.SR",
+      "company": "Riyad Bank",
+      "date": "2026-01-27",
+      "signal_price": 28.0,
+      "current_price": 28.1,
+      "change_pct": 0.36,
+      "rally_probability": 66.0,
+      "signal_confidence": 33.1,
+      "anomaly_intensity": 0.77,
+      "screening_score": 60.79867007991099,
+      "recommendation": "GOOD"
+    },
+    {
+      "ticker": "4280.SR",
+      "company": "Kingdom Holding Co.",
+      "date": "2026-01-25",
+      "signal_price": 8.03,
+      "current_price": 8.08,
+      "change_pct": 0.62,
+      "rally_probability": 58.3,
+      "signal_confidence": 33.4,
+      "anomaly_intensity": 0.62,
+      "screening_score": 60.6847601008202,
+      "recommendation": "GOOD"
+    },
+    {
+      "ticker": "2070.SR",
+      "company": "Saudi Pharmaceutical Industries",
+      "date": "2026-01-29",
+      "signal_price": 27.62,
+      "current_price": 27.62,
+      "change_pct": 0.0,
+      "rally_probability": 56.5,
+      "signal_confidence": 30.2,
+      "anomaly_intensity": 0.43,
+      "screening_score": 56.517538499872344,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "6070.SR",
+      "company": "Al-Jouf Agricultural Developmen",
+      "date": "2026-01-29",
+      "signal_price": 50.0,
+      "current_price": 50.0,
+      "change_pct": 0.0,
+      "rally_probability": 60.2,
+      "signal_confidence": 34.2,
+      "anomaly_intensity": 0.43,
+      "screening_score": 55.85551067471161,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "1050.SR",
+      "company": "Banque Saudi Fransi",
+      "date": "2026-01-29",
+      "signal_price": 18.05,
+      "current_price": 18.05,
+      "change_pct": 0.0,
+      "rally_probability": 60.4,
+      "signal_confidence": 31.8,
+      "anomaly_intensity": 0.6,
+      "screening_score": 55.40923236322969,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "8050.SR",
+      "company": "Salama Cooperative Insurance Co",
+      "date": "2026-01-29",
+      "signal_price": 9.61,
+      "current_price": 9.61,
+      "change_pct": 0.0,
+      "rally_probability": 59.5,
+      "signal_confidence": 42.0,
+      "anomaly_intensity": 0.44,
+      "screening_score": 52.94061717060009,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "4051.SR",
+      "company": "Baazeem Trading Co.",
+      "date": "2026-01-25",
+      "signal_price": 6.31,
+      "current_price": 6.27,
+      "change_pct": -0.63,
+      "rally_probability": 56.5,
+      "signal_confidence": 31.7,
+      "anomaly_intensity": 0.61,
+      "screening_score": 52.70646119389345,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "3040.SR",
+      "company": "Qassim Cement Co.",
+      "date": "2026-01-25",
+      "signal_price": 42.98,
+      "current_price": 42.8,
+      "change_pct": -0.42,
+      "rally_probability": 61.4,
+      "signal_confidence": 45.4,
+      "anomaly_intensity": 0.5,
+      "screening_score": 52.67256864352403,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "8180.SR",
+      "company": "Al Sagr Cooperative Insurance C",
+      "date": "2026-01-29",
+      "signal_price": 10.08,
+      "current_price": 10.08,
+      "change_pct": 0.0,
+      "rally_probability": 59.9,
+      "signal_confidence": 51.0,
+      "anomaly_intensity": 0.52,
+      "screening_score": 52.47438706272049,
+      "recommendation": "MODERATE"
+    },
+    {
+      "ticker": "2080.SR",
+      "company": "National Gas and Industrializat",
+      "date": "2026-01-26",
+      "signal_price": 90.55,
+      "current_price": 89.0,
+      "change_pct": -1.71,
+      "rally_probability": 63.0,
+      "signal_confidence": 36.7,
+      "anomaly_intensity": 0.85,
+      "screening_score": 51.42450774788668,
+      "recommendation": "MODERATE"
+    }
+  ],
+  "errors": []
+}
