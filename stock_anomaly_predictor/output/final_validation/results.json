@@ -1,0 +1,29 @@
+{
+  "parameters": {
+    "initial_capital": 1000000,
+    "max_position_pct": 0.05,
+    "max_positions": 20,
+    "use_stop_loss": false,
+    "stop_loss_atr": 3.0,
+    "take_profit_pct": 0.2,
+    "max_holding_days": 180,
+    "trailing_stop_pct": 0.05,
+    "use_trailing": true,
+    "commission_pct": 0.001,
+    "slippage_pct": 0.001
+  },
+  "performance": {
+    "total_return": -0.010798177581700097,
+    "annual_return": -0.0026839546606801656,
+    "sharpe_ratio": -0.003155808071381822,
+    "max_drawdown": 0.10286650466884265,
+    "win_rate": 0.5825242718446602,
+    "profit_factor": 0.9839227469450609,
+    "total_trades": 206
+  },
+  "validation": {
+    "passed_checks": 1,
+    "total_checks": 5,
+    "verdict": "STRATEGY NEEDS MORE WORK"
+  }
+}

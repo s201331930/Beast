@@ -1,0 +1,150 @@
+{
+  "Conservative": {
+    "config": {
+      "stop_after_days": 30,
+      "stop_if_down_pct": 0.05,
+      "take_profit_pct": 0.2,
+      "max_holding_days": 90,
+      "trailing_stop_pct": 0.05
+    },
+    "return": 0.009690104691664203,
+    "sharpe": 0.23660483016020276,
+    "win_rate": 0.4489795918367347,
+    "pf": 1.079302869591712,
+    "max_dd": 0.0798578365366681,
+    "trades": 245,
+    "exit_stats": {
+      "conditional_stop": {
+        "count": 114,
+        "pct": 46.53061224489796,
+        "avg_ret": -8.00219787304087
+      },
+      "trailing_stop": {
+        "count": 79,
+        "pct": 32.244897959183675,
+        "avg_ret": 3.283433440545352
+      },
+      "take_profit": {
+        "count": 29,
+        "pct": 11.83673469387755,
+        "avg_ret": 21.804641466418175
+      },
+      "time_exit": {
+        "count": 23,
+        "pct": 9.387755102040817,
+        "avg_ret": 4.836761542257446
+      }
+    }
+  },
+  "Moderate": {
+    "config": {
+      "stop_after_days": 45,
+      "stop_if_down_pct": 0.1,
+      "take_profit_pct": 0.2,
+      "max_holding_days": 120,
+      "trailing_stop_pct": 0.05
+    },
+    "return": -0.0008406206485160883,
+    "sharpe": 0.16431291091392008,
+    "win_rate": 0.5490196078431373,
+    "pf": 1.0418699219499579,
+    "max_dd": 0.08146018211615123,
+    "trades": 204,
+    "exit_stats": {
+      "conditional_stop": {
+        "count": 66,
+        "pct": 32.35294117647059,
+        "avg_ret": -12.596410147848935
+      },
+      "trailing_stop": {
+        "count": 82,
+        "pct": 40.19607843137255,
+        "avg_ret": 3.5505937424675102
+      },
+      "take_profit": {
+        "count": 27,
+        "pct": 13.23529411764706,
+        "avg_ret": 21.391561096260332
+      },
+      "time_exit": {
+        "count": 29,
+        "pct": 14.215686274509803,
+        "avg_ret": 1.8830868234717495
+      }
+    }
+  },
+  "Aggressive": {
+    "config": {
+      "stop_after_days": 60,
+      "stop_if_down_pct": 0.15,
+      "take_profit_pct": 0.25,
+      "max_holding_days": 180,
+      "trailing_stop_pct": 0.07
+    },
+    "return": 0.08008562575220779,
+    "sharpe": 0.4735587912881947,
+    "win_rate": 0.5947712418300654,
+    "pf": 1.3542920139077268,
+    "max_dd": 0.07301425649740795,
+    "trades": 153,
+    "exit_stats": {
+      "conditional_stop": {
+        "count": 34,
+        "pct": 22.22222222222222,
+        "avg_ret": -17.487115835366136
+      },
+      "trailing_stop": {
+        "count": 64,
+        "pct": 41.830065359477125,
+        "avg_ret": 5.098822973686065
+      },
+      "take_profit": {
+        "count": 22,
+        "pct": 14.37908496732026,
+        "avg_ret": 25.640983087140214
+      },
+      "time_exit": {
+        "count": 33,
+        "pct": 21.568627450980394,
+        "avg_ret": 0.1923354216116897
+      }
+    }
+  },
+  "TimeBasedSL": {
+    "config": {
+      "stop_after_days": 20,
+      "stop_if_down_pct": 0.08,
+      "take_profit_pct": 0.15,
+      "max_holding_days": 60,
+      "trailing_stop_pct": 0.04
+    },
+    "return": 0.003764791984649296,
+    "sharpe": 0.09272603699043597,
+    "win_rate": 0.5343511450381679,
+    "pf": 1.0684669819051023,
+    "max_dd": 0.06708152394504877,
+    "trades": 262,
+    "exit_stats": {
+      "conditional_stop": {
+        "count": 79,
+        "pct": 30.15267175572519,
+        "avg_ret": -9.696591129985999
+      },
+      "trailing_stop": {
+        "count": 89,
+        "pct": 33.969465648854964,
+        "avg_ret": 2.4372037482584203
+      },
+      "take_profit": {
+        "count": 30,
+        "pct": 11.450381679389313,
+        "avg_ret": 17.419579007751437
+      },
+      "time_exit": {
+        "count": 64,
+        "pct": 24.427480916030532,
+        "avg_ret": 1.9293117054280058
+      }
+    }
+  }
+}
