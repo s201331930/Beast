@@ -1,0 +1,183 @@
+# ============================================================================
+# TASI Daily Scanner - GitHub Actions Workflow
+# ============================================================================
+# Automatically scans Saudi Stock Exchange (Tadawul) every trading day
+# Schedule: 7:00 PM KSA (16:00 UTC) Sunday-Thursday
+# 
+# This workflow:
+# 1. Scans all TASI stocks
+# 2. Generates signals for qualified stocks
+# 3. Sends email report to configured recipient
+# 4. Saves results to repository
+# ============================================================================
+
+name: 🇸🇦 TASI Daily Scanner
+
+on:
+  # Scheduled runs - 7 PM KSA (16:00 UTC) on trading days
+  schedule:
+    # Cron: minute hour day month weekday
+    # Sunday=0, Monday=1, ..., Thursday=4
+    - cron: '0 16 * * 0-4'
+  
+  # Allow manual trigger from GitHub UI
+  workflow_dispatch:
+    inputs:
+      send_email:
+        description: 'Send email report'
+        required: true
+        default: 'true'
+        type: boolean
+
+env:
+  PYTHON_VERSION: '3.11'
+  TZ: 'Asia/Riyadh'
+
+jobs:
+  scan:
+    name: 📊 Daily Market Scan
+    runs-on: ubuntu-latest
+    
+    steps:
+      # ========================================
+      # Setup
+      # ========================================
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      
+      - name: 🐍 Setup Python ${{ env.PYTHON_VERSION }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: 'pip'
+      
+      - name: 📦 Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pandas numpy scipy scikit-learn yfinance pytz matplotlib
+          pip install nltk textblob vaderSentiment pytrends
+          echo "✓ Dependencies installed"
+      
+      - name: 🔧 Setup NLTK Data
+        run: |
+          python -c "import nltk; nltk.download('vader_lexicon', quiet=True); nltk.download('punkt', quiet=True)"
+          echo "✓ NLTK data downloaded"
+      
+      # ========================================
+      # Run Scanner
+      # ========================================
+      - name: 🔍 Run TASI Daily Scanner
+        id: scan
+        working-directory: stock_anomaly_predictor
+        env:
+          SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+        run: |
+          echo "=========================================="
+          echo "🇸🇦 TASI Daily Scanner"
+          echo "Date: $(TZ=Asia/Riyadh date '+%Y-%m-%d %H:%M:%S KSA')"
+          echo "=========================================="
+          
+          # Run the scanner
+          python tasi_daily_scanner.py
+          
+          # Check for output files
+          SCAN_DATE=$(date +%Y%m%d)
+          if [ -f "output/daily_scans/tasi_scan_${SCAN_DATE}.json" ]; then
+            echo "scan_success=true" >> $GITHUB_OUTPUT
+            echo "scan_date=${SCAN_DATE}" >> $GITHUB_OUTPUT
+            
+            # Extract signal count
+            SIGNAL_COUNT=$(python -c "import json; data=json.load(open('output/daily_scans/tasi_scan_${SCAN_DATE}.json')); print(data.get('signals_generated', 0))")
+            echo "signal_count=${SIGNAL_COUNT}" >> $GITHUB_OUTPUT
+            echo "✓ Scan completed: ${SIGNAL_COUNT} active signals"
+          else
+            echo "scan_success=false" >> $GITHUB_OUTPUT
+            echo "✗ Scan failed - no output file generated"
+            exit 1
+          fi
+      
+      # ========================================
+      # Send Email Report
+      # ========================================
+      - name: 📧 Send Email Report
+        if: steps.scan.outputs.scan_success == 'true' && (github.event.inputs.send_email != 'false')
+        working-directory: stock_anomaly_predictor
+        env:
+          SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+        run: |
+          echo "Sending email report..."
+          python send_test_email.py || echo "Email sending skipped or failed"
+      
+      # ========================================
+      # Save Results to Repository
+      # ========================================
+      - name: 💾 Commit Scan Results
+        if: steps.scan.outputs.scan_success == 'true'
+        run: |
+          git config --local user.email "tasi-scanner@github-actions.com"
+          git config --local user.name "TASI Scanner Bot"
+          
+          SCAN_DATE=${{ steps.scan.outputs.scan_date }}
+          SIGNAL_COUNT=${{ steps.scan.outputs.signal_count }}
+          
+          # Add output files
+          git add stock_anomaly_predictor/output/daily_scans/ || true
+          
+          # Check if there are changes to commit
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "📊 TASI Daily Scan - $(TZ=Asia/Riyadh date '+%Y-%m-%d') - ${SIGNAL_COUNT} signals"
+            git push
+            echo "✓ Results committed to repository"
+          fi
+      
+      # ========================================
+      # Summary
+      # ========================================
+      - name: 📋 Generate Summary
+        if: always()
+        run: |
+          echo "## 🇸🇦 TASI Daily Scan Results" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Date:** $(TZ=Asia/Riyadh date '+%Y-%m-%d %H:%M:%S KSA')" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          if [ "${{ steps.scan.outputs.scan_success }}" == "true" ]; then
+            echo "✅ **Status:** Scan completed successfully" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "📊 **Active Signals:** ${{ steps.scan.outputs.signal_count }}" >> $GITHUB_STEP_SUMMARY
+            
+            # Display signals if available
+            SCAN_DATE=${{ steps.scan.outputs.scan_date }}
+            if [ -f "stock_anomaly_predictor/output/daily_scans/tasi_signals_${SCAN_DATE}.csv" ]; then
+              echo "" >> $GITHUB_STEP_SUMMARY
+              echo "### Recent Signals" >> $GITHUB_STEP_SUMMARY
+              echo "" >> $GITHUB_STEP_SUMMARY
+              echo "| Date | Ticker | Company | Price | Probability |" >> $GITHUB_STEP_SUMMARY
+              echo "|------|--------|---------|-------|-------------|" >> $GITHUB_STEP_SUMMARY
+              head -11 "stock_anomaly_predictor/output/daily_scans/tasi_signals_${SCAN_DATE}.csv" | tail -10 | while IFS=, read -r ticker company date signal_price current_price change_pct rally_prob rest; do
+                echo "| $date | $ticker | ${company:0:20} | $current_price | ${rally_prob}% |" >> $GITHUB_STEP_SUMMARY
+              done
+            fi
+          else
+            echo "❌ **Status:** Scan failed" >> $GITHUB_STEP_SUMMARY
+          fi
+      
+      # ========================================
+      # Upload Artifacts
+      # ========================================
+      - name: 📁 Upload Scan Results
+        if: steps.scan.outputs.scan_success == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: tasi-scan-${{ steps.scan.outputs.scan_date }}
+          path: |
+            stock_anomaly_predictor/output/daily_scans/tasi_scan_*.json
+            stock_anomaly_predictor/output/daily_scans/tasi_signals_*.csv
+            stock_anomaly_predictor/output/daily_scans/tasi_report_*.html
+          retention-days: 30

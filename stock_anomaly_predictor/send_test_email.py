@@ -1,7 +1,11 @@
 #!/usr/bin/env python3
 """
-Test Email Sender for TASI Daily Scanner
-Sends yesterday's report to verify email configuration
+Email Sender for TASI Daily Scanner
+Sends the latest report via email
+
+Works with:
+- Local .env file
+- GitHub Actions secrets (SMTP_USERNAME, SMTP_PASSWORD)
 """
 
 import os
@@ -12,9 +16,11 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from datetime import datetime
 import json
+import glob
 
-# Load environment variables from .env file
+# Load environment variables from .env file (if exists)
 def load_env():
+    """Load from .env file if available, otherwise use existing env vars"""
     env_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), '.env')
     if os.path.exists(env_file):
         with open(env_file, 'r') as f:
@@ -22,12 +28,17 @@ def load_env():
                 line = line.strip()
                 if line and not line.startswith('#') and '=' in line:
                     key, value = line.split('=', 1)
-                    os.environ[key.strip()] = value.strip()
+                    # Only set if not already in environment (GitHub Actions sets secrets)
+                    if key.strip() not in os.environ:
+                        os.environ[key.strip()] = value.strip()
         print(f"✓ Loaded configuration from .env")
+        return True
+    elif os.environ.get('SMTP_USERNAME') and os.environ.get('SMTP_PASSWORD'):
+        print(f"✓ Using environment variables (GitHub Actions)")
+        return True
     else:
-        print(f"✗ .env file not found")
+        print(f"✗ No credentials found")
         return False
-    return True
 
 def send_test_email():
     """Send test email with yesterday's report"""
@@ -52,55 +63,79 @@ def send_test_email():
     print(f"✓ Sender: {sender}")
     print(f"✓ Recipient: {recipient}")
     
-    # Load yesterday's report
-    report_file = 'output/daily_scans/tasi_report_20260130.html'
-    json_file = 'output/daily_scans/tasi_scan_20260130.json'
+    # Find the latest report
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    report_pattern = os.path.join(script_dir, 'output/daily_scans/tasi_report_*.html')
+    json_pattern = os.path.join(script_dir, 'output/daily_scans/tasi_scan_*.json')
     
-    if not os.path.exists(report_file):
-        print(f"✗ Report file not found: {report_file}")
+    report_files = sorted(glob.glob(report_pattern), reverse=True)
+    json_files = sorted(glob.glob(json_pattern), reverse=True)
+    
+    if not report_files:
+        print(f"✗ No report files found in output/daily_scans/")
         return False
     
-    print(f"✓ Loading report: {report_file}")
+    report_file = report_files[0]  # Latest report
+    json_file = json_files[0] if json_files else None
+    
+    print(f"✓ Loading report: {os.path.basename(report_file)}")
     
     with open(report_file, 'r') as f:
         html_content = f.read()
     
-    with open(json_file, 'r') as f:
-        scan_data = json.load(f)
+    scan_data = {'stocks_scanned': 0, 'stocks_qualified': 0, 'signals_generated': 0, 'active_signals': []}
+    if json_file and os.path.exists(json_file):
+        with open(json_file, 'r') as f:
+            scan_data = json.load(f)
+    
+    # Extract date from report filename
+    report_date = os.path.basename(report_file).replace('tasi_report_', '').replace('.html', '')
+    if len(report_date) == 8:  # YYYYMMDD format
+        formatted_date = f"{report_date[:4]}-{report_date[4:6]}-{report_date[6:8]}"
+    else:
+        formatted_date = datetime.now().strftime('%Y-%m-%d')
     
     # Create email
     msg = MIMEMultipart('alternative')
-    msg['Subject'] = f"🇸🇦 TASI Daily Signals - Test Email - {datetime.now().strftime('%Y-%m-%d')}"
+    msg['Subject'] = f"🇸🇦 TASI Daily Signals - {formatted_date} - {scan_data.get('signals_generated', 0)} Active Signals"
     msg['From'] = sender
     msg['To'] = recipient
     
     # Plain text version
     signals = scan_data.get('active_signals', [])
-    today_signals = [s for s in signals if s['date'] == '2026-01-29']
+    
+    # Get the most recent signal date
+    if signals:
+        latest_date = max(s['date'] for s in signals)
+        latest_signals = [s for s in signals if s['date'] == latest_date]
+    else:
+        latest_date = formatted_date
+        latest_signals = []
     
     text_content = f"""
-TASI Daily Signal Report - TEST EMAIL
+TASI Daily Signal Report - {formatted_date}
 =====================================
 
-This is a test email to verify your TASI Daily Scanner configuration.
-
 Scan Summary:
-- Stocks Scanned: {scan_data['stocks_scanned']}
-- Stocks Qualified: {scan_data['stocks_qualified']}
-- Active Signals: {scan_data['signals_generated']}
+- Stocks Scanned: {scan_data.get('stocks_scanned', 'N/A')}
+- Stocks Qualified: {scan_data.get('stocks_qualified', 'N/A')}
+- Active Signals: {scan_data.get('signals_generated', 0)}
 
-NEW Signals (Jan 29, 2026):
+Latest Signals ({latest_date}):
 """
-    for s in sorted(today_signals, key=lambda x: -x['rally_probability']):
-        text_content += f"  • {s['ticker']}: {s['company'][:30]} - {s['rally_probability']:.0f}% probability @ {s['current_price']:.2f} SAR\n"
+    for s in sorted(latest_signals, key=lambda x: -x.get('rally_probability', 0))[:10]:
+        text_content += f"  • {s['ticker']}: {s.get('company', '')[:30]} - {s.get('rally_probability', 0):.0f}% probability @ {s.get('current_price', 0):.2f} SAR\n"
+    
+    if not latest_signals:
+        text_content += "  (No new signals)\n"
     
     text_content += """
 
-If you received this email, your TASI Daily Scanner is configured correctly!
-Daily reports will be sent at 7:00 PM KSA time (Sunday-Thursday).
+View the full HTML report for detailed analysis and charts.
 
 ---
 TASI Anomaly Prediction System
+Sent automatically at 7:00 PM KSA (Sunday-Thursday)
 """
     
     msg.attach(MIMEText(text_content, 'plain'))
