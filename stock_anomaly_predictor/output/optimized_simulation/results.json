@@ -1,0 +1,23 @@
+{
+  "parameters": {
+    "initial_capital": 1000000,
+    "max_position_pct": 0.05,
+    "max_positions": 15,
+    "stop_loss_atr": 3.0,
+    "take_profit_pct": 0.3,
+    "max_holding_days": 60,
+    "trailing_stop_pct": 0.05,
+    "commission_pct": 0.001,
+    "slippage_pct": 0.001
+  },
+  "total_return": 0.024992464668532444,
+  "annual_return": 0.006129401671715939,
+  "sharpe_ratio": 0.1510673046889459,
+  "max_drawdown": 0.07319804436044505,
+  "win_rate": 0.38071065989847713,
+  "profit_factor": 1.0891381694688504,
+  "total_trades": 394,
+  "stop_loss_rate": 0.8248730964467005,
+  "take_profit_rate": 0.025380710659898477,
+  "time_exit_rate": 0.13451776649746192
+}
