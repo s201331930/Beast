@@ -1,0 +1,10 @@
+{
+  "stop_loss_atr": 3.0,
+  "take_profit_pct": 0.3,
+  "max_holding_days": 60,
+  "trailing_stop_pct": 0.05,
+  "expected_return": 0.08999749837864957,
+  "expected_sharpe": 0.7524609346894782,
+  "expected_win_rate": 0.41818181818181815,
+  "expected_profit_factor": 1.4597285287502246
+}
