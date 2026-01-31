@@ -1,0 +1,26 @@
+{
+  "summary": {
+    "initial_capital": 1000000,
+    "final_value": 930757.3374288592,
+    "total_pnl": -69242.6625711408,
+    "total_return": -0.06924266257114076,
+    "annual_return": -0.017606119730106062,
+    "sharpe_ratio": -0.2771337984130563,
+    "sortino_ratio": -0.33791918888542133,
+    "max_drawdown": 0.14108922353465123,
+    "calmar_ratio": -0.12478713319860348,
+    "trading_days": 1018,
+    "years": 4.0396825396825395
+  },
+  "trades": {
+    "total_trades": 1150,
+    "winning_trades": 472,
+    "losing_trades": 678,
+    "win_rate": 0.41043478260869565,
+    "avg_win": 1419.2853218285225,
+    "avg_loss": -1046.913981805529,
+    "profit_factor": 0.9437805353416754,
+    "avg_holding_days": 10.806086956521739,
+    "expectancy": -34.700006748770534
+  }
+}
