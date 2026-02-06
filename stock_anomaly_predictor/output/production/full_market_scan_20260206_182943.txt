@@ -1,0 +1,331 @@
+==============================================================================================================
+🇸🇦 FULL TASI MARKET SCAN - SCIENTIFIC SCREENING REPORT
+   Generated: 2026-02-06 18:29:43
+==============================================================================================================
+
+┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│  FULL MARKET SCREENING SUMMARY                                                                               │
+├──────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│  Total TASI Stocks in Database:    173                                                                       │
+│  Stocks with Valid Data:           169                                                                       │
+│  Stocks Successfully Screened:     169                                                                       │
+│  Stocks Passing Threshold (≥50):   128                                                                       │
+│  Final Selection (Top 10):          10                                                                       │
+└──────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+==============================================================================================================
+📊 TOP 20 STOCKS BY SCIENTIFIC SCORE (Full Market Ranking)
+==============================================================================================================
+
+  Rank  Ticker     Name                        Score Rec          Hurst   Beta    ADX     Vol   Mom20d
+  ---------------------------------------------------------------------------------------------------------
+    1✓ 2320.SR    Albabtain Power             80.5 EXCELLENT    1.031   2.58   25.0  30.1%   +8.1%
+    2✓ 1211.SR    Maaden                      80.5 EXCELLENT    1.017   2.30   25.0  42.8%  +14.3%
+    3✓ 1304.SR    Al Yamamah Steel            79.6 EXCELLENT    1.006   2.19   25.0  36.9%   +2.3%
+    4✓ 1321.SR    Astra Industrial Group      79.6 EXCELLENT    1.013   2.34   25.0  33.4%  +18.9%
+    5✓ 4140.SR    Saudi Industrial Services   79.1 EXCELLENT    0.917   2.35   25.0  55.4%   +2.4%
+    6✓ 8010.SR    Tawuniya                    78.1 EXCELLENT    1.001   2.04   25.0  34.9%  +21.0%
+    7✓ 4030.SR    Bahri                       76.8 EXCELLENT    0.979   2.01   25.0  39.9%  +18.3%
+    8✓ 4071.SR    Almarai                     76.2 EXCELLENT    1.003   2.47   25.0  38.1%   +5.6%
+    9✓ 8210.SR    Bupa Arabia for Cooperati   76.1 EXCELLENT    0.934   2.04   25.0  36.6%  +20.6%
+   10✓ 2240.SR    Zamil Industrial            75.7 EXCELLENT    0.989   2.85   25.0  42.4%   -3.9%
+   11  1180.SR    Al Rajhi Bank               75.0 GOOD         0.951   1.56   25.0  23.0%   +7.9%
+   12  8030.SR    Mediterranean & Gulf Insu   74.7 GOOD         0.988   2.43   25.0  41.1%  +26.4%
+   13  2381.SR    Petro Rabigh                74.7 GOOD         1.014   2.12   25.0  30.5%   +0.4%
+   14  4300.SR    Dar Al Arkan Real Estate    73.6 GOOD         0.958   2.36   25.0  39.1%  +17.7%
+   15  4020.SR    Saudi Public Transport      72.2 GOOD         1.053   2.18   25.0  36.2%  +11.3%
+   16  4280.SR    Kingdom Holding             71.7 GOOD         0.963   1.88   25.0  22.6%   +3.9%
+   17  1120.SR    Al Rajhi REIT               71.7 GOOD         1.015   1.41   25.0  18.9%   +7.2%
+   18  1060.SR    Saudi Investment Bank       71.5 GOOD         0.951   1.38   25.0  16.0%  +11.7%
+   19  1020.SR    Bank Al-Jazira              71.2 GOOD         1.003   1.42   25.0  21.2%  +11.9%
+   20  2020.SR    Saudi Arabia Fertilizers    71.2 GOOD         1.022   1.39   25.0  19.1%  +14.0%
+
+
+==============================================================================================================
+🟢 CURRENT MARKET REGIME: BULL
+==============================================================================================================
+
+  Market Proxy (2320.SR):
+    Current Price:        69.95 SAR
+    50-Day MA:            66.93 SAR
+    Price vs MA:          +4.52%
+  
+  LEVERAGE SETTING:
+    Current Regime:       BULL
+    Leverage:             1.5x
+    Total Exposure:       1,500,000 SAR (150% of capital)
+  
+  REGIME CHANGE TRIGGER:
+    If price crosses 66.93 SAR → Switch leverage
+
+==============================================================================================================
+💰 SELECTED TOP 10 POSITIONS (From 169 Screened)
+==============================================================================================================
+
+  Capital: 1,000,000 SAR | Leverage: 1.5x | Total Exposure: 1,500,000 SAR
+
+  Ticker     Name                    Score      Price      50-MA    vs MA   Weight   Shares        Value Regime
+  -------------------------------------------------------------------------------------------------------------------
+  2320.SR    Albabtain Power         80.5      69.95      66.93    +4.5%    15.0%     2144      150,000 🟢
+  1211.SR    Maaden                  80.5      72.55      65.75   +10.3%    15.0%     2067      150,000 🟢
+  1304.SR    Al Yamamah Steel        79.6      37.90      34.89    +8.6%    15.0%     3957      150,000 🟢
+  1321.SR    Astra Industrial Group  79.6     159.80     138.51   +15.4%    15.0%      938      150,000 🟢
+  4140.SR    Saudi Industrial Servi  79.1       2.56       2.31   +10.9%    15.0%    58593      150,000 🟢
+  8010.SR    Tawuniya                78.1     137.00     122.30   +12.0%    15.0%     1094      150,000 🟢
+  4030.SR    Bahri                   76.8      31.60      29.53    +7.0%    15.0%     4746      150,000 🟢
+  4071.SR    Almarai                 76.2     121.50     120.97    +0.4%    15.0%     1234      150,000 🟢
+  8210.SR    Bupa Arabia for Cooper  76.1     162.00     145.31   +11.5%    15.0%      925      150,000 🟢
+  2240.SR    Zamil Industrial        75.7      40.64      39.09    +4.0%    15.0%     3690      150,000 🟢
+  -------------------------------------------------------------------------------------------------------------------
+  TOTAL                                                                     150.0%             1,500,000
+
+
+==============================================================================================================
+📋 DETAILED TRADE PARAMETERS - TOP 10
+==============================================================================================================
+
+
+  2320.SR - Albabtain Power 🟢
+  Score: 80.5/100 (EXCELLENT)
+  ──────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  ENTRY PARAMETERS:
+    Current Price:      69.95 SAR
+    Target Shares:      2,144 shares
+    Position Value:     150,000 SAR
+    Portfolio Weight:   15.0%
+  
+  KEY LEVELS:
+    50-Day MA:          66.93 SAR (Regime change trigger)
+    Price vs MA:        +4.5%
+    Daily Change:       -0.50%
+  
+  SCIENTIFIC METRICS:
+    Hurst Exponent:     1.031 (Strong Trend)
+    Beta:               2.58 (High Beta)
+    ADX:                25.0 (Weak Trend)
+    Volatility:         30.1% (Optimal)
+    20d Momentum:       +8.1%
+
+
+  1211.SR - Maaden 🟢
+  Score: 80.5/100 (EXCELLENT)
+  ──────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  ENTRY PARAMETERS:
+    Current Price:      72.55 SAR
+    Target Shares:      2,067 shares
+    Position Value:     150,000 SAR
+    Portfolio Weight:   15.0%
+  
+  KEY LEVELS:
+    50-Day MA:          65.75 SAR (Regime change trigger)
+    Price vs MA:        +10.3%
+    Daily Change:       -5.41%
+  
+  SCIENTIFIC METRICS:
+    Hurst Exponent:     1.017 (Strong Trend)
+    Beta:               2.30 (High Beta)
+    ADX:                25.0 (Weak Trend)
+    Volatility:         42.8% (Optimal)
+    20d Momentum:       +14.3%
+
+
+  1304.SR - Al Yamamah Steel 🟢
+  Score: 79.6/100 (EXCELLENT)
+  ──────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  ENTRY PARAMETERS:
+    Current Price:      37.90 SAR
+    Target Shares:      3,957 shares
+    Position Value:     150,000 SAR
+    Portfolio Weight:   15.0%
+  
+  KEY LEVELS:
+    50-Day MA:          34.89 SAR (Regime change trigger)
+    Price vs MA:        +8.6%
+    Daily Change:       -0.52%
+  
+  SCIENTIFIC METRICS:
+    Hurst Exponent:     1.006 (Strong Trend)
+    Beta:               2.19 (High Beta)
+    ADX:                25.0 (Weak Trend)
+    Volatility:         36.9% (Optimal)
+    20d Momentum:       +2.3%
+
+
+  1321.SR - Astra Industrial Group 🟢
+  Score: 79.6/100 (EXCELLENT)
+  ──────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  ENTRY PARAMETERS:
+    Current Price:      159.80 SAR
+    Target Shares:      938 shares
+    Position Value:     150,000 SAR
+    Portfolio Weight:   15.0%
+  
+  KEY LEVELS:
+    50-Day MA:          138.51 SAR (Regime change trigger)
+    Price vs MA:        +15.4%
+    Daily Change:       +0.50%
+  
+  SCIENTIFIC METRICS:
+    Hurst Exponent:     1.013 (Strong Trend)
+    Beta:               2.34 (High Beta)
+    ADX:                25.0 (Weak Trend)
+    Volatility:         33.4% (Optimal)
+    20d Momentum:       +18.9%
+
+
+  4140.SR - Saudi Industrial Services 🟢
+  Score: 79.1/100 (EXCELLENT)
+  ──────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  ENTRY PARAMETERS:
+    Current Price:      2.56 SAR
+    Target Shares:      58,593 shares
+    Position Value:     150,000 SAR
+    Portfolio Weight:   15.0%
+  
+  KEY LEVELS:
+    50-Day MA:          2.31 SAR (Regime change trigger)
+    Price vs MA:        +10.9%
+    Daily Change:       -1.54%
+  
+  SCIENTIFIC METRICS:
+    Hurst Exponent:     0.917 (Strong Trend)
+    Beta:               2.35 (High Beta)
+    ADX:                25.0 (Weak Trend)
+    Volatility:         55.4% (Optimal)
+    20d Momentum:       +2.4%
+
+
+  8010.SR - Tawuniya 🟢
+  Score: 78.1/100 (EXCELLENT)
+  ──────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  ENTRY PARAMETERS:
+    Current Price:      137.00 SAR
+    Target Shares:      1,094 shares
+    Position Value:     150,000 SAR
+    Portfolio Weight:   15.0%
+  
+  KEY LEVELS:
+    50-Day MA:          122.30 SAR (Regime change trigger)
+    Price vs MA:        +12.0%
+    Daily Change:       -0.94%
+  
+  SCIENTIFIC METRICS:
+    Hurst Exponent:     1.001 (Strong Trend)
+    Beta:               2.04 (High Beta)
+    ADX:                25.0 (Weak Trend)
+    Volatility:         34.9% (Optimal)
+    20d Momentum:       +21.0%
+
+
+  4030.SR - Bahri 🟢
+  Score: 76.8/100 (EXCELLENT)
+  ──────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  ENTRY PARAMETERS:
+    Current Price:      31.60 SAR
+    Target Shares:      4,746 shares
+    Position Value:     150,000 SAR
+    Portfolio Weight:   15.0%
+  
+  KEY LEVELS:
+    50-Day MA:          29.53 SAR (Regime change trigger)
+    Price vs MA:        +7.0%
+    Daily Change:       -0.32%
+  
+  SCIENTIFIC METRICS:
+    Hurst Exponent:     0.979 (Strong Trend)
+    Beta:               2.01 (High Beta)
+    ADX:                25.0 (Weak Trend)
+    Volatility:         39.9% (Optimal)
+    20d Momentum:       +18.3%
+
+
+  4071.SR - Almarai 🟢
+  Score: 76.2/100 (EXCELLENT)
+  ──────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  ENTRY PARAMETERS:
+    Current Price:      121.50 SAR
+    Target Shares:      1,234 shares
+    Position Value:     150,000 SAR
+    Portfolio Weight:   15.0%
+  
+  KEY LEVELS:
+    50-Day MA:          120.97 SAR (Regime change trigger)
+    Price vs MA:        +0.4%
+    Daily Change:       -2.02%
+  
+  SCIENTIFIC METRICS:
+    Hurst Exponent:     1.003 (Strong Trend)
+    Beta:               2.47 (High Beta)
+    ADX:                25.0 (Weak Trend)
+    Volatility:         38.1% (Optimal)
+    20d Momentum:       +5.6%
+
+
+  8210.SR - Bupa Arabia for Cooperative Insurance 🟢
+  Score: 76.1/100 (EXCELLENT)
+  ──────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  ENTRY PARAMETERS:
+    Current Price:      162.00 SAR
+    Target Shares:      925 shares
+    Position Value:     150,000 SAR
+    Portfolio Weight:   15.0%
+  
+  KEY LEVELS:
+    50-Day MA:          145.31 SAR (Regime change trigger)
+    Price vs MA:        +11.5%
+    Daily Change:       -2.11%
+  
+  SCIENTIFIC METRICS:
+    Hurst Exponent:     0.934 (Strong Trend)
+    Beta:               2.04 (High Beta)
+    ADX:                25.0 (Weak Trend)
+    Volatility:         36.6% (Optimal)
+    20d Momentum:       +20.6%
+
+
+  2240.SR - Zamil Industrial 🟢
+  Score: 75.7/100 (EXCELLENT)
+  ──────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  ENTRY PARAMETERS:
+    Current Price:      40.64 SAR
+    Target Shares:      3,690 shares
+    Position Value:     150,000 SAR
+    Portfolio Weight:   15.0%
+  
+  KEY LEVELS:
+    50-Day MA:          39.09 SAR (Regime change trigger)
+    Price vs MA:        +4.0%
+    Daily Change:       -3.97%
+  
+  SCIENTIFIC METRICS:
+    Hurst Exponent:     0.989 (Strong Trend)
+    Beta:               2.85 (High Beta)
+    ADX:                25.0 (Weak Trend)
+    Volatility:         42.4% (Optimal)
+    20d Momentum:       -3.9%
+
+==============================================================================================================
+📈 PERFORMANCE TRACKER
+==============================================================================================================
+
+  Tracking Period:
+    Total Days: 2
+    Bull Days:  2 (100.0%)
+    Bear Days:  0 (0.0%)
+    Regime Changes: 1
+
+
+
+==============================================================================================================
+🎯 ACTION SUMMARY
+==============================================================================================================
+
+  CURRENT RECOMMENDATION:
+    Regime: BULL → Use 1.5x leverage
+    INCREASE exposure to 1,500,000 SAR
+    Allocate to 10 scientifically selected stocks
+    Monitor: Price crossing 66.93 SAR triggers regime change
+
+==============================================================================================================
+END OF REPORT
+==============================================================================================================
