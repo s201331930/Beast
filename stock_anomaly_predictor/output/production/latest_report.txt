@@ -1,0 +1,192 @@
+================================================================================
+TASI SCANNER REPORT - 2026-02-06 13:04:20
+================================================================================
+
+MARKET REGIME: BULL
+Leverage Setting: 1.5x
+Volatility: 23.2%
+
+================================================================================
+BUY SIGNALS (18 stocks)
+================================================================================
+
+Ticker     Name                      Price    Score          Signal    Size%
+--------------------------------------------------------------------------------
+2222.SR    Saudi Aramco              25.60     70.8  MOMENTUM_ENTRY    10.0%
+1140.SR    Bank Albilad              26.66     70.7  MOMENTUM_ENTRY    10.0%
+1180.SR    Al Rajhi Bank             43.50     69.7  MOMENTUM_ENTRY     9.0%
+1212.SR    Astra Industrial         145.00     68.6  OVERSOLD_ENTRY     9.0%
+4190.SR    Jarir Marketing           14.31     68.2  MOMENTUM_ENTRY     9.0%
+1060.SR    Saudi Awwal Bank          35.80     66.3  MOMENTUM_ENTRY     9.0%
+1150.SR    Alinma Bank               28.54     66.3  MOMENTUM_ENTRY     6.3%
+1010.SR    Riyad Bank                28.76     66.2  MOMENTUM_ENTRY     9.0%
+4030.SR    Bahri                     31.60     65.8  MOMENTUM_ENTRY     6.3%
+1120.SR    Al Jazira Bank           107.00     64.5  MOMENTUM_ENTRY     9.0%
+7020.SR    Mobily                    68.20     63.9  MOMENTUM_ENTRY     9.0%
+1050.SR    Banque Saudi Fransi       18.00     63.7  MOMENTUM_ENTRY     9.0%
+2010.SR    SABIC                     55.50     63.6  MOMENTUM_ENTRY     6.3%
+1080.SR    Arab National Bank        21.50     62.6  MOMENTUM_ENTRY     9.0%
+3030.SR    Saudi Cement              35.18     61.9  MOMENTUM_ENTRY     9.0%
+6020.SR    Sadafco                   15.34     61.8  OVERSOLD_ENTRY     3.0%
+4250.SR    Jabal Omar                16.09     61.6  MOMENTUM_ENTRY     6.3%
+4005.SR    Care                     157.00     61.3  MOMENTUM_ENTRY     9.0%
+
+TRADE PARAMETERS:
+--------------------------------------------------------------------------------
+
+2222.SR - Saudi Aramco
+  Entry Price:    25.65 SAR
+  Take Profit:    32.06 SAR (+25%)
+  Trailing Stop:  23.86 SAR (-7%)
+  Position Size:  10.0% of capital
+  RSI: 63.6, Momentum: 8.2%, Vol: 17.8%
+
+1140.SR - Bank Albilad
+  Entry Price:    26.71 SAR
+  Take Profit:    33.39 SAR (+25%)
+  Trailing Stop:  24.84 SAR (-7%)
+  Position Size:  10.0% of capital
+  RSI: 75.9, Momentum: 8.3%, Vol: 24.3%
+
+1180.SR - Al Rajhi Bank
+  Entry Price:    43.59 SAR
+  Take Profit:    54.48 SAR (+25%)
+  Trailing Stop:  40.54 SAR (-7%)
+  Position Size:  9.0% of capital
+  RSI: 62.2, Momentum: 7.9%, Vol: 23.2%
+
+1212.SR - Astra Industrial
+  Entry Price:    145.29 SAR
+  Take Profit:    181.61 SAR (+25%)
+  Trailing Stop:  135.12 SAR (-7%)
+  Position Size:  9.0% of capital
+  RSI: 42.5, Momentum: 2.1%, Vol: 21.7%
+
+4190.SR - Jarir Marketing
+  Entry Price:    14.34 SAR
+  Take Profit:    17.92 SAR (+25%)
+  Trailing Stop:  13.33 SAR (-7%)
+  Position Size:  9.0% of capital
+  RSI: 76.2, Momentum: 8.4%, Vol: 12.0%
+
+1060.SR - Saudi Awwal Bank
+  Entry Price:    35.87 SAR
+  Take Profit:    44.84 SAR (+25%)
+  Trailing Stop:  33.36 SAR (-7%)
+  Position Size:  9.0% of capital
+  RSI: 78.4, Momentum: 11.7%, Vol: 14.7%
+
+1150.SR - Alinma Bank
+  Entry Price:    28.60 SAR
+  Take Profit:    35.75 SAR (+25%)
+  Trailing Stop:  26.60 SAR (-7%)
+  Position Size:  6.3% of capital
+  RSI: 69.8, Momentum: 13.3%, Vol: 26.9%
+
+1010.SR - Riyad Bank
+  Entry Price:    28.82 SAR
+  Take Profit:    36.02 SAR (+25%)
+  Trailing Stop:  26.80 SAR (-7%)
+  Position Size:  9.0% of capital
+  RSI: 73.8, Momentum: 7.2%, Vol: 19.6%
+
+4030.SR - Bahri
+  Entry Price:    31.66 SAR
+  Take Profit:    39.58 SAR (+25%)
+  Trailing Stop:  29.45 SAR (-7%)
+  Position Size:  6.3% of capital
+  RSI: 64.4, Momentum: 18.3%, Vol: 28.7%
+
+1120.SR - Al Jazira Bank
+  Entry Price:    107.21 SAR
+  Take Profit:    134.02 SAR (+25%)
+  Trailing Stop:  99.71 SAR (-7%)
+  Position Size:  9.0% of capital
+  RSI: 66.2, Momentum: 7.2%, Vol: 20.1%
+
+7020.SR - Mobily
+  Entry Price:    68.34 SAR
+  Take Profit:    85.42 SAR (+25%)
+  Trailing Stop:  63.55 SAR (-7%)
+  Position Size:  9.0% of capital
+  RSI: 59.4, Momentum: 5.5%, Vol: 20.9%
+
+1050.SR - Banque Saudi Fransi
+  Entry Price:    18.04 SAR
+  Take Profit:    22.54 SAR (+25%)
+  Trailing Stop:  16.77 SAR (-7%)
+  Position Size:  9.0% of capital
+  RSI: 53.1, Momentum: 5.8%, Vol: 17.9%
+
+2010.SR - SABIC
+  Entry Price:    55.61 SAR
+  Take Profit:    69.51 SAR (+25%)
+  Trailing Stop:  51.72 SAR (-7%)
+  Position Size:  6.3% of capital
+  RSI: 47.7, Momentum: 9.0%, Vol: 30.3%
+
+1080.SR - Arab National Bank
+  Entry Price:    21.54 SAR
+  Take Profit:    26.93 SAR (+25%)
+  Trailing Stop:  20.03 SAR (-7%)
+  Position Size:  9.0% of capital
+  RSI: 58.5, Momentum: 3.7%, Vol: 22.1%
+
+3030.SR - Saudi Cement
+  Entry Price:    35.25 SAR
+  Take Profit:    44.06 SAR (+25%)
+  Trailing Stop:  32.78 SAR (-7%)
+  Position Size:  9.0% of capital
+  RSI: 42.7, Momentum: 2.4%, Vol: 14.4%
+
+6020.SR - Sadafco
+  Entry Price:    15.37 SAR
+  Take Profit:    19.21 SAR (+25%)
+  Trailing Stop:  14.29 SAR (-7%)
+  Position Size:  3.0% of capital
+  RSI: 23.0, Momentum: 0.9%, Vol: 20.4%
+
+4250.SR - Jabal Omar
+  Entry Price:    16.12 SAR
+  Take Profit:    20.15 SAR (+25%)
+  Trailing Stop:  14.99 SAR (-7%)
+  Position Size:  6.3% of capital
+  RSI: 55.8, Momentum: 11.0%, Vol: 32.0%
+
+4005.SR - Care
+  Entry Price:    157.31 SAR
+  Take Profit:    196.64 SAR (+25%)
+  Trailing Stop:  146.30 SAR (-7%)
+  Position Size:  9.0% of capital
+  RSI: 62.0, Momentum: 8.3%, Vol: 22.4%
+
+================================================================================
+WATCHLIST (0 stocks)
+================================================================================
+
+================================================================================
+TOP 10 BY SCORE
+================================================================================
+  2222.SR    Saudi Aramco         Score: 70.8 BUY       
+  1140.SR    Bank Albilad         Score: 70.7 BUY       
+  1180.SR    Al Rajhi Bank        Score: 69.7 BUY       
+  1212.SR    Astra Industrial     Score: 68.6 BUY       
+  4190.SR    Jarir Marketing      Score: 68.2 BUY       
+  1060.SR    Saudi Awwal Bank     Score: 66.3 BUY       
+  1150.SR    Alinma Bank          Score: 66.3 BUY       
+  1010.SR    Riyad Bank           Score: 66.2 BUY       
+  4030.SR    Bahri                Score: 65.8 BUY       
+  1120.SR    Al Jazira Bank       Score: 64.5 BUY       
+
+================================================================================
+STRATEGY PARAMETERS
+================================================================================
+  Regime Detection:    50-day MA
+  Bull Leverage:       1.5x
+  Bear Leverage:       0.5x
+  Take Profit:         25%
+  Trailing Stop:       7% (activates at +5%)
+  Max Holding:         180 days
+  Min Score:           60
+
+================================================================================

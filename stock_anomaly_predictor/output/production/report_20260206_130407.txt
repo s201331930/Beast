@@ -1,0 +1,96 @@
+================================================================================
+TASI SCANNER REPORT - 2026-02-06 13:04:07
+================================================================================
+
+MARKET REGIME: BULL
+Leverage Setting: 1.5x
+Volatility: 23.2%
+
+================================================================================
+BUY SIGNALS (6 stocks)
+================================================================================
+
+Ticker     Name                      Price    Score          Signal    Size%
+--------------------------------------------------------------------------------
+2222.SR    Saudi Aramco              25.60     70.8  MOMENTUM_ENTRY    10.0%
+1180.SR    Al Rajhi Bank             43.50     69.7  MOMENTUM_ENTRY     9.0%
+4190.SR    Jarir Marketing           14.31     68.2  MOMENTUM_ENTRY     9.0%
+1150.SR    Alinma Bank               28.54     66.3  MOMENTUM_ENTRY     6.3%
+1010.SR    Riyad Bank                28.76     66.2  MOMENTUM_ENTRY     9.0%
+2010.SR    SABIC                     55.50     63.6  MOMENTUM_ENTRY     6.3%
+
+TRADE PARAMETERS:
+--------------------------------------------------------------------------------
+
+2222.SR - Saudi Aramco
+  Entry Price:    25.65 SAR
+  Take Profit:    32.06 SAR (+25%)
+  Trailing Stop:  23.86 SAR (-7%)
+  Position Size:  10.0% of capital
+  RSI: 63.6, Momentum: 8.2%, Vol: 17.8%
+
+1180.SR - Al Rajhi Bank
+  Entry Price:    43.59 SAR
+  Take Profit:    54.48 SAR (+25%)
+  Trailing Stop:  40.54 SAR (-7%)
+  Position Size:  9.0% of capital
+  RSI: 62.2, Momentum: 7.9%, Vol: 23.2%
+
+4190.SR - Jarir Marketing
+  Entry Price:    14.34 SAR
+  Take Profit:    17.92 SAR (+25%)
+  Trailing Stop:  13.33 SAR (-7%)
+  Position Size:  9.0% of capital
+  RSI: 76.2, Momentum: 8.4%, Vol: 12.0%
+
+1150.SR - Alinma Bank
+  Entry Price:    28.60 SAR
+  Take Profit:    35.75 SAR (+25%)
+  Trailing Stop:  26.60 SAR (-7%)
+  Position Size:  6.3% of capital
+  RSI: 69.8, Momentum: 13.3%, Vol: 26.9%
+
+1010.SR - Riyad Bank
+  Entry Price:    28.82 SAR
+  Take Profit:    36.02 SAR (+25%)
+  Trailing Stop:  26.80 SAR (-7%)
+  Position Size:  9.0% of capital
+  RSI: 73.8, Momentum: 7.2%, Vol: 19.6%
+
+2010.SR - SABIC
+  Entry Price:    55.61 SAR
+  Take Profit:    69.51 SAR (+25%)
+  Trailing Stop:  51.72 SAR (-7%)
+  Position Size:  6.3% of capital
+  RSI: 47.7, Momentum: 9.0%, Vol: 30.3%
+
+================================================================================
+WATCHLIST (0 stocks)
+================================================================================
+
+================================================================================
+TOP 10 BY SCORE
+================================================================================
+  2222.SR    Saudi Aramco         Score: 70.8 BUY       
+  1180.SR    Al Rajhi Bank        Score: 69.7 BUY       
+  4190.SR    Jarir Marketing      Score: 68.2 BUY       
+  1150.SR    Alinma Bank          Score: 66.3 BUY       
+  1010.SR    Riyad Bank           Score: 66.2 BUY       
+  2010.SR    SABIC                Score: 63.6 BUY       
+  2082.SR    ACWA Power           Score: 59.6 HOLD      
+  7010.SR    STC                  Score: 58.5 HOLD      
+  1211.SR    Maaden               Score: 57.2 HOLD      
+  2280.SR    Almarai              Score: 56.9 HOLD      
+
+================================================================================
+STRATEGY PARAMETERS
+================================================================================
+  Regime Detection:    50-day MA
+  Bull Leverage:       1.5x
+  Bear Leverage:       0.5x
+  Take Profit:         25%
+  Trailing Stop:       7% (activates at +5%)
+  Max Holding:         180 days
+  Min Score:           60
+
+================================================================================
