@@ -1,0 +1,24 @@
+{
+  "last_updated": "2026-02-06T13:47:02.818337",
+  "start_date": "2026-02-06",
+  "total_days": 2,
+  "regime_history": [
+    {
+      "start_date": "2026-02-06",
+      "end_date": null,
+      "regime": "BULL",
+      "leverage": 1.5,
+      "starting_price": 100,
+      "ending_price": null,
+      "return_pct": null,
+      "leveraged_return_pct": null,
+      "days": 2,
+      "status": "ACTIVE"
+    }
+  ],
+  "cumulative_bh_return": 0,
+  "cumulative_strategy_return": 0,
+  "excess_return": 0,
+  "current_regime": "BULL",
+  "current_leverage": 1.5
+}

@@ -1,0 +1,504 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f8fafc; margin: 0; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .header { background: linear-gradient(135deg, #1e40af, #3b82f6); color: white; padding: 30px; border-radius: 12px 12px 0 0; }
+        .header h1 { margin: 0 0 10px 0; font-size: 24px; }
+        .header p { margin: 0; opacity: 0.9; }
+        .regime-badge { display: inline-block; padding: 8px 20px; border-radius: 20px; font-weight: bold; font-size: 18px; background: #10b981; color: white; margin-top: 15px; }
+        .section { padding: 25px; border-bottom: 1px solid #e5e7eb; }
+        .section h2 { color: #1e40af; margin-top: 0; border-bottom: 2px solid #3b82f6; padding-bottom: 10px; }
+        .metric-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-top: 15px; }
+        .metric { background: #f1f5f9; padding: 15px; border-radius: 8px; text-align: center; }
+        .metric-value { font-size: 24px; font-weight: bold; color: #1e40af; }
+        .metric-label { font-size: 12px; color: #64748b; margin-top: 5px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        th { background: #1e40af; color: white; padding: 12px; text-align: left; font-size: 13px; }
+        td { padding: 12px; border-bottom: 1px solid #e5e7eb; font-size: 13px; }
+        tr:hover { background: #f8fafc; }
+        .bull { color: #10b981; font-weight: bold; }
+        .bear { color: #ef4444; font-weight: bold; }
+        .warning { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 15px; margin: 15px 0; border-radius: 4px; }
+        .trade-card { background: #f8fafc; border: 1px solid #e5e7eb; border-radius: 8px; padding: 20px; margin: 15px 0; }
+        .trade-card h3 { margin: 0 0 15px 0; color: #1e40af; }
+        .trade-params { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+        .param { background: white; padding: 10px; border-radius: 4px; }
+        .param-label { font-size: 11px; color: #64748b; }
+        .param-value { font-size: 14px; font-weight: bold; color: #1e293b; }
+        .tracker { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 15px; margin-top: 15px; }
+        .footer { text-align: center; padding: 20px; color: #64748b; font-size: 12px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🇸🇦 TASI Trend-Based Leverage Strategy</h1>
+            <p>Daily Report - Friday, February 06, 2026</p>
+            <div class="regime-badge">🟢 BULL MARKET - 1.5x LEVERAGE</div>
+        </div>
+        
+        <div class="section">
+            <h2>📊 Strategy Overview</h2>
+            <div class="metric-grid">
+                <div class="metric">
+                    <div class="metric-value">1.5x</div>
+                    <div class="metric-label">Current Leverage</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value">1,500,000</div>
+                    <div class="metric-label">Target Exposure (SAR)</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value">14</div>
+                    <div class="metric-label">Active Positions</div>
+                </div>
+            </div>
+            
+            <div class="warning">
+                <strong>⚠️ Regime Change Alert:</strong> 
+                If market proxy price crosses <strong>39.83 SAR</strong>, 
+                regime will change to BEAR (0.5x leverage).
+                Current price: <strong>43.50 SAR</strong> (+9.2% from trigger).
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>💼 Position Allocation</h2>
+            <table>
+                <tr>
+                    <th>Ticker</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>50-MA</th>
+                    <th>vs MA</th>
+                    <th>Weight</th>
+                    <th>Shares</th>
+                    <th>Value</th>
+                    <th>Status</th>
+                </tr>
+
+                <tr>
+                    <td><strong>1180.SR</strong></td>
+                    <td>Al Rajhi Bank</td>
+                    <td>43.50</td>
+                    <td>39.83</td>
+                    <td class="bull">+9.2%</td>
+                    <td>12.7%</td>
+                    <td>2,922</td>
+                    <td>127,119</td>
+                    <td class="bull">🟢 BULL</td>
+                </tr>
+
+                <tr>
+                    <td><strong>1010.SR</strong></td>
+                    <td>Riyad Bank</td>
+                    <td>28.76</td>
+                    <td>26.94</td>
+                    <td class="bull">+6.7%</td>
+                    <td>12.7%</td>
+                    <td>4,419</td>
+                    <td>127,119</td>
+                    <td class="bull">🟢 BULL</td>
+                </tr>
+
+                <tr>
+                    <td><strong>2222.SR</strong></td>
+                    <td>Saudi Aramco</td>
+                    <td>25.60</td>
+                    <td>24.41</td>
+                    <td class="bull">+4.9%</td>
+                    <td>12.7%</td>
+                    <td>4,965</td>
+                    <td>127,119</td>
+                    <td class="bull">🟢 BULL</td>
+                </tr>
+
+                <tr>
+                    <td><strong>7010.SR</strong></td>
+                    <td>STC</td>
+                    <td>44.28</td>
+                    <td>43.24</td>
+                    <td class="bull">+2.4%</td>
+                    <td>12.7%</td>
+                    <td>2,870</td>
+                    <td>127,119</td>
+                    <td class="bull">🟢 BULL</td>
+                </tr>
+
+                <tr>
+                    <td><strong>2010.SR</strong></td>
+                    <td>SABIC</td>
+                    <td>55.50</td>
+                    <td>53.84</td>
+                    <td class="bull">+3.1%</td>
+                    <td>12.7%</td>
+                    <td>2,290</td>
+                    <td>127,119</td>
+                    <td class="bull">🟢 BULL</td>
+                </tr>
+
+                <tr>
+                    <td><strong>1150.SR</strong></td>
+                    <td>Alinma Bank</td>
+                    <td>28.54</td>
+                    <td>25.54</td>
+                    <td class="bull">+11.7%</td>
+                    <td>12.7%</td>
+                    <td>4,454</td>
+                    <td>127,119</td>
+                    <td class="bull">🟢 BULL</td>
+                </tr>
+
+                <tr>
+                    <td><strong>2082.SR</strong></td>
+                    <td>ACWA Power</td>
+                    <td>187.20</td>
+                    <td>184.04</td>
+                    <td class="bull">+1.7%</td>
+                    <td>10.2%</td>
+                    <td>543</td>
+                    <td>101,695</td>
+                    <td class="bull">🟢 BULL</td>
+                </tr>
+
+                <tr>
+                    <td><strong>2280.SR</strong></td>
+                    <td>Almarai</td>
+                    <td>41.74</td>
+                    <td>43.46</td>
+                    <td class="bear">-4.0%</td>
+                    <td>10.2%</td>
+                    <td>2,436</td>
+                    <td>101,695</td>
+                    <td class="bear">🔴 BEAR</td>
+                </tr>
+
+                <tr>
+                    <td><strong>8210.SR</strong></td>
+                    <td>Bupa Arabia</td>
+                    <td>162.00</td>
+                    <td>145.31</td>
+                    <td class="bull">+11.5%</td>
+                    <td>10.2%</td>
+                    <td>627</td>
+                    <td>101,695</td>
+                    <td class="bull">🟢 BULL</td>
+                </tr>
+
+                <tr>
+                    <td><strong>4190.SR</strong></td>
+                    <td>Jarir Marketing</td>
+                    <td>14.31</td>
+                    <td>13.19</td>
+                    <td class="bull">+8.5%</td>
+                    <td>10.2%</td>
+                    <td>7,106</td>
+                    <td>101,695</td>
+                    <td class="bull">🟢 BULL</td>
+                </tr>
+
+                <tr>
+                    <td><strong>1211.SR</strong></td>
+                    <td>Maaden</td>
+                    <td>72.55</td>
+                    <td>65.75</td>
+                    <td class="bull">+10.3%</td>
+                    <td>8.9%</td>
+                    <td>1,226</td>
+                    <td>88,983</td>
+                    <td class="bull">🟢 BULL</td>
+                </tr>
+
+                <tr>
+                    <td><strong>7020.SR</strong></td>
+                    <td>Mobily</td>
+                    <td>68.20</td>
+                    <td>66.81</td>
+                    <td class="bull">+2.1%</td>
+                    <td>8.9%</td>
+                    <td>1,304</td>
+                    <td>88,983</td>
+                    <td class="bull">🟢 BULL</td>
+                </tr>
+
+                <tr>
+                    <td><strong>4300.SR</strong></td>
+                    <td>Dar Al Arkan</td>
+                    <td>18.12</td>
+                    <td>16.43</td>
+                    <td class="bull">+10.3%</td>
+                    <td>7.6%</td>
+                    <td>4,209</td>
+                    <td>76,271</td>
+                    <td class="bull">🟢 BULL</td>
+                </tr>
+
+                <tr>
+                    <td><strong>2050.SR</strong></td>
+                    <td>Savola</td>
+                    <td>22.81</td>
+                    <td>23.02</td>
+                    <td class="bear">-0.9%</td>
+                    <td>7.6%</td>
+                    <td>3,343</td>
+                    <td>76,271</td>
+                    <td class="bear">🔴 BEAR</td>
+                </tr>
+
+                <tr style="background: #f1f5f9; font-weight: bold;">
+                    <td colspan="5">TOTAL</td>
+                    <td>150.0%</td>
+                    <td></td>
+                    <td>1,500,000</td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="section">
+            <h2>📋 Top 5 Position Details</h2>
+
+            <div class="trade-card">
+                <h3>1180.SR - Al Rajhi Bank 🟢</h3>
+                <div class="trade-params">
+                    <div class="param">
+                        <div class="param-label">Entry Price</div>
+                        <div class="param-value">43.50 SAR</div>
+                    </div>
+                    <div class="param">
+                        <div class="param-label">Target Shares</div>
+                        <div class="param-value">2,922</div>
+                    </div>
+                    <div class="param">
+                        <div class="param-label">Position Value</div>
+                        <div class="param-value">127,119 SAR</div>
+                    </div>
+                    <div class="param">
+                        <div class="param-label">Portfolio Weight</div>
+                        <div class="param-value">12.7%</div>
+                    </div>
+                    <div class="param">
+                        <div class="param-label">50-Day MA</div>
+                        <div class="param-value">39.83 SAR</div>
+                    </div>
+                    <div class="param">
+                        <div class="param-label">Regime Change Price</div>
+                        <div class="param-value">39.83 SAR</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="trade-card">
+                <h3>1010.SR - Riyad Bank 🟢</h3>
+                <div class="trade-params">
+                    <div class="param">
+                        <div class="param-label">Entry Price</div>
+                        <div class="param-value">28.76 SAR</div>
+                    </div>
+                    <div class="param">
+                        <div class="param-label">Target Shares</div>
+                        <div class="param-value">4,419</div>
+                    </div>
+                    <div class="param">
+                        <div class="param-label">Position Value</div>
+                        <div class="param-value">127,119 SAR</div>
+                    </div>
+                    <div class="param">
+                        <div class="param-label">Portfolio Weight</div>
+                        <div class="param-value">12.7%</div>
+                    </div>
+                    <div class="param">
+                        <div class="param-label">50-Day MA</div>
+                        <div class="param-value">26.94 SAR</div>
+                    </div>
+                    <div class="param">
+                        <div class="param-label">Regime Change Price</div>
+                        <div class="param-value">26.94 SAR</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="trade-card">
+                <h3>2222.SR - Saudi Aramco 🟢</h3>
+                <div class="trade-params">
+                    <div class="param">
+                        <div class="param-label">Entry Price</div>
+                        <div class="param-value">25.60 SAR</div>
+                    </div>
+                    <div class="param">
+                        <div class="param-label">Target Shares</div>
+                        <div class="param-value">4,965</div>
+                    </div>
+                    <div class="param">
+                        <div class="param-label">Position Value</div>
+                        <div class="param-value">127,119 SAR</div>
+                    </div>
+                    <div class="param">
+                        <div class="param-label">Portfolio Weight</div>
+                        <div class="param-value">12.7%</div>
+                    </div>
+                    <div class="param">
+                        <div class="param-label">50-Day MA</div>
+                        <div class="param-value">24.41 SAR</div>
+                    </div>
+                    <div class="param">
+                        <div class="param-label">Regime Change Price</div>
+                        <div class="param-value">24.41 SAR</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="trade-card">
+                <h3>7010.SR - STC 🟢</h3>
+                <div class="trade-params">
+                    <div class="param">
+                        <div class="param-label">Entry Price</div>
+                        <div class="param-value">44.28 SAR</div>
+                    </div>
+                    <div class="param">
+                        <div class="param-label">Target Shares</div>
+                        <div class="param-value">2,870</div>
+                    </div>
+                    <div class="param">
+                        <div class="param-label">Position Value</div>
+                        <div class="param-value">127,119 SAR</div>
+                    </div>
+                    <div class="param">
+                        <div class="param-label">Portfolio Weight</div>
+                        <div class="param-value">12.7%</div>
+                    </div>
+                    <div class="param">
+                        <div class="param-label">50-Day MA</div>
+                        <div class="param-value">43.24 SAR</div>
+                    </div>
+                    <div class="param">
+                        <div class="param-label">Regime Change Price</div>
+                        <div class="param-value">43.24 SAR</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="trade-card">
+                <h3>2010.SR - SABIC 🟢</h3>
+                <div class="trade-params">
+                    <div class="param">
+                        <div class="param-label">Entry Price</div>
+                        <div class="param-value">55.50 SAR</div>
+                    </div>
+                    <div class="param">
+                        <div class="param-label">Target Shares</div>
+                        <div class="param-value">2,290</div>
+                    </div>
+                    <div class="param">
+                        <div class="param-label">Position Value</div>
+                        <div class="param-value">127,119 SAR</div>
+                    </div>
+                    <div class="param">
+                        <div class="param-label">Portfolio Weight</div>
+                        <div class="param-value">12.7%</div>
+                    </div>
+                    <div class="param">
+                        <div class="param-label">50-Day MA</div>
+                        <div class="param-value">53.84 SAR</div>
+                    </div>
+                    <div class="param">
+                        <div class="param-label">Regime Change Price</div>
+                        <div class="param-value">53.84 SAR</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+        <div class="section">
+            <h2>📈 Performance Tracking</h2>
+
+            <div class="metric-grid">
+                <div class="metric">
+                    <div class="metric-value">2</div>
+                    <div class="metric-label">Days Tracked</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value">2</div>
+                    <div class="metric-label">Bull Days (100%)</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value">1</div>
+                    <div class="metric-label">Regime Changes</div>
+                </div>
+            </div>
+            
+            <div class="tracker">
+                <strong>📊 Regime History (Last 5):</strong>
+                <table style="margin-top: 10px;">
+                    <tr>
+                        <th>Start</th>
+                        <th>End</th>
+                        <th>Regime</th>
+                        <th>Leverage</th>
+                        <th>Days</th>
+                        <th>Status</th>
+                    </tr>
+
+                    <tr>
+                        <td>2026-02-06</td>
+                        <td>Ongoing</td>
+                        <td class="bull">BULL</td>
+                        <td>1.5x</td>
+                        <td>2</td>
+                        <td>ACTIVE</td>
+                    </tr>
+
+                </table>
+            </div>
+
+        </div>
+        
+        <div class="section">
+            <h2>📊 Expected Performance (Backtest 2022-2026)</h2>
+            <table>
+                <tr>
+                    <th>Metric</th>
+                    <th>Buy & Hold</th>
+                    <th>This Strategy</th>
+                    <th>Excess</th>
+                </tr>
+                <tr>
+                    <td>Total Return</td>
+                    <td>+33.8%</td>
+                    <td class="bull">+141.7%</td>
+                    <td class="bull">+107.9%</td>
+                </tr>
+                <tr>
+                    <td>Annualized Return</td>
+                    <td>+7.4%</td>
+                    <td class="bull">+24.3%</td>
+                    <td class="bull">+16.8%</td>
+                </tr>
+                <tr>
+                    <td>Sharpe Ratio</td>
+                    <td>0.56</td>
+                    <td class="bull">1.61</td>
+                    <td class="bull">+1.05</td>
+                </tr>
+                <tr>
+                    <td>Max Drawdown</td>
+                    <td>19.3%</td>
+                    <td class="bull">11.2%</td>
+                    <td class="bull">Better</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="footer">
+            <p>TASI Trend-Based Leverage Strategy | Generated 2026-02-06 13:47:01</p>
+            <p style="font-size: 10px; margin-top: 10px;">
+                This strategy is for informational purposes only. Past performance does not guarantee future results.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
