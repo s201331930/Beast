@@ -1,0 +1,14 @@
+{
+  "bh_return": 0.39534646799710754,
+  "strategies": {
+    "Buy & Hold": 0.39534646799710754,
+    "Momentum Rotation": 0.1302299093195043,
+    "Vol-Adjusted": 0.28664726025708154,
+    "Trend-Following": 0.017328188937490108,
+    "Combined Mom+Vol": 0.13450337938647894,
+    "Leveraged B&H 1.3x": 0.6105228186592742
+  },
+  "best_strategy": "Leveraged B&H 1.3x",
+  "best_return": 0.6105228186592742,
+  "excess_vs_bh": 0.21517635066216662
+}
