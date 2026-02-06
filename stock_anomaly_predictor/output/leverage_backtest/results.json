@@ -1,0 +1,29 @@
+{
+  "period": {
+    "start": "2022-01-02",
+    "end": "2026-02-05",
+    "days": 1024
+  },
+  "buy_and_hold": {
+    "total_return": 0.3381,
+    "annual_return": 0.0743,
+    "sharpe": 0.561,
+    "max_drawdown": 0.1933,
+    "final_value": 1338050.28
+  },
+  "leverage_strategy": {
+    "total_return": 1.4169,
+    "annual_return": 0.2426,
+    "sharpe": 1.614,
+    "max_drawdown": 0.1124,
+    "final_value": 2416946.87
+  },
+  "excess_return": 1.0789,
+  "regime_analysis": {
+    "bull_days": 507,
+    "bear_days": 466,
+    "bull_pct": 52.1,
+    "bear_pct": 47.9
+  },
+  "validated": true
+}
