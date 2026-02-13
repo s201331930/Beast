@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-02-06T18:30:15.564073",
+  "last_updated": "2026-02-13T09:25:18.960726",
   "current_regime": "BULL",
   "current_leverage": 1.5,
   "regime_history": [
@@ -8,21 +8,21 @@
       "end_date": null,
       "regime": "BULL",
       "leverage": 1.5,
-      "days": 2,
+      "days": 3,
       "status": "ACTIVE"
     }
   ],
   "selected_stocks": [
-    "2320.SR",
-    "1211.SR",
     "1304.SR",
+    "1211.SR",
     "1321.SR",
-    "4140.SR",
     "8010.SR",
-    "4030.SR",
-    "4071.SR",
     "8210.SR",
-    "2240.SR"
+    "4071.SR",
+    "4140.SR",
+    "8030.SR",
+    "2320.SR",
+    "1150.SR"
   ],
-  "stocks_screened": 169
+  "stocks_screened": 152
 }

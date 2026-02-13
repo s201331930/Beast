@@ -5,7 +5,7 @@ FULL MARKET SCANNER
 Scans ALL TASI (Saudi Stock Exchange) stocks and selects the TOP 10
 based on scientific screening criteria.
 
-Complete TASI stock list with all sectors.
+Fetches actual company names from Yahoo Finance to ensure accuracy.
 """
 
 import os
@@ -32,231 +32,71 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 
 # =============================================================================
-# COMPLETE TASI STOCK LIST (All Sectors)
+# COMPLETE TASI TICKER LIST
 # =============================================================================
 
-# This is a comprehensive list of TASI stocks across all sectors
-ALL_TASI_STOCKS = {
-    # === BANKS ===
-    '1180.SR': 'Al Rajhi Bank',
-    '1010.SR': 'Riyad Bank',
-    '1150.SR': 'Alinma Bank',
-    '1140.SR': 'Banque Saudi Fransi',
-    '1060.SR': 'Saudi Investment Bank',
-    '1050.SR': 'Saudi British Bank (SABB)',
-    '1020.SR': 'Bank Al-Jazira',
-    '1030.SR': 'Saudi Awwal Bank (SAB)',
-    '1080.SR': 'Arab National Bank',
-    '1182.SR': 'Amlak International',
+# All known TASI tickers - names will be fetched from Yahoo Finance
+TASI_TICKERS = [
+    # Banks
+    '1180.SR', '1010.SR', '1150.SR', '1140.SR', '1060.SR', '1050.SR',
+    '1020.SR', '1030.SR', '1080.SR', '1182.SR',
     
-    # === ENERGY ===
-    '2222.SR': 'Saudi Aramco',
-    '2030.SR': 'Sarco',
-    '4030.SR': 'Bahri',
-    '2381.SR': 'Petro Rabigh',
-    '2380.SR': 'Rabigh Refining',
+    # Energy & Petrochemicals
+    '2222.SR', '2030.SR', '4030.SR', '2381.SR', '2380.SR',
+    '2010.SR', '2290.SR', '2250.SR', '2210.SR', '2001.SR',
+    '2060.SR', '2310.SR', '2350.SR', '2330.SR', '2170.SR',
+    '2020.SR', '2190.SR',
     
-    # === MATERIALS ===
-    '2010.SR': 'SABIC',
-    '1211.SR': 'Maaden',
-    '2290.SR': 'Yanbu National Petrochemical',
-    '2250.SR': 'Saudi Industrial Investment',
-    '2210.SR': 'Nama Chemicals',
-    '2001.SR': 'Methanol Chemicals',
-    '2060.SR': 'National Industrialization',
-    '2310.SR': 'Saudi International Petrochemical',
-    '2350.SR': 'Saudi Kayan',
-    '2330.SR': 'Advanced Petrochemical',
-    '2170.SR': 'Alujain Corporation',
-    '2020.SR': 'Saudi Arabia Fertilizers (SAFCO)',
-    '1320.SR': 'Saudi Steel Pipe',
-    '1321.SR': 'Astra Industrial Group',
-    '1302.SR': 'Bawan Company',
-    '1304.SR': 'Al Yamamah Steel',
-    '2200.SR': 'Arabian Pipe',
-    '2220.SR': 'National Metal Manufacturing',
-    '3010.SR': 'Arabian Cement',
-    '3020.SR': 'Yamama Cement',
-    '3030.SR': 'Saudi Cement',
-    '3040.SR': 'Qassim Cement',
-    '3050.SR': 'Southern Province Cement',
-    '3060.SR': 'Yanbu Cement',
-    '3080.SR': 'Eastern Province Cement',
-    '3090.SR': 'Tabuk Cement',
-    '3091.SR': 'Umm Al-Qura Cement',
-    '3001.SR': 'Hail Cement',
-    '3002.SR': 'Najran Cement',
-    '3003.SR': 'City Cement',
-    '3004.SR': 'Northern Region Cement',
-    '2190.SR': 'Sipchem',
-    '2240.SR': 'Zamil Industrial',
+    # Materials & Industrials
+    '1211.SR', '1320.SR', '1321.SR', '1302.SR', '1304.SR',
+    '2200.SR', '2220.SR', '2240.SR', '2320.SR', '2370.SR',
     
-    # === INDUSTRIALS ===
-    '2082.SR': 'ACWA Power',
-    '2083.SR': 'Alkhorayef Water & Power',
-    '1212.SR': 'Astra Industrial',
-    '2040.SR': 'Saudi Ceramic',
-    '2130.SR': 'Saudi Industrial Development',
-    '2320.SR': 'Albabtain Power',
-    '2370.SR': 'Middle East Specialized Cables',
-    '4110.SR': 'Saudi Printing & Packaging',
-    '4140.SR': 'Saudi Industrial Services',
-    '2160.SR': 'Al Hassan Shaker (Jokey)',
-    '1214.SR': 'Al Sorayai Trading',
-    '2180.SR': 'Filling & Packing Materials (FIPCO)',
-    '2150.SR': 'Saudi Industrial Export Company',
-    '4142.SR': 'Al Kathiri Holding',
-    '4143.SR': 'Alujain Corporation',
+    # Cement
+    '3010.SR', '3020.SR', '3030.SR', '3040.SR', '3050.SR',
+    '3060.SR', '3080.SR', '3090.SR', '3091.SR', '3001.SR',
+    '3002.SR', '3003.SR', '3004.SR',
     
-    # === CONSUMER DISCRETIONARY ===
-    '4190.SR': 'Jarir Marketing',
-    '4003.SR': 'Extra',
-    '4240.SR': 'Fawaz Abdulaziz Alhokair',
-    '4001.SR': 'Abdullah Al Othaim Markets',
-    '4002.SR': 'Mouwasat Medical Services',
-    '4004.SR': 'Dallah Healthcare',
-    '4005.SR': 'Saudi Pharmaceutical Industries',
-    '4006.SR': 'Saudi Arabian Cooperative Insurance',
-    '4007.SR': 'Al Hammadi Holding',
-    '4008.SR': 'National Medical Care',
-    '4009.SR': 'SACO',
-    '4010.SR': 'Saudi Paper Manufacturing',
-    '4011.SR': 'Al Sagr Cooperative Insurance',
-    '4012.SR': 'Tihama Advertising',
-    '4013.SR': 'Walaa Cooperative Insurance',
-    '4014.SR': 'Al Alamiya Insurance',
-    '4015.SR': 'Fitaihi Holding',
-    '4017.SR': 'Saudi Hotels',
-    '4020.SR': 'Saudi Public Transport',
-    '4031.SR': 'Saudi Ground Services',
-    '4040.SR': 'Saudi Real Estate',
-    '4050.SR': 'Saudi Automotive Services',
-    '4051.SR': 'Taiba Holding',
-    '4061.SR': 'Anaam International Holding',
-    '4071.SR': 'Almarai',
-    '4080.SR': 'Saudia Dairy & Foodstuff (SADAFCO)',
-    '4130.SR': 'Al Babtain Power & Telecom',
-    '4160.SR': 'Thimar Development',
-    '4180.SR': 'Fitaihi Holding',
-    '4200.SR': 'Aldrees Petroleum',
-    '4210.SR': 'Saudi Automotive Services',
-    '4220.SR': 'Emaar The Economic City',
-    '4230.SR': 'Red Sea International',
-    '4250.SR': 'Jabal Omar',
-    '4260.SR': 'Budget Saudi',
-    '4261.SR': 'Mohammad Al Mojil Group (MMG)',
-    '4270.SR': 'Saudi Research & Marketing Group',
-    '4280.SR': 'Kingdom Holding Company',
-    '4290.SR': 'Al Khaleej Training & Education',
-    '4291.SR': 'NCLE',
-    '4292.SR': 'Sasco',
+    # Utilities
+    '5110.SR', '2082.SR', '2083.SR',
     
-    # === CONSUMER STAPLES ===
-    '2280.SR': 'Almarai',
-    '2050.SR': 'Savola Group',
-    '6002.SR': 'Herfy Food Services',
-    '6001.SR': 'Halwani Bros',
-    '6010.SR': 'National Agricultural Development (NADEC)',
-    '6020.SR': 'Jazan Development Company',
-    '6040.SR': 'Tabuk Agricultural Development',
-    '6050.SR': 'Saudi Fisheries',
-    '6060.SR': 'Ash-Sharqiyah Development',
-    '6070.SR': 'Al Jouf Agricultural Development',
-    '6090.SR': 'Jadwa REIT Saudi Fund',
-    '4291.SR': 'National Company for Learning & Education',
+    # Retail & Consumer
+    '4190.SR', '4003.SR', '4240.SR', '4001.SR', '4002.SR',
+    '4004.SR', '4005.SR', '4006.SR', '4007.SR', '4008.SR',
+    '4009.SR', '4020.SR', '4031.SR', '4040.SR', '4050.SR',
+    '4051.SR', '4061.SR', '4080.SR', '4110.SR', '4130.SR',
+    '4140.SR', '4160.SR', '4180.SR', '4200.SR', '4210.SR',
+    '4220.SR', '4230.SR', '4250.SR', '4260.SR', '4261.SR',
+    '4270.SR', '4280.SR', '4290.SR', '4291.SR', '4292.SR',
     
-    # === HEALTHCARE ===
-    '4002.SR': 'Mouwasat Medical Services',
-    '4004.SR': 'Dallah Healthcare',
-    '4007.SR': 'Al Hammadi Holding',
-    '4009.SR': 'Saudi Chemical Company',
+    # Food & Agriculture
+    '2280.SR', '2050.SR', '6002.SR', '6001.SR', '6010.SR',
+    '6020.SR', '6040.SR', '6050.SR', '6060.SR', '6070.SR',
+    '4071.SR',
     
-    # === TELECOM ===
-    '7010.SR': 'STC (Saudi Telecom)',
-    '7020.SR': 'Mobily (Etihad Etisalat)',
-    '7030.SR': 'Zain KSA',
-    '7040.SR': 'Integrated Telecom',
+    # Telecom
+    '7010.SR', '7020.SR', '7030.SR', '7040.SR',
     
-    # === UTILITIES ===
-    '5110.SR': 'Saudi Electricity Company',
-    '2082.SR': 'ACWA Power',
-    '2083.SR': 'Alkhorayef Water & Power Technologies',
+    # Real Estate
+    '4300.SR', '4310.SR', '4320.SR', '4321.SR', '4322.SR',
+    '4323.SR', '4324.SR', '4330.SR', '4331.SR', '4332.SR',
+    '4333.SR', '4334.SR', '4336.SR', '4337.SR', '4338.SR',
+    '4339.SR', '4340.SR', '4342.SR', '4344.SR', '4347.SR',
+    '1120.SR',
     
-    # === REAL ESTATE ===
-    '4300.SR': 'Dar Al Arkan Real Estate',
-    '4310.SR': 'Knowledge Economic City',
-    '4320.SR': 'Al Andalus Property',
-    '4321.SR': 'Riyad REIT',
-    '4322.SR': 'Jadwa REIT Al Haramain Fund',
-    '4323.SR': 'SEDCO Capital REIT Fund',
-    '4324.SR': 'Bonyan REIT Fund',
-    '4330.SR': 'Arriyadh Development Company',
-    '4331.SR': 'Makkah Construction & Development',
-    '4332.SR': 'Jabal Omar Development',
-    '4333.SR': 'Taiba Holding',
-    '4334.SR': 'Al Tayyar Travel Group',
-    '4336.SR': 'Alinma Retail REIT',
-    '4337.SR': 'Jazira REIT Fund',
-    '4338.SR': 'Al Rajhi REIT Fund',
-    '4339.SR': 'Derayah REIT Fund',
-    '4340.SR': 'Swicorp Wabel REIT Fund',
-    '4342.SR': 'Al Maather REIT',
-    '4344.SR': 'Mulkia Gulf Real Estate REIT',
-    '4345.SR': 'Saudi Enaya Cooperative Insurance',
-    '4347.SR': 'Musharaka REIT',
+    # Insurance
+    '8010.SR', '8012.SR', '8020.SR', '8030.SR', '8040.SR',
+    '8050.SR', '8060.SR', '8070.SR', '8080.SR', '8100.SR',
+    '8120.SR', '8150.SR', '8160.SR', '8170.SR', '8180.SR',
+    '8190.SR', '8200.SR', '8210.SR', '8230.SR', '8240.SR',
+    '8250.SR', '8260.SR', '8270.SR', '8280.SR', '8300.SR',
+    '8310.SR', '8311.SR',
     
-    # === INSURANCE ===
-    '8010.SR': 'Tawuniya',
-    '8012.SR': 'Bupa Arabia',
-    '8020.SR': 'Malath Cooperative Insurance',
-    '8030.SR': 'Mediterranean & Gulf Insurance',
-    '8040.SR': 'Allianz Saudi Fransi Cooperative Insurance',
-    '8050.SR': 'Salama Cooperative Insurance',
-    '8060.SR': 'Walaa Cooperative Insurance',
-    '8070.SR': 'Arabian Shield Insurance',
-    '8080.SR': 'SABB Takaful',
-    '8100.SR': 'Saudi Re for Cooperative Reinsurance',
-    '8120.SR': 'Gulf Union Cooperative Insurance',
-    '8150.SR': 'ACIG',
-    '8160.SR': 'Al Ahlia For Cooperative Insurance',
-    '8170.SR': 'Al Ahli Takaful Company',
-    '8180.SR': 'Al Sagr Cooperative Insurance',
-    '8190.SR': 'United Cooperative Assurance',
-    '8200.SR': 'Al Rajhi Takaful',
-    '8210.SR': 'Bupa Arabia for Cooperative Insurance',
-    '8230.SR': 'Buruj Cooperative Insurance',
-    '8240.SR': 'Axa Cooperative Insurance',
-    '8250.SR': 'Trade Union Cooperative Insurance',
-    '8260.SR': 'Gulf General Cooperative Insurance',
-    '8270.SR': 'Arabian Cooperative Insurance',
-    '8280.SR': 'Al Alamiya Insurance',
-    '8300.SR': 'Wataniya Insurance',
-    '8310.SR': 'Amana Cooperative Insurance',
-    '8311.SR': 'Aljazira Takaful',
-    
-    # === REITS ===
-    '1120.SR': 'Al Rajhi REIT',
-    '4330.SR': 'Arriyadh Development Company',
-    '4336.SR': 'Alinma Retail REIT',
-    '4337.SR': 'Jazira REIT',
-    '4338.SR': 'Al Rajhi REIT Fund',
-    '4339.SR': 'Derayah REIT',
-    '4340.SR': 'Swicorp Wabel REIT',
-    '4342.SR': 'Al Maather REIT',
-    '4344.SR': 'Mulkia Gulf REIT',
-    '4345.SR': 'Enaya Insurance',
-    '4347.SR': 'Musharaka REIT',
-    
-    # === DIVERSIFIED FINANCIALS ===
-    '1111.SR': 'Saudi Tadawul Group',
-    '4280.SR': 'Kingdom Holding',
-    '4081.SR': 'Nat\'l Agriculture Company',
-    '1183.SR': 'Saudi Arabian Mining',
-    '4082.SR': 'National Agricultural Marketing',
-}
+    # Diversified
+    '1111.SR', '1183.SR', '4081.SR', '4082.SR',
+]
 
-# Remove duplicates and invalid entries
-ALL_TASI_STOCKS = {k: v for k, v in ALL_TASI_STOCKS.items() if k and v}
+# Remove duplicates
+TASI_TICKERS = list(set(TASI_TICKERS))
 
 
 # =============================================================================
@@ -281,7 +121,7 @@ CONFIG = {
 @dataclass
 class StockScore:
     ticker: str
-    name: str
+    name: str  # Fetched from Yahoo Finance
     overall_score: float
     recommendation: str
     momentum_score: float
@@ -603,6 +443,7 @@ class FullMarketScanner:
     def __init__(self, capital: float = 1_000_000):
         self.capital = capital
         self.stock_data: Dict[str, pd.DataFrame] = {}
+        self.stock_names: Dict[str, str] = {}  # Ticker -> Actual company name
         self.stock_scores: Dict[str, StockScore] = {}
         self.all_scores: List[StockScore] = []
         self.selected_stocks: List[str] = []
@@ -616,24 +457,40 @@ class FullMarketScanner:
         self.stocks_loaded = 0
     
     def fetch_all_data(self) -> None:
-        """Fetch data for ALL TASI stocks."""
-        total = len(ALL_TASI_STOCKS)
-        print(f"Fetching data for {total} TASI stocks...")
+        """Fetch data for ALL TASI stocks and get actual company names."""
+        total = len(TASI_TICKERS)
+        print(f"Fetching data for {total} TASI tickers...")
         print("This may take a few minutes...\n")
         
         loaded = 0
         failed = 0
         
-        for i, (ticker, name) in enumerate(ALL_TASI_STOCKS.items()):
+        for i, ticker in enumerate(TASI_TICKERS):
             try:
-                df = yf.Ticker(ticker).history(period="1y")
+                stock = yf.Ticker(ticker)
+                df = stock.history(period="1y")
+                
                 if len(df) >= 60:
                     df.columns = [c.lower() for c in df.columns]
                     self.stock_data[ticker] = df
+                    
+                    # Get actual company name from Yahoo Finance
+                    try:
+                        info = stock.info
+                        # Try different fields for company name
+                        name = info.get('longName') or info.get('shortName') or info.get('displayName') or ticker
+                        # Clean up the name
+                        name = name.replace('Company', 'Co').replace('Corporation', 'Corp')
+                        if len(name) > 35:
+                            name = name[:32] + '...'
+                        self.stock_names[ticker] = name
+                    except:
+                        self.stock_names[ticker] = ticker
+                    
                     loaded += 1
                 else:
                     failed += 1
-            except:
+            except Exception as e:
                 failed += 1
             
             # Progress indicator
@@ -652,7 +509,7 @@ class FullMarketScanner:
         self.all_scores = []
         
         for ticker, df in self.stock_data.items():
-            name = ALL_TASI_STOCKS.get(ticker, ticker)
+            name = self.stock_names.get(ticker, ticker)
             try:
                 screener = ScientificScreener(df, ticker, name)
                 score = screener.analyze()
@@ -825,13 +682,14 @@ class FullMarketScanner:
         lines.append("=" * 110)
         lines.append("🇸🇦 FULL TASI MARKET SCAN - SCIENTIFIC SCREENING REPORT")
         lines.append(f"   Generated: {self.scan_time.strftime('%Y-%m-%d %H:%M:%S')}")
+        lines.append("   Company names fetched directly from Yahoo Finance")
         lines.append("=" * 110)
         
         lines.append(f"""
 ┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
 │  FULL MARKET SCREENING SUMMARY                                                                               │
 ├──────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
-│  Total TASI Stocks in Database:  {len(ALL_TASI_STOCKS):>5}                                                                       │
+│  Total TASI Tickers Scanned:     {len(TASI_TICKERS):>5}                                                                       │
 │  Stocks with Valid Data:         {self.stocks_loaded:>5}                                                                       │
 │  Stocks Successfully Screened:   {self.stocks_screened:>5}                                                                       │
 │  Stocks Passing Threshold (≥{CONFIG['min_score']}): {len([s for s in self.all_scores if s.overall_score >= CONFIG['min_score']]):>5}                                                                       │
@@ -844,18 +702,20 @@ class FullMarketScanner:
         lines.append("📊 TOP 20 STOCKS BY SCIENTIFIC SCORE (Full Market Ranking)")
         lines.append("=" * 110)
         
-        lines.append(f"\n  {'Rank':<5} {'Ticker':<10} {'Name':<25} {'Score':>7} {'Rec':<10} {'Hurst':>7} {'Beta':>6} {'ADX':>6} {'Vol':>7} {'Mom20d':>8}")
+        lines.append(f"\n  {'Rank':<5} {'Ticker':<10} {'Company Name':<35} {'Score':>7} {'Rec':<10} {'Hurst':>6} {'Beta':>5} {'Vol':>6} {'Mom':>7}")
         lines.append("  " + "-" * 105)
         
         for i, score in enumerate(self.all_scores[:20]):
             selected = "✓" if score.ticker in self.selected_stocks else " "
-            lines.append(f"  {i+1:>3}{selected} {score.ticker:<10} {score.name[:25]:<25} {score.overall_score:>6.1f} "
-                        f"{score.recommendation:<10} {score.hurst_exponent:>7.3f} {score.beta:>6.2f} {score.adx:>6.1f} "
-                        f"{score.volatility:>6.1%} {score.momentum_20d:>+7.1%}")
+            name_display = score.name[:35] if len(score.name) <= 35 else score.name[:32] + '...'
+            lines.append(f"  {i+1:>3}{selected} {score.ticker:<10} {name_display:<35} {score.overall_score:>6.1f} "
+                        f"{score.recommendation:<10} {score.hurst_exponent:>6.2f} {score.beta:>5.2f} "
+                        f"{score.volatility:>5.0%} {score.momentum_20d:>+6.1%}")
         
         # Current Regime
         regime_emoji = "🟢" if self.current_regime == "BULL" else "🔴"
         proxy = self.selected_stocks[0] if self.selected_stocks else "N/A"
+        proxy_name = self.stock_names.get(proxy, proxy)
         proxy_price = self.stock_data[proxy]['close'].iloc[-1] if proxy in self.stock_data else 0
         proxy_ma = self.stock_data[proxy]['close'].rolling(50).mean().iloc[-1] if proxy in self.stock_data else 0
         
@@ -865,7 +725,7 @@ class FullMarketScanner:
 {regime_emoji} CURRENT MARKET REGIME: {self.current_regime}
 {'='*110}
 
-  Market Proxy ({proxy}):
+  Market Proxy: {proxy} ({proxy_name})
     Current Price:        {proxy_price:.2f} SAR
     50-Day MA:            {proxy_ma:.2f} SAR
     Price vs MA:          {(proxy_price/proxy_ma-1)*100:+.2f}%
@@ -886,20 +746,20 @@ class FullMarketScanner:
         
         lines.append(f"\n  Capital: {self.capital:,.0f} SAR | Leverage: {self.current_leverage}x | Total Exposure: {self.capital * self.current_leverage:,.0f} SAR\n")
         
-        lines.append(f"  {'Ticker':<10} {'Name':<22} {'Score':>6} {'Price':>10} {'50-MA':>10} {'vs MA':>8} {'Weight':>8} {'Shares':>8} {'Value':>12} {'Regime':<6}")
-        lines.append("  " + "-" * 115)
+        lines.append(f"  {'Ticker':<10} {'Company Name':<30} {'Score':>6} {'Price':>10} {'Weight':>8} {'Shares':>8} {'Value':>12} {'Regime':<6}")
+        lines.append("  " + "-" * 105)
         
         total_value = 0
         for p in self.positions:
             regime_icon = "🟢" if p.stock_regime == "BULL" else "🔴"
-            lines.append(f"  {p.ticker:<10} {p.name[:22]:<22} {p.suitability_score:>5.1f} {p.current_price:>10.2f} "
-                        f"{p.ma_50:>10.2f} {p.price_vs_ma_pct:>+7.1f}% {p.target_weight_pct:>7.1f}% "
-                        f"{p.target_shares:>8} {p.target_value:>12,.0f} {regime_icon}")
+            name_display = p.name[:30] if len(p.name) <= 30 else p.name[:27] + '...'
+            lines.append(f"  {p.ticker:<10} {name_display:<30} {p.suitability_score:>5.1f} {p.current_price:>10.2f} "
+                        f"{p.target_weight_pct:>7.1f}% {p.target_shares:>8} {p.target_value:>12,.0f} {regime_icon}")
             total_value += p.target_value
         
-        lines.append("  " + "-" * 115)
+        lines.append("  " + "-" * 105)
         total_weight = sum(p.target_weight_pct for p in self.positions)
-        lines.append(f"  {'TOTAL':<10} {'':<22} {'':<6} {'':<10} {'':<10} {'':<8} {total_weight:>7.1f}% {'':<8} {total_value:>12,.0f}")
+        lines.append(f"  {'TOTAL':<10} {'':<30} {'':<6} {'':<10} {total_weight:>7.1f}% {'':<8} {total_value:>12,.0f}")
         
         # Detailed Trade Cards
         lines.append(f"""
@@ -994,6 +854,7 @@ def main():
     print("\n" + "=" * 70)
     print("FULL TASI MARKET SCANNER")
     print("Scanning ALL stocks to find TOP 10 by scientific score")
+    print("Company names fetched directly from Yahoo Finance")
     print("=" * 70 + "\n")
     
     scanner = FullMarketScanner(capital=1_000_000)
