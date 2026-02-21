@@ -1,0 +1,418 @@
+========================================================================================================================
+🏆 CHAMPIONSHIP TRADING SCANNER - TASI MARKET
+   Generated: 2026-02-21 23:05:50
+   Strategy: Minervini VCP + O'Neil RS + Weinstein Stages
+========================================================================================================================
+
+┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│  MARKET REGIME                                                                                                         │
+├────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│  🟢 Trend: BULL       Strength:  82.0  │  Volatility: NORMAL    │  Breadth:  36.5%  │  RISK_OFF    │
+│  Overall Market Health: 57.4/100                                                                                          │
+└────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+========================================================================================================================
+🚀 BREAKOUT IMMINENT - Top 5 Setups
+========================================================================================================================
+
+  Rank  Ticker     Company                           Price  Setup Timing   RS Entry Window   
+  -------------------------------------------------------------------------------------------------------------------
+  1     2222.SR    Saudi Arabian Oil Company         25.70    85     50   75 NOW            
+  2     4332.SR    Jadwa REIT Al Haramain Fund        4.96    45     55   70 WAIT_BREAKOUT  
+  3     4190.SR    Jarir Marketing Company           14.13    55     50   89 WAIT_BREAKOUT  
+  4     4300.SR    Dar Al Arkan Real Estate Devel    19.97    45     65   99 NOW            
+  5     1150.SR    Alinma Bank                       28.04    55     20   93 WAIT_BREAKOUT  
+
+========================================================================================================================
+💰 ACCUMULATING - Top 4 Setups
+========================================================================================================================
+
+  Rank  Ticker     Company                           Price  Setup Timing   RS Entry Window   
+  -------------------------------------------------------------------------------------------------------------------
+  10    2280.SR    Almarai Company                   42.50    35     55   53 WAIT_BREAKOUT  
+  11    4200.SR    Aldrees Petroleum and Transpor   121.30    35     55   50 WAIT_BREAKOUT  
+  13    4003.SR    United Electronics Company        86.75    35     40   56 WAIT_BREAKOUT  
+  14    8120.SR    Gulf Union Alahlia Cooperative    10.50    35     40   41 WAIT_BREAKOUT  
+
+========================================================================================================================
+🌱 EARLY STAGE - Top 3 Setups
+========================================================================================================================
+
+  Rank  Ticker     Company                           Price  Setup Timing   RS Entry Window   
+  -------------------------------------------------------------------------------------------------------------------
+  8     1050.SR    Banque Saudi Fransi               19.62    35     45   98 NOW            
+  12    4280.SR    Kingdom Holding Company            9.02    20     15   92 WAIT_PULLBACK  
+  18    1321.SR    East Pipes Integrated Company    147.00    35     20   86 WAIT_BREAKOUT  
+
+========================================================================================================================
+⚡ MOMENTUM - Top 3 Setups
+========================================================================================================================
+
+  Rank  Ticker     Company                           Price  Setup Timing   RS Entry Window   
+  -------------------------------------------------------------------------------------------------------------------
+  15    8210.SR    Bupa Arabia for Cooperative In   175.00    25     80   97 WAIT_BREAKOUT  
+  16    8010.SR    The Company for Cooperative In   140.00    25     65   95 WAIT_BREAKOUT  
+  17    1304.SR    Al Yamamah Steel Industries Co    38.72    40     35   90 WAIT_BREAKOUT  
+
+
+========================================================================================================================
+📋 DETAILED TOP 10 OPPORTUNITIES
+========================================================================================================================
+
+
+  #1 2222.SR - Saudi Arabian Oil Company
+  ──────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  Category: BREAKOUT_IMMINENT | Stage: STAGE_2 | MA Alignment: BULLISH
+  
+  CURRENT STATUS:
+    Price:              25.70 SAR
+    RS Rank:            75/100 
+    Setup Quality:      85/100
+    Timing Score:       50/100
+  
+  ACTIVE FLAGS:
+    🔥 BB Squeeze (11d) | 💰 Accumulating | 📊 FLAT_BASE
+  
+  CONSOLIDATION:
+    Days in Range:      59
+    Base Pattern:       FLAT_BASE
+    Base Depth:         12.7%
+    Breakout Distance:  1.4%
+  
+  VOLUME ANALYSIS:
+    Volume Trend:       ACCUMULATING
+    Accum Score:        100.0
+    Volume Dry-Up:      No
+  
+  TRADE PARAMETERS:
+    Entry Zone:         25.19 - 26.21 SAR
+    Stop Loss:          25.18 SAR (-2.0%)
+    Target 1:           26.48 SAR (3.0%)
+    Target 2:           27.00 SAR (5.1%)
+    Position Size:      3.9% of portfolio
+    Success Prob:       85%
+    Entry Window:       NOW
+
+
+  #2 4332.SR - Jadwa REIT Al Haramain Fund
+  ──────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  Category: BREAKOUT_IMMINENT | Stage: STAGE_2 | MA Alignment: MIXED
+  
+  CURRENT STATUS:
+    Price:              4.96 SAR
+    RS Rank:            70/100 
+    Setup Quality:      45/100
+    Timing Score:       55/100
+  
+  ACTIVE FLAGS:
+    🔥 BB Squeeze (29d) | 💰 Accumulating | 📈 Bullish Divergence
+  
+  CONSOLIDATION:
+    Days in Range:      6
+    Base Pattern:       NONE
+    Base Depth:         9.9%
+    Breakout Distance:  3.6%
+  
+  VOLUME ANALYSIS:
+    Volume Trend:       ACCUMULATING
+    Accum Score:        100.0
+    Volume Dry-Up:      Yes ✓
+  
+  TRADE PARAMETERS:
+    Entry Zone:         4.86 - 5.06 SAR
+    Stop Loss:          4.81 SAR (-3.0%)
+    Target 1:           5.19 SAR (4.6%)
+    Target 2:           5.35 SAR (7.9%)
+    Position Size:      5.0% of portfolio
+    Success Prob:       75%
+    Entry Window:       WAIT_BREAKOUT
+
+
+  #3 4190.SR - Jarir Marketing Company
+  ──────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  Category: BREAKOUT_IMMINENT | Stage: STAGE_2 | MA Alignment: BULLISH
+  
+  CURRENT STATUS:
+    Price:              14.13 SAR
+    RS Rank:            89/100 
+    Setup Quality:      55/100
+    Timing Score:       50/100
+  
+  ACTIVE FLAGS:
+    🔥 BB Squeeze (7d) | 💰 Accumulating
+  
+  CONSOLIDATION:
+    Days in Range:      56
+    Base Pattern:       NONE
+    Base Depth:         15.1%
+    Breakout Distance:  2.2%
+  
+  VOLUME ANALYSIS:
+    Volume Trend:       ACCUMULATING
+    Accum Score:        100.0
+    Volume Dry-Up:      No
+  
+  TRADE PARAMETERS:
+    Entry Zone:         13.85 - 14.41 SAR
+    Stop Loss:          13.77 SAR (-2.5%)
+    Target 1:           14.67 SAR (3.8%)
+    Target 2:           15.03 SAR (6.4%)
+    Position Size:      3.3% of portfolio
+    Success Prob:       85%
+    Entry Window:       WAIT_BREAKOUT
+
+
+  #4 4300.SR - Dar Al Arkan Real Estate Development Com
+  ──────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  Category: BREAKOUT_IMMINENT | Stage: STAGE_2 | MA Alignment: MIXED
+  
+  CURRENT STATUS:
+    Price:              19.97 SAR
+    RS Rank:            99/100 🔥 TOP DECILE
+    Setup Quality:      45/100
+    Timing Score:       65/100
+  
+  ACTIVE FLAGS:
+    🔥 BB Squeeze (7d) | 💰 Accumulating | ⚡ RS Leader (99) | 📊 CUP
+  
+  CONSOLIDATION:
+    Days in Range:      0
+    Base Pattern:       CUP
+    Base Depth:         30.5%
+    Breakout Distance:  1.1%
+  
+  VOLUME ANALYSIS:
+    Volume Trend:       ACCUMULATING
+    Accum Score:        100.0
+    Volume Dry-Up:      No
+  
+  TRADE PARAMETERS:
+    Entry Zone:         19.57 - 20.37 SAR
+    Stop Loss:          18.84 SAR (-5.7%)
+    Target 1:           21.66 SAR (8.5%)
+    Target 2:           22.79 SAR (14.1%)
+    Position Size:      1.6% of portfolio
+    Success Prob:       85%
+    Entry Window:       NOW
+
+
+  #5 1150.SR - Alinma Bank
+  ──────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  Category: BREAKOUT_IMMINENT | Stage: STAGE_2 | MA Alignment: BULLISH
+  
+  CURRENT STATUS:
+    Price:              28.04 SAR
+    RS Rank:            93/100 🔥 TOP DECILE
+    Setup Quality:      55/100
+    Timing Score:       20/100
+  
+  ACTIVE FLAGS:
+    🔥 BB Squeeze (6d) | 💰 Accumulating | ⚡ RS Leader (93)
+  
+  CONSOLIDATION:
+    Days in Range:      14
+    Base Pattern:       NONE
+    Base Depth:         18.2%
+    Breakout Distance:  4.3%
+  
+  VOLUME ANALYSIS:
+    Volume Trend:       ACCUMULATING
+    Accum Score:        100.0
+    Volume Dry-Up:      No
+  
+  TRADE PARAMETERS:
+    Entry Zone:         27.48 - 28.60 SAR
+    Stop Loss:          26.99 SAR (-3.7%)
+    Target 1:           29.62 SAR (5.6%)
+    Target 2:           30.68 SAR (9.4%)
+    Position Size:      2.7% of portfolio
+    Success Prob:       85%
+    Entry Window:       WAIT_BREAKOUT
+
+
+  #6 2020.SR - SABIC Agri-Nutrients Company
+  ──────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  Category: BREAKOUT_IMMINENT | Stage: STAGE_2 | MA Alignment: BULLISH
+  
+  CURRENT STATUS:
+    Price:              125.80 SAR
+    RS Rank:            84/100 
+    Setup Quality:      55/100
+    Timing Score:       20/100
+  
+  ACTIVE FLAGS:
+    🔥 BB Squeeze (8d) | 💰 Accumulating | 📊 FLAG
+  
+  CONSOLIDATION:
+    Days in Range:      10
+    Base Pattern:       FLAG
+    Base Depth:         16.4%
+    Breakout Distance:  3.0%
+  
+  VOLUME ANALYSIS:
+    Volume Trend:       ACCUMULATING
+    Accum Score:        100.0
+    Volume Dry-Up:      No
+  
+  TRADE PARAMETERS:
+    Entry Zone:         123.28 - 128.32 SAR
+    Stop Loss:          121.26 SAR (-3.6%)
+    Target 1:           132.61 SAR (5.4%)
+    Target 2:           137.16 SAR (9.0%)
+    Position Size:      3.0% of portfolio
+    Success Prob:       85%
+    Entry Window:       WAIT_BREAKOUT
+
+
+  #7 7010.SR - Saudi Telecom Company
+  ──────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  Category: BREAKOUT_IMMINENT | Stage: TRANSITION | MA Alignment: BULLISH
+  
+  CURRENT STATUS:
+    Price:              43.00 SAR
+    RS Rank:            66/100 
+    Setup Quality:      75/100
+    Timing Score:       40/100
+  
+  ACTIVE FLAGS:
+    🔥 BB Squeeze (14d) | 💰 Accumulating | 📈 Bullish Divergence | 📊 FLAT_BASE
+  
+  CONSOLIDATION:
+    Days in Range:      59
+    Base Pattern:       FLAT_BASE
+    Base Depth:         9.9%
+    Breakout Distance:  4.9%
+  
+  VOLUME ANALYSIS:
+    Volume Trend:       ACCUMULATING
+    Accum Score:        100.0
+    Volume Dry-Up:      No
+  
+  TRADE PARAMETERS:
+    Entry Zone:         42.14 - 43.86 SAR
+    Stop Loss:          42.08 SAR (-2.1%)
+    Target 1:           44.38 SAR (3.2%)
+    Target 2:           45.30 SAR (5.3%)
+    Position Size:      5.0% of portfolio
+    Success Prob:       75%
+    Entry Window:       WAIT_BREAKOUT
+
+
+  #8 1050.SR - Banque Saudi Fransi
+  ──────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  Category: EARLY_STAGE | Stage: STAGE_2 | MA Alignment: BULLISH
+  
+  CURRENT STATUS:
+    Price:              19.62 SAR
+    RS Rank:            98/100 🔥 TOP DECILE
+    Setup Quality:      35/100
+    Timing Score:       45/100
+  
+  ACTIVE FLAGS:
+    💰 Accumulating | ⚡ RS Leader (98)
+  
+  CONSOLIDATION:
+    Days in Range:      0
+    Base Pattern:       NONE
+    Base Depth:         22.3%
+    Breakout Distance:  1.6%
+  
+  VOLUME ANALYSIS:
+    Volume Trend:       ACCUMULATING
+    Accum Score:        100.0
+    Volume Dry-Up:      No
+  
+  TRADE PARAMETERS:
+    Entry Zone:         19.23 - 20.01 SAR
+    Stop Loss:          18.74 SAR (-4.5%)
+    Target 1:           20.94 SAR (6.7%)
+    Target 2:           21.83 SAR (11.3%)
+    Position Size:      2.2% of portfolio
+    Success Prob:       85%
+    Entry Window:       NOW
+
+
+  #9 2010.SR - Saudi Basic Industries Corporation
+  ──────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  Category: BREAKOUT_IMMINENT | Stage: TRANSITION | MA Alignment: MIXED
+  
+  CURRENT STATUS:
+    Price:              55.40 SAR
+    RS Rank:            65/100 
+    Setup Quality:      35/100
+    Timing Score:       55/100
+  
+  ACTIVE FLAGS:
+    🔥 BB Squeeze (12d) | 💰 Accumulating | 📈 Bullish Divergence
+  
+  CONSOLIDATION:
+    Days in Range:      11
+    Base Pattern:       NONE
+    Base Depth:         24.7%
+    Breakout Distance:  4.9%
+  
+  VOLUME ANALYSIS:
+    Volume Trend:       ACCUMULATING
+    Accum Score:        100.0
+    Volume Dry-Up:      No
+  
+  TRADE PARAMETERS:
+    Entry Zone:         54.29 - 56.51 SAR
+    Stop Loss:          53.27 SAR (-3.8%)
+    Target 1:           58.59 SAR (5.8%)
+    Target 2:           60.72 SAR (9.6%)
+    Position Size:      2.0% of portfolio
+    Success Prob:       65%
+    Entry Window:       WAIT_BREAKOUT
+
+
+  #10 2280.SR - Almarai Company
+  ──────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  Category: ACCUMULATING | Stage: STAGE_1 | MA Alignment: BEARISH
+  
+  CURRENT STATUS:
+    Price:              42.50 SAR
+    RS Rank:            53/100 
+    Setup Quality:      35/100
+    Timing Score:       55/100
+  
+  ACTIVE FLAGS:
+    🔥 BB Squeeze (14d) | 💰 Accumulating | 📈 Bullish Divergence
+  
+  CONSOLIDATION:
+    Days in Range:      6
+    Base Pattern:       NONE
+    Base Depth:         23.8%
+    Breakout Distance:  7.3%
+  
+  VOLUME ANALYSIS:
+    Volume Trend:       ACCUMULATING
+    Accum Score:        84.7
+    Volume Dry-Up:      No
+  
+  TRADE PARAMETERS:
+    Entry Zone:         41.65 - 43.35 SAR
+    Stop Loss:          41.08 SAR (-3.3%)
+    Target 1:           44.63 SAR (5.0%)
+    Target 2:           46.04 SAR (8.3%)
+    Position Size:      2.1% of portfolio
+    Success Prob:       65%
+    Entry Window:       WAIT_BREAKOUT
+
+
+========================================================================================================================
+📊 SCAN SUMMARY
+========================================================================================================================
+
+  Stocks Scanned:           104
+  Breakout Imminent:        8
+  VCP Setups:               0
+  Accumulating:             4
+  
+  Market Regime:            BULL (82/100)
+  Recommended Exposure:     FULL
+  
+========================================================================================================================
+END OF REPORT
+========================================================================================================================
