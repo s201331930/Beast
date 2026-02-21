@@ -1,0 +1,290 @@
+========================================================================================================================
+🏆 OPTIMIZED BLENDED STRATEGY SCANNER
+   Generated: 2026-02-21 23:23:53
+   Based on 2019-2026 Backtest (103 stocks, 7+ years)
+========================================================================================================================
+
+┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│  PROVEN STRATEGIES (Backtest Results)                                                                                  │
+├────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│  🥇 Cup & Handle:        PF=1.80, Win=54.2% - U-shaped base + handle + breakout                                        │
+│  🥈 Volume Dry-Up:       PF=1.76, Win=54.8% - Low volume consolidation near highs                                      │
+│  🥉 Accumulation:        PF=1.74, Win=54.0% - A/D rising + price consolidation                                         │
+│     Flat Base:           PF=1.65, Win=53.1% - Tight range (<15%) near highs                                            │
+│     BB Squeeze:          PF=1.47, Win=50.0% - Volatility contraction + breakout                                        │
+│     RS Momentum:         PF=1.37, Win=48.8% - 60d momentum > 15%, above 50MA                                           │
+├────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│  ❌ DROPPED: VCP Pattern, MA Alignment, Stage 2 Entry (insufficient signals or poor performance)                       │
+└────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+========================================================================================================================
+📊 SCAN SUMMARY
+========================================================================================================================
+
+  Total Stocks Scanned:    102
+  Stocks with Signals:     84
+  
+  Signal Breakdown:
+    🔥 STRONG (4+ strategies):   1
+    ⚡ MODERATE (2-3 strategies): 22
+    📊 WEAK (1 strategy):         61
+
+
+========================================================================================================================
+🔥 STRONG SIGNALS (4+ Strategies Confirming) - HIGHEST PROBABILITY
+========================================================================================================================
+
+  Ticker     Company                           Price  Score  WinRate Strategies                              
+  -------------------------------------------------------------------------------------------------------------------
+  8010.SR    The Company for Cooperative In   140.00  65.2    51.8% cup_handle, accumulation, bb_squeeze, rs
+
+
+========================================================================================================================
+⚡ MODERATE SIGNALS (2-3 Strategies Confirming)
+========================================================================================================================
+
+  Ticker     Company                           Price  Score  WinRate Strategies                              
+  -------------------------------------------------------------------------------------------------------------------
+  2020.SR    SABIC Agri-Nutrients Company     125.80  51.2    52.7% cup_handle, accumulation, bb_squeeze    
+  4332.SR    Jadwa REIT Al Haramain Fund        4.96  50.8    52.9% volume_dryup, accumulation, bb_squeeze  
+  1150.SR    Alinma Bank                       28.04  50.2    52.3% cup_handle, accumulation, rs_momentum   
+  4330.SR    Riyad REIT Fund                    5.12  49.8    52.6% volume_dryup, flat_base, bb_squeeze     
+  2222.SR    Saudi Arabian Oil Company         25.70  49.6    52.4% accumulation, flat_base, bb_squeeze     
+  4190.SR    Jarir Marketing Company           14.13  49.6    52.4% accumulation, flat_base, bb_squeeze     
+  1020.SR    Bank AlJazira                     11.78  36.2    54.1% cup_handle, accumulation                
+  3010.SR    Arabian Cement Company            22.79  34.6    53.6% accumulation, flat_base                 
+  7030.SR    Mobile Telecommunications Comp    11.73  34.6    53.6% accumulation, flat_base                 
+  1304.SR    Al Yamamah Steel Industries Co    38.72  33.4    52.1% cup_handle, bb_squeeze                  
+  1010.SR    Riyad Bank                        27.82  32.8    52.0% accumulation, bb_squeeze                
+  1140.SR    Bank Albilad                      26.08  32.8    52.0% accumulation, bb_squeeze                
+  1030.SR    The Saudi Investment Bank         13.71  32.8    52.0% accumulation, bb_squeeze                
+  2010.SR    Saudi Basic Industries Corpora    55.40  32.8    52.0% accumulation, bb_squeeze                
+  4003.SR    United Electronics Company        86.75  32.8    52.0% accumulation, bb_squeeze                
+
+
+========================================================================================================================
+📋 DETAILED TOP 10 OPPORTUNITIES
+========================================================================================================================
+
+
+  #1 8010.SR - The Company for Cooperative Insurance
+  ────────────────────────────────────────────────────────────────────────────────────────────────────
+  
+  SIGNAL STRENGTH: STRONG (4 strategies confirming)
+  BLENDED SCORE:   65.2/100
+  EXPECTED WIN:    51.8%
+  
+  ACTIVE STRATEGIES:
+    🏆 Cup&Handle | 💰 Accum | 🔥 BBSqueeze | ⚡ RSMom
+  
+  TRADE PARAMETERS:
+    Entry Price:    140.00 SAR
+    Stop Loss:      132.16 SAR (-5.6%)
+    Target 1:       161.00 SAR (+15.0%)
+    Target 2:       175.00 SAR (+25.0%)
+    Risk/Reward:    2.68
+    Position Size:  10.0% of portfolio
+
+
+  #2 2020.SR - SABIC Agri-Nutrients Company
+  ────────────────────────────────────────────────────────────────────────────────────────────────────
+  
+  SIGNAL STRENGTH: MODERATE (3 strategies confirming)
+  BLENDED SCORE:   51.2/100
+  EXPECTED WIN:    52.7%
+  
+  ACTIVE STRATEGIES:
+    🏆 Cup&Handle | 💰 Accum | 🔥 BBSqueeze
+  
+  TRADE PARAMETERS:
+    Entry Price:    125.80 SAR
+    Stop Loss:      121.26 SAR (-3.6%)
+    Target 1:       144.67 SAR (+15.0%)
+    Target 2:       157.25 SAR (+25.0%)
+    Risk/Reward:    4.15
+    Position Size:  7.5% of portfolio
+
+
+  #3 4332.SR - Jadwa REIT Al Haramain Fund
+  ────────────────────────────────────────────────────────────────────────────────────────────────────
+  
+  SIGNAL STRENGTH: MODERATE (3 strategies confirming)
+  BLENDED SCORE:   50.8/100
+  EXPECTED WIN:    52.9%
+  
+  ACTIVE STRATEGIES:
+    📉 VolDryUp | 💰 Accum | 🔥 BBSqueeze
+  
+  TRADE PARAMETERS:
+    Entry Price:    4.96 SAR
+    Stop Loss:      4.81 SAR (-3.0%)
+    Target 1:       5.70 SAR (+15.0%)
+    Target 2:       6.20 SAR (+25.0%)
+    Risk/Reward:    4.82
+    Position Size:  7.5% of portfolio
+
+
+  #4 1150.SR - Alinma Bank
+  ────────────────────────────────────────────────────────────────────────────────────────────────────
+  
+  SIGNAL STRENGTH: MODERATE (3 strategies confirming)
+  BLENDED SCORE:   50.2/100
+  EXPECTED WIN:    52.3%
+  
+  ACTIVE STRATEGIES:
+    🏆 Cup&Handle | 💰 Accum | ⚡ RSMom
+  
+  TRADE PARAMETERS:
+    Entry Price:    28.04 SAR
+    Stop Loss:      26.99 SAR (-3.7%)
+    Target 1:       32.25 SAR (+15.0%)
+    Target 2:       35.05 SAR (+25.0%)
+    Risk/Reward:    3.99
+    Position Size:  7.5% of portfolio
+
+
+  #5 4330.SR - Riyad REIT Fund
+  ────────────────────────────────────────────────────────────────────────────────────────────────────
+  
+  SIGNAL STRENGTH: MODERATE (3 strategies confirming)
+  BLENDED SCORE:   49.8/100
+  EXPECTED WIN:    52.6%
+  
+  ACTIVE STRATEGIES:
+    📉 VolDryUp | 📊 FlatBase | 🔥 BBSqueeze
+  
+  TRADE PARAMETERS:
+    Entry Price:    5.12 SAR
+    Stop Loss:      4.95 SAR (-3.3%)
+    Target 1:       5.89 SAR (+15.0%)
+    Target 2:       6.40 SAR (+25.0%)
+    Risk/Reward:    4.52
+    Position Size:  7.5% of portfolio
+
+
+  #6 2222.SR - Saudi Arabian Oil Company
+  ────────────────────────────────────────────────────────────────────────────────────────────────────
+  
+  SIGNAL STRENGTH: MODERATE (3 strategies confirming)
+  BLENDED SCORE:   49.6/100
+  EXPECTED WIN:    52.4%
+  
+  ACTIVE STRATEGIES:
+    💰 Accum | 📊 FlatBase | 🔥 BBSqueeze
+  
+  TRADE PARAMETERS:
+    Entry Price:    25.70 SAR
+    Stop Loss:      25.18 SAR (-2.0%)
+    Target 1:       29.56 SAR (+15.0%)
+    Target 2:       32.13 SAR (+25.0%)
+    Risk/Reward:    7.43
+    Position Size:  7.5% of portfolio
+
+
+  #7 4190.SR - Jarir Marketing Company
+  ────────────────────────────────────────────────────────────────────────────────────────────────────
+  
+  SIGNAL STRENGTH: MODERATE (3 strategies confirming)
+  BLENDED SCORE:   49.6/100
+  EXPECTED WIN:    52.4%
+  
+  ACTIVE STRATEGIES:
+    💰 Accum | 📊 FlatBase | 🔥 BBSqueeze
+  
+  TRADE PARAMETERS:
+    Entry Price:    14.13 SAR
+    Stop Loss:      13.77 SAR (-2.5%)
+    Target 1:       16.25 SAR (+15.0%)
+    Target 2:       17.66 SAR (+25.0%)
+    Risk/Reward:    5.91
+    Position Size:  7.5% of portfolio
+
+
+  #8 1020.SR - Bank AlJazira
+  ────────────────────────────────────────────────────────────────────────────────────────────────────
+  
+  SIGNAL STRENGTH: MODERATE (2 strategies confirming)
+  BLENDED SCORE:   36.2/100
+  EXPECTED WIN:    54.1%
+  
+  ACTIVE STRATEGIES:
+    🏆 Cup&Handle | 💰 Accum
+  
+  TRADE PARAMETERS:
+    Entry Price:    11.78 SAR
+    Stop Loss:      11.38 SAR (-3.4%)
+    Target 1:       13.55 SAR (+15.0%)
+    Target 2:       14.72 SAR (+25.0%)
+    Risk/Reward:    4.44
+    Position Size:  5.0% of portfolio
+
+
+  #9 3010.SR - Arabian Cement Company
+  ────────────────────────────────────────────────────────────────────────────────────────────────────
+  
+  SIGNAL STRENGTH: MODERATE (2 strategies confirming)
+  BLENDED SCORE:   34.6/100
+  EXPECTED WIN:    53.6%
+  
+  ACTIVE STRATEGIES:
+    💰 Accum | 📊 FlatBase
+  
+  TRADE PARAMETERS:
+    Entry Price:    22.79 SAR
+    Stop Loss:      22.13 SAR (-2.9%)
+    Target 1:       26.21 SAR (+15.0%)
+    Target 2:       28.49 SAR (+25.0%)
+    Risk/Reward:    5.21
+    Position Size:  5.0% of portfolio
+
+
+  #10 7030.SR - Mobile Telecommunications Company Saudi 
+  ────────────────────────────────────────────────────────────────────────────────────────────────────
+  
+  SIGNAL STRENGTH: MODERATE (2 strategies confirming)
+  BLENDED SCORE:   34.6/100
+  EXPECTED WIN:    53.6%
+  
+  ACTIVE STRATEGIES:
+    💰 Accum | 📊 FlatBase
+  
+  TRADE PARAMETERS:
+    Entry Price:    11.73 SAR
+    Stop Loss:      11.29 SAR (-3.8%)
+    Target 1:       13.49 SAR (+15.0%)
+    Target 2:       14.66 SAR (+25.0%)
+    Risk/Reward:    4.02
+    Position Size:  5.0% of portfolio
+
+
+========================================================================================================================
+📖 TRADING RULES (Based on Backtest)
+========================================================================================================================
+
+  ENTRY RULES:
+    1. Only trade STRONG signals (4+ strategies) or MODERATE (2-3) in BULL market
+    2. Entry at current price or on pullback to support
+    3. Confirm with volume expansion on breakout day
+
+  EXIT RULES:
+    1. Stop Loss: 8% below entry (backtest optimal)
+    2. Target 1: +15% (take 50% off)
+    3. Target 2: +25% (remaining position)
+    4. Time Stop: Exit after 20 days if neither hit
+
+  POSITION SIZING:
+    • STRONG signal: 7-10% of portfolio
+    • MODERATE signal: 5-7% of portfolio
+    • WEAK signal: Skip or 2-3% max
+    • Max 5 positions at once
+    • Max 30% in any sector
+
+  MARKET FILTER:
+    • BULL market (index > 50MA): Full exposure
+    • NEUTRAL: 50% exposure, only STRONG signals
+    • BEAR market (index < 50MA): 25% exposure or cash
+
+========================================================================================================================
+END OF REPORT
+========================================================================================================================

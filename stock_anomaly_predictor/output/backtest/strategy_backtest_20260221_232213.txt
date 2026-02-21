@@ -1,0 +1,141 @@
+========================================================================================================================
+🏆 CHAMPIONSHIP STRATEGY BACKTEST RESULTS
+   Period: 2019-01-01 to 2026-02-21
+   Holding Period: 20 days | Stop Loss: 8% | Take Profit: 15%
+   Stocks Tested: 103
+========================================================================================================================
+
+========================================================================================================================
+📊 STRATEGY COMPARISON
+========================================================================================================================
+
+  Strategy                   Trades   Win%   AvgRet     PF   Total%  Sharpe   MaxDD    Best   Worst
+  -------------------------------------------------------------------------------------------------------------------
+  🥇cup_handle                  924  54.2%   +1.97%  1.80 +1821.9%   0.86   75.2%  +15.0%   -8.0%
+  🥈volume_dryup_breakout       301  54.8%   +2.02%  1.76  +608.2%   0.86   65.4%  +15.0%   -8.0%
+  🥉accumulation_breakout      1246  54.0%   +1.66%  1.74 +2066.8%   0.80   67.0%  +15.0%   -8.0%
+    flat_base_breakout         1702  53.1%   +1.54%  1.65 +2627.3%   0.73   74.7%  +15.0%   -8.0%
+    bb_squeeze_breakout        2846  50.0%   +1.25%  1.47 +3556.9%   0.56   88.7%  +15.0%   -8.0%
+    rs_momentum                1727  48.8%   +1.18%  1.37 +2033.3%   0.48  131.2%  +15.0%   -8.0%
+    stage2_entry                415  45.3%   +0.36%  1.12  +148.9%   0.16  170.0%  +15.0%   -8.0%
+    vcp_pattern                   0   0.0%   +0.00%  0.00    +0.0%   0.00    0.0%   +0.0%   +0.0%
+    ma_alignment                  0   0.0%   +0.00%  0.00    +0.0%   0.00    0.0%   +0.0%   +0.0%
+
+
+========================================================================================================================
+🥇 TOP 3 STRATEGIES - DETAILED ANALYSIS
+========================================================================================================================
+
+
+  🥇 GOLD: CUP HANDLE
+  ────────────────────────────────────────────────────────────────────────────────────────────────────
+  
+  PERFORMANCE:
+    Total Trades:       924
+    Win Rate:           54.2%
+    Profit Factor:      1.80
+    Avg Return/Trade:   +1.97%
+    Total Return:       +1821.9%
+    Sharpe Ratio:       0.86
+  
+  WIN/LOSS ANALYSIS:
+    Avg Winner:         +8.20%
+    Avg Loser:          -5.41%
+    Best Trade:         +15.00%
+    Worst Trade:        -8.00%
+    Max Drawdown:       75.2%
+  
+  EXIT ANALYSIS:
+    Target Exits:       161 (17.4%)
+    Stop Exits:         216 (23.4%)
+    Time Exits:         547 (59.2%)
+
+
+  🥈 SILVER: VOLUME DRYUP BREAKOUT
+  ────────────────────────────────────────────────────────────────────────────────────────────────────
+  
+  PERFORMANCE:
+    Total Trades:       301
+    Win Rate:           54.8%
+    Profit Factor:      1.76
+    Avg Return/Trade:   +2.02%
+    Total Return:       +608.2%
+    Sharpe Ratio:       0.86
+  
+  WIN/LOSS ANALYSIS:
+    Avg Winner:         +8.52%
+    Avg Loser:          -5.86%
+    Best Trade:         +15.00%
+    Worst Trade:        -8.00%
+    Max Drawdown:       65.4%
+  
+  EXIT ANALYSIS:
+    Target Exits:       54 (17.9%)
+    Stop Exits:         77 (25.6%)
+    Time Exits:         170 (56.5%)
+
+
+  🥉 BRONZE: ACCUMULATION BREAKOUT
+  ────────────────────────────────────────────────────────────────────────────────────────────────────
+  
+  PERFORMANCE:
+    Total Trades:       1246
+    Win Rate:           54.0%
+    Profit Factor:      1.74
+    Avg Return/Trade:   +1.66%
+    Total Return:       +2066.8%
+    Sharpe Ratio:       0.80
+  
+  WIN/LOSS ANALYSIS:
+    Avg Winner:         +7.23%
+    Avg Loser:          -4.88%
+    Best Trade:         +15.00%
+    Worst Trade:        -8.00%
+    Max Drawdown:       67.0%
+  
+  EXIT ANALYSIS:
+    Target Exits:       149 (12.0%)
+    Stop Exits:         237 (19.0%)
+    Time Exits:         860 (69.0%)
+
+
+========================================================================================================================
+❌ STRATEGIES TO DROP (PF < 1.0 or Win Rate < 40%)
+========================================================================================================================
+
+  • vcp_pattern: PF=0.00, Win=0.0%, Avg=+0.00%
+  • ma_alignment: PF=0.00, Win=0.0%, Avg=+0.00%
+
+========================================================================================================================
+✅ RECOMMENDED BLENDED STRATEGY
+========================================================================================================================
+
+  Based on backtest results, the optimal blended strategy combines:
+
+    • cup_handle: 27% weight (PF=1.80, Win=54.2%)
+    • volume_dryup_breakout: 26% weight (PF=1.76, Win=54.8%)
+    • accumulation_breakout: 26% weight (PF=1.74, Win=54.0%)
+    • flat_base_breakout: 25% weight (PF=1.65, Win=53.1%)
+    • bb_squeeze_breakout: 22% weight (PF=1.47, Win=50.0%)
+    • rs_momentum: 21% weight (PF=1.37, Win=48.8%)
+
+
+========================================================================================================================
+🎯 FINAL RECOMMENDATION
+========================================================================================================================
+
+  BEST SINGLE STRATEGY: cup_handle
+    - Profit Factor: 1.80
+    - Win Rate: 54.2%
+    - Avg Return: +1.97% per trade
+
+  IMPLEMENTATION:
+    - Use cup_handle as primary signal
+    - Apply market regime filter (BULL market only for full exposure)
+    - Position size: 5.0% per trade (based on max loss)
+    - Stop loss: 8%
+    - Take profit: 15%
+
+========================================================================================================================
+END OF BACKTEST REPORT
+========================================================================================================================
