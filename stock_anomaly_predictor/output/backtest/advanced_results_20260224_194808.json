@@ -1,0 +1,62 @@
+{
+  "Buy & Hold (20 stocks)": {
+    "total_return": -1.4,
+    "annual_return": -0.6,
+    "sharpe": 0.04,
+    "max_drawdown": 19.0,
+    "win_rate_daily": 45.5,
+    "best_20d": 11.6,
+    "worst_20d": -9.7,
+    "years": 2.3
+  },
+  "Momentum Rotation": {
+    "total_return": 10.4,
+    "annual_return": 4.5,
+    "sharpe": 0.35,
+    "max_drawdown": 22.8,
+    "win_rate_daily": 50.0,
+    "best_20d": 11.1,
+    "worst_20d": -15.3,
+    "years": 2.3
+  },
+  "Momentum + Leverage": {
+    "total_return": 22.7,
+    "annual_return": 9.4,
+    "sharpe": 0.76,
+    "max_drawdown": 15.1,
+    "win_rate_daily": 50.0,
+    "best_20d": 16.1,
+    "worst_20d": -13.6,
+    "years": 2.3
+  },
+  "Concentrated (5 stocks)": {
+    "total_return": 6.5,
+    "annual_return": 2.8,
+    "sharpe": 0.26,
+    "max_drawdown": 16.8,
+    "win_rate_daily": 50.0,
+    "best_20d": 11.9,
+    "worst_20d": -14.3,
+    "years": 2.3
+  },
+  "Trend Filter + Leverage": {
+    "total_return": 9.7,
+    "annual_return": 4.2,
+    "sharpe": 0.37,
+    "max_drawdown": 23.6,
+    "win_rate_daily": 49.1,
+    "best_20d": 11.2,
+    "worst_20d": -17.0,
+    "years": 2.3
+  },
+  "Weekly Rebalance + Leverage": {
+    "total_return": 14.8,
+    "annual_return": 6.3,
+    "sharpe": 0.53,
+    "max_drawdown": 14.6,
+    "win_rate_daily": 51.4,
+    "best_20d": 13.1,
+    "worst_20d": -13.3,
+    "years": 2.3
+  }
+}
